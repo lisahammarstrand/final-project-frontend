@@ -1,7 +1,7 @@
 import React from 'react'
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import { StartPage } from 'pages/StartPage'
-import { PackageDetails } from 'pages/PackageDeatils'
+import { PackageDetails } from 'pages/PackageDetails'
 import { BookingPage } from 'pages/BookingPage'
 import { Summary } from 'pages/Summary'
 import { MyPage } from 'pages/MyPage'

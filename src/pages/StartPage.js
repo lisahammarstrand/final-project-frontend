@@ -5,10 +5,10 @@ export const StartPage = () => {
   return (
     <>
       <div>StartPage</div>
-      <PackageCard />
-      <PackageCard />
-      <PackageCard />
-      <PackageCard />
+      <PackageCard title="Ski Touring" subtitle="in Funäsdalen" />
+      <PackageCard title="Ski Touring" subtitle="in Funäsdalen" />
+      <PackageCard title="Ski Touring" subtitle="in Funäsdalen" />
+      <PackageCard title="Ski Touring" subtitle="in Funäsdalen" />
     </>
   )
 }
