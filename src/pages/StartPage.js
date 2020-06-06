@@ -1,14 +1,16 @@
 import React from 'react'
 import { PackageCard } from 'components/PackageCard'
+import { Header } from 'components/Header'
 
 export const StartPage = () => {
   return (
     <>
       <div>StartPage</div>
-      <PackageCard title="Ski Touring" subtitle="in Funäsdalen" />
-      <PackageCard title="Ski Touring" subtitle="in Funäsdalen" />
-      <PackageCard title="Ski Touring" subtitle="in Funäsdalen" />
-      <PackageCard title="Ski Touring" subtitle="in Funäsdalen" />
+      <Header />
+      <PackageCard title="Backcountry Skiing" subtitle="in Riksgränsen" />
+      <PackageCard title="Backcountry Skiing" subtitle="in Riksgränsen" />
+      <PackageCard title="Backcountry Skiing" subtitle="in Riksgränsen" />
+      <PackageCard title="Backcountry Skiing" subtitle="in Riksgränsen" />
     </>
   )
 }

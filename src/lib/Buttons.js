@@ -12,9 +12,13 @@ const StyledButton = styled.button`
   padding: 10px 20px;
   margin: 5px;
   cursor: pointer;
+  position: absolute;
+  bottom: 24px;
+  align-self: center;
   
   &:hover {
     background: transparent;
+    border: 2px solid #ff3366;
   }
 `;
 
