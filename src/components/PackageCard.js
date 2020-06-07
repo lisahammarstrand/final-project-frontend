@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { Link } from 'react-router-dom'
 import { Button } from 'lib/Buttons'
 
 const CardContainer = styled.div`
@@ -29,6 +30,7 @@ const PackageTitle = styled.h1`
   margin-left: 16px;
   margin-bottom: 10px;
   margin-top: 10px;
+  color: white;
 `
 const DumbbellIcon = styled.img`
   width: 30px;
@@ -40,6 +42,7 @@ const PackageSubTitle = styled.h2`
   font-weight: normal;
   margin-left: 16px;
   margin-top: 0px;
+  color: white;
 `
 const CardOverlay = styled.div`
   position: absolute;
@@ -63,16 +66,18 @@ const PackageCardButton = styled(Button)`
 `
 export const PackageCard = ({ title, subtitle }) => {
   return (
-    <CardContainer>
-      <CardOverlay>
-        <CardHeader>
-          <PackageTitle>{title}</PackageTitle>
-          <DumbbellIcon src="dumbbell.svg" alt="dumbbell" />
-          <DumbbellIcon src="dumbbell.svg" alt="dumbbell" />
-        </CardHeader>
-        <PackageSubTitle>{subtitle}</PackageSubTitle>
-        <PackageCardButton title="Learn more" />
-      </CardOverlay>
-    </CardContainer>
+    <Link to="/package">
+      <CardContainer>
+        <CardOverlay>
+          <CardHeader>
+            <PackageTitle>{title}</PackageTitle>
+            <DumbbellIcon src="dumbbell.svg" alt="dumbbell" />
+            <DumbbellIcon src="dumbbell.svg" alt="dumbbell" />
+          </CardHeader>
+          <PackageSubTitle>{subtitle}</PackageSubTitle>
+          <PackageCardButton title="Learn more" />
+        </CardOverlay>
+      </CardContainer>
+    </Link>
   )
 }

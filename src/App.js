@@ -1,15 +1,18 @@
 import React from 'react'
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
+import { Header } from 'components/Header'
 import { StartPage } from 'pages/StartPage'
 import { PackageDetails } from 'pages/PackageDetails'
 import { BookingPage } from 'pages/BookingPage'
 import { Summary } from 'pages/Summary'
 import { MyPage } from 'pages/MyPage'
 import { Profile } from 'pages/Profile'
+import { Footer } from 'components/Footer'
 
 export const App = () => {
   return (
     <BrowserRouter>
+      <Header />
       <main>
         <Switch>
           <Route path="/" exact>
@@ -32,6 +35,7 @@ export const App = () => {
           </Route>
         </Switch>
       </main>
+      <Footer />
     </BrowserRouter>
   )
 }

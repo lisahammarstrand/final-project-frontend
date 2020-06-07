@@ -1,8 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
 import { PackageCard } from 'components/PackageCard'
-import { Header } from 'components/Header'
-import { Footer } from 'components/Footer'
 
 const StartPageWrapper = styled.main`
   display: flex;
@@ -48,7 +46,6 @@ export const StartPage = () => {
     /*  <div>StartPage</div> */
     <StartPageWrapper>
       <>
-        <Header />
         <IntroSection>
           <IntroTitle>
             <h1>Intro title</h1>
@@ -63,7 +60,6 @@ export const StartPage = () => {
           <PackageCard title="Backcountry Skiing" subtitle="in Riksgränsen" />
           <PackageCard title="Backcountry Skiing" subtitle="in Riksgränsen" />
         </PackageCardContainer>
-        <Footer />
       </>
     </StartPageWrapper >
   )
