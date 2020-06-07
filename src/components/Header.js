@@ -20,24 +20,6 @@ const HeaderTitle = styled.h1`
 const HeaderImage = styled.img`
   width: 50px;
 `
-const SignUpButton = styled.button`
-display: block;
-height: 45px;
-width: auto;
-background: #ff3366;
-color: white;
-border: 2px solid white;
-border-radius: 6px;
-padding: 10px 20px;
-margin: 5px;
-cursor: pointer;
-
-&:hover {
-  background: transparent;
-  border: 2px solid #ff3366;
-}
-`
-
 
 export const Header = ({ title }) => {
   return (
