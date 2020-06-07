@@ -56,6 +56,11 @@ const CardOverlay = styled.div`
     visibility: visible;
   } */
   `
+const PackageCardButton = styled(Button)`
+  position absolute;
+  bottom: 24px;
+  align-self: center;
+`
 export const PackageCard = ({ title, subtitle }) => {
   return (
     <CardContainer>
@@ -66,7 +71,7 @@ export const PackageCard = ({ title, subtitle }) => {
           <DumbbellIcon src="dumbbell.svg" alt="dumbbell" />
         </CardHeader>
         <PackageSubTitle>{subtitle}</PackageSubTitle>
-        <Button title="Learn more" />
+        <PackageCardButton title="Learn more" />
       </CardOverlay>
     </CardContainer>
   )

@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Button } from 'lib/Buttons'
+import { OutlinedButton } from 'lib/Buttons'
 
 const HeaderContainer = styled.header`
   position: relative;
@@ -12,6 +12,7 @@ const HeaderContainer = styled.header`
   align-items: center;
   margin-right: 16px;
   margin-left: 16px;
+  border-bottom: 2px solid white;
 `
 const HeaderTitle = styled.h1`
   font-size: 20px;
@@ -42,8 +43,8 @@ export const Header = ({ title }) => {
   return (
     <HeaderContainer>
       <HeaderImage src="logo_mountains.png" alt="logo_mountains" />
-      <HeaderTitle>YOUR ACTIVE VAYCAY</HeaderTitle>
-      <SignUpButton title="Sign up" />
+      <HeaderTitle>TITLE OF THIS PAGE</HeaderTitle>
+      <OutlinedButton title="My page" />
     </HeaderContainer>
   )
 }
