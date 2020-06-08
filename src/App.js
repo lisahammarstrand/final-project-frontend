@@ -8,6 +8,7 @@ import { Summary } from 'pages/Summary'
 import { MyPage } from 'pages/MyPage'
 import { Profile } from 'pages/Profile'
 import { Footer } from 'components/Footer'
+import { GlobalStyle } from 'components/GlobalStyle'
 
 export const App = () => {
   return (
@@ -36,6 +37,8 @@ export const App = () => {
         </Switch>
       </main>
       <Footer />
+      <GlobalStyle />
     </BrowserRouter>
   )
 }
+

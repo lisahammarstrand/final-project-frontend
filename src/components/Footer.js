@@ -20,7 +20,7 @@ const FooterLink = styled.a`
 export const Footer = () => {
   return (
     <FooterContainer>
-      <p>&copy; LH Production 2020</p>
+      <p>&copy; LHP 2020</p>
       <div>
         <FooterLink href="contact">Contact</FooterLink>
         <FooterLink href="about">About</FooterLink>

@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { Button } from 'lib/Buttons'
 
 const PackageDetailsContainer = styled.article`
   position: relative;
@@ -12,6 +13,7 @@ const PackageDetailsBackground = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: flex-end; 
+  z-index: -1;
 `
 const DetailsOverlay = styled.div`
   position: absolute;
@@ -22,11 +24,18 @@ const DetailsOverlay = styled.div`
   background: rgba(1,23,39,0.3);
   display: flex;
   flex-direction: column;
+  z-index: 0;
   `
 const DetailsSummary = styled.div`
   display: flex;
-  align-items: flex-end;
+  flex-direction: column;
+  align-items: center; 
   padding: 50px;
+  z-index: 1;
+
+  @media (min-width: 650px) {
+    flex-direction: row;
+  }
 `
 const DetailsImage = styled.img`
   width: 300px;
@@ -34,8 +43,20 @@ const DetailsImage = styled.img`
 `
 const DetailsDescription = styled.div`
   margin-left: 20px;
-  max-width: 400px;
+  max-width: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (min-width: 650px) {
+    align-items: flex-start;
+    max-width: 400px;
+  }
 `
+/* const PackageDetailsButton = styled(Button)`
+position absolute;
+bottom: 24px;
+` */
 
 export const PackageDetails = () => {
   return (
@@ -48,6 +69,7 @@ export const PackageDetails = () => {
           <DetailsDescription>
             <h1>Title</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed leo erat, lacinia et nulla id, dapibus tristique orci. Etiam non tellus ante. Sed scelerisque mattis augue, sed bibendum elit aliquet nec. Praesent non scelerisque lectus, accumsan viverra ante</p>
+            <Button title="Book now" />
           </DetailsDescription>
         </DetailsSummary>
       </PackageDetailsBackground>
