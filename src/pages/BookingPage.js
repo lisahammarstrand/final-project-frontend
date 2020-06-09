@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Route, Link } from 'react-router-dom'
+import { Button } from 'lib/Buttons'
 
 const BookingContainer = styled.section`
   position: relative;
