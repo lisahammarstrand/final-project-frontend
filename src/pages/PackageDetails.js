@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { Link } from 'react-router-dom'
 import { Button } from 'lib/Buttons'
 
 const PackageDetailsContainer = styled.article`
@@ -13,7 +14,6 @@ const PackageDetailsBackground = styled.div`
   background-size: cover;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end; 
   z-index: -1;
 `
 const DetailsOverlay = styled.div`
@@ -54,23 +54,45 @@ const DetailsDescription = styled.div`
     max-width: 400px;
   }
 `
-/* const PackageDetailsButton = styled(Button)`
-position absolute;
-bottom: 24px;
-` */
+const IconSkis = styled.img`
+  width: 40px;
+  margin: 0px 5px 0px 10px;
+`
+const IconDumbbell = styled.img`
+  width: 40px;
+  margin-left: 10px;
+  transform: rotate(-50deg);
+`
+const DetailsTitle = styled.div`
+  display: flex;
+  background: #011627;
+  padding: 5px 32px;
+  margin: 16px 0px;
+`
 
 export const PackageDetails = () => {
   return (
-    /*  <div>PackageDetailsPage</div> */
     <PackageDetailsContainer>
       <DetailsOverlay />
       <PackageDetailsBackground>
         <DetailsSummary>
           <DetailsImage src="skitouring_2.jpeg" alt="skitouring" />
           <DetailsDescription>
-            <h1>Title</h1>
+            <DetailsTitle>
+              <h1>Title</h1>
+              <IconSkis src="skis.svg" alt="skis" />
+            </DetailsTitle>
+            <h2>Subtitle</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed leo erat, lacinia et nulla id, dapibus tristique orci. Etiam non tellus ante. Sed scelerisque mattis augue, sed bibendum elit aliquet nec. Praesent non scelerisque lectus, accumsan viverra ante</p>
-            <Button title="Book now" />
+            <DetailsTitle>
+              <h1>Title</h1>
+              <IconDumbbell src="dumbbell.svg" alt="dumbbell" />
+            </DetailsTitle>
+            <h2>Subtitle</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed leo erat, lacinia et nulla id, dapibus tristique orci. Etiam non tellus ante. Sed scelerisque mattis augue, sed bibendum elit aliquet nec. Praesent non scelerisque lectus, accumsan viverra ante</p>
+            <Link to="/booking">
+              <Button title="Book now" />
+            </Link>
           </DetailsDescription>
         </DetailsSummary>
       </PackageDetailsBackground>

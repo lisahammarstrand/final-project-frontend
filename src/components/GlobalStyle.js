@@ -7,4 +7,12 @@ export const GlobalStyle = createGlobalStyle`
 a {
   text-decoration: none;
 }
+h1 {
+  font-size: 22px;
+  margin: 10px 0px;
+}
+h2 {
+  font-size: 16px;
+  margin: 5px 0px;
+}
 `

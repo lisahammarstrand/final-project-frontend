@@ -35,7 +35,8 @@ const IntroSection = styled.article`
 const IntroTitle = styled.div`
 display: flex;
 background: #011627;
-padding: 0px 32px;
+padding: 5px 32px;
+margin: 16px 0px;
 `
 
 const IconSkis = styled.img`
@@ -86,7 +87,6 @@ const PackageCardContainer = styled.section`
 `
 export const StartPage = () => {
   return (
-    /*  <div>StartPage</div> */
     <StartPageWrapper>
       <StartPageOverlay />
       <IntroSection>

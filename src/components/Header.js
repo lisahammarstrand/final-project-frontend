@@ -25,17 +25,21 @@ const HeaderImage = styled.img`
 
 export const Header = () => {
   return (
-    <HeaderContainer>
-      <HeaderImage src="logo_mountains.png" alt="logo_mountains" />
-      <HeaderTitle>TITLE OF THIS PAGE</HeaderTitle>
-      <OutlinedButton title="My page" />
+    <>
+      <HeaderContainer>
+        <Link to="/">
+          <HeaderImage src="logo_mountains.png" alt="logo_mountains" />
+        </Link>
+        <HeaderTitle>TITLE OF THIS PAGE</HeaderTitle>
+        <OutlinedButton title="My page" />
+      </HeaderContainer>
       <Route path="/package">
         <Link className="back-link" to="/">
           {/*  <i className="fas fa-arrow-circle-left"></i> */}
-      All packages
+           ⬅️All packages
         </Link>
       </Route>
-    </HeaderContainer>
+    </>
   )
 }
 
