@@ -5,21 +5,22 @@ import { OutlinedButton } from 'lib/Buttons'
 
 const HeaderContainer = styled.header`
   position: relative;
-  width: 95%;
+  width: 100%;
   height: 70px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  margin-right: 16px;
-  margin-left: 16px;
-  border-bottom: 2px solid white;
+  margin: 0px;
+  border-bottom: 1px solid white;
 `
 const HeaderTitle = styled.h1`
   font-size: 20px;
+  color: #f6f7f8;
 `
 const HeaderImage = styled.img`
   width: 50px;
+  margin-left: 16px;
 `
 
 export const Header = () => {

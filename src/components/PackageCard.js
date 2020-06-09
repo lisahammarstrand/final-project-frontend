@@ -68,15 +68,15 @@ export const PackageCard = ({ title, subtitle }) => {
   return (
     <Link to="/package">
       <CardContainer>
-        <CardOverlay>
-          <CardHeader>
-            <PackageTitle>{title}</PackageTitle>
-            <DumbbellIcon src="dumbbell.svg" alt="dumbbell" />
-            <DumbbellIcon src="dumbbell.svg" alt="dumbbell" />
-          </CardHeader>
-          <PackageSubTitle>{subtitle}</PackageSubTitle>
-          <PackageCardButton title="Learn more" />
-        </CardOverlay>
+        {/* <CardOverlay> */}
+        <CardHeader>
+          <PackageTitle>{title}</PackageTitle>
+          <DumbbellIcon src="dumbbell.svg" alt="dumbbell" />
+          <DumbbellIcon src="dumbbell.svg" alt="dumbbell" />
+        </CardHeader>
+        <PackageSubTitle>{subtitle}</PackageSubTitle>
+        <PackageCardButton title="Learn more" />
+        {/*  </CardOverlay> */}
       </CardContainer>
     </Link>
   )

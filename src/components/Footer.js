@@ -2,14 +2,14 @@ import React from 'react'
 import styled from 'styled-components'
 
 const FooterContainer = styled.footer`
-  height: 100px;
-  width: 95%;
+  height: 90px;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
   color:  #f6f7f8;
   padding: 0 16px;
-  border-top: 2px solid white;
+  border-top: 1px solid #f6f7f8;
 `
 const FooterLink = styled.a`
   text-decoration: none;

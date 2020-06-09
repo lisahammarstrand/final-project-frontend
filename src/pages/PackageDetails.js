@@ -5,6 +5,7 @@ import { Button } from 'lib/Buttons'
 const PackageDetailsContainer = styled.article`
   position: relative;
   color: white;
+  width: 100%;
 `
 const PackageDetailsBackground = styled.div`
   min-height: 100vh;
