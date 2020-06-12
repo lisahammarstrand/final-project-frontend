@@ -49,7 +49,6 @@ export const BookingPage = () => {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [activepackage, setActivePackage] = useState('')
-  const [date, setDate] = useState('')
   const [training, setTraining] = useState('')
   const history = useHistory()
 
@@ -72,7 +71,7 @@ export const BookingPage = () => {
               type="text"
               required
               value={email}
-              onChange={event => setEmail(event.target.value)} />
+              onChange={(event) => setEmail(event.target.value)} />
           </Label>
           <Label>
             Password
@@ -80,27 +79,21 @@ export const BookingPage = () => {
               type="password"
               required
               value={password}
-              onChange={event => setPassword(event.target.value)} />
+              onChange={(event) => setPassword(event.target.value)} />
           </Label>
           <Label>
             Package
-            <Input
-              type="text"
-              required
-              value={activepackage}
-              onChange={event => setActivePackage(event.target.value)} />
-          </Label>
-          <Label>
-            Date
             <Select
               type="text"
               required
-              value={date}
-              onChange={event => setDate(event.target.value)} />
-            <option value="">Select date</option>
-            <option value="Feb 20–25 2021">Feb 20–25 2021</option>
-            <option value="March 20–25 2021">March 20–25 2021</option>
-            <option value="April 20–25 2021">April 20–25 2021</option>
+              value={activepackage}
+              onChange={(event) => setActivePackage(event.target.value)}>
+              <option value="">Select package</option>
+              <option value="Riksgränsen">Backcountry skiing in Riksgränsen</option>
+              <option value="Funäsdalen">Skitouring in Funäsfjällen</option>
+              <option value="Kittelfjäll">Skitouring in Kittelfjäll</option>
+              <option value="Storulvån">Skitouring in Storulvån</option>
+            </Select>
           </Label>
           <Label>
             Training
@@ -108,7 +101,7 @@ export const BookingPage = () => {
               type="text"
               required
               value={training}
-              onChange={event => setTraining(event.target.value)} />
+              onChange={(event) => setTraining(event.target.value)} />
           </Label>
         </BookingForm>
       </BookingBackground>
