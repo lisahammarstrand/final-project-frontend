@@ -35,6 +35,8 @@ const BookingOverlay = styled.div`
   `
 const BookingForm = styled.form`
   position: absolute;
+  display: flex;
+  flex-direction: column;
   top: 50px;
   width: 80%;
   height: 500px;
@@ -44,26 +46,65 @@ const BookingForm = styled.form`
   border-radius: 6px;
   z-index: 1;
   `
+const SubmitButton = styled(Button)`
+  position absolute;
+  bottom: 24px;
+  align-self: center;
+`
+const URL = 'https://localhost:8080/users'
+
 export const BookingPage = () => {
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [activepackage, setActivePackage] = useState('')
   const [training, setTraining] = useState('')
+  const [registrered, setRegistered] = useState(false)
+  const [failed, setFailed] = useState(false)
   const history = useHistory()
+
+  const handleSubmit = event => {
+    event.preventDefault()
+    fetch(URL, {
+      method: 'POST',
+      body: JSON.stringify({ name, email, password, activepackage, training }),
+      headers: { 'Content-Type': 'application/json' }
+    })
+      .then((res) => {
+        if (res.status !== 201) {
+          return (
+            res.json()
+              .then((json) => console.log(json.message)), setFailed(true)
+          )
+        } else {
+          setRegistered(true)
+          return res.json()
+        }
+      })
+      .then(({ accessToken }) => {
+        if (accessToken) {
+          window.localStorage.setItem('accessToken', accessToken)
+          history.push('/mypage')
+        }
+      })
+      .catch((err) => console.log('Error:', err))
+  }
 
   return (
     <BookingContainer>
       <BookingOverlay />
       <BookingBackground>
-        <BookingForm>
+        <BookingForm onSubmit={handleSubmit}>
+          {failed && (
+            <p>Oops could not registrer your booking. Please check your inputs and try again.</p>
+          )}
           <Label>
             Name
             <Input
               type="text"
               required
               value={name}
-              onChange={event => setName(event.target.value)} />
+              onChange={(event) => setName(event.target.value)} />
           </Label>
           <Label>
             Email
@@ -97,17 +138,24 @@ export const BookingPage = () => {
           </Label>
           <Label>
             Training
-            <Input
+            <Select
               type="text"
               required
               value={training}
-              onChange={(event) => setTraining(event.target.value)} />
+              onChange={(event) => setTraining(event.target.value)}>
+              <option value="">Select training</option>
+              <option value="Soft">Soft</option>
+              <option value="Medium">Medium</option>
+              <option value="Tough">Tough</option>
+            </Select>
           </Label>
+          <SubmitButton
+            title="Submit"
+            type="submit"
+            onClick={handleSubmit} />
         </BookingForm>
       </BookingBackground>
     </BookingContainer>
-
-
   )
 }
 
