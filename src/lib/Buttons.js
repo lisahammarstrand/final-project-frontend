@@ -17,6 +17,7 @@ const StyledButton = styled.button`
   align-self: center; */
   
   &:hover {
+   /*  transform: scale(1.1); */
     background: transparent;
     border: 2px solid #ff3366;
   }
