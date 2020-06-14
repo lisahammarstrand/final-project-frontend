@@ -7,19 +7,21 @@ const StyledButton = styled.button`
   width: auto;
   background: #ff3366;
   color: white;
-  border: 2px solid white;
+ /*  border: 2px solid white; */
+  border: none;
   border-radius: 6px;
   padding: 10px 20px;
   margin: 5px;
   cursor: pointer;
+  transition: 0.5s;
  /*  position: absolute;
   bottom: 24px;
   align-self: center; */
   
   &:hover {
-   /*  transform: scale(1.1); */
-    background: transparent;
-    border: 2px solid #ff3366;
+    transform: scale(1.1);
+   /*  background: transparent;
+    border: 2px solid #ff3366; */
   }
 `;
 
@@ -43,8 +45,9 @@ export const OutlinedButton = styled(Button)`
   border: 2px solid #ff3366;
 
   &:hover {
-    background: #ff3366;
-    border: 2px solid white;
+    transform: scale(1.1);
+   /*  background: #ff3366;
+    border: 2px solid white; */
   }
 `;
 

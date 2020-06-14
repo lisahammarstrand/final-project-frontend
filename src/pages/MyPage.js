@@ -14,6 +14,7 @@ const MyPageBackground = styled.div`
   background-size: cover;
   display: flex;
   flex-direction: column;
+  align-items: center;
   z-index: -1;
 `
 const MyPageOverlay = styled.div`
