@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 export const Select = styled.select`
   line-height: 25px;
-  font-size: 18px;
+  font-size: 16px;
   width: 95%;
   background: transparent;
   color: white;

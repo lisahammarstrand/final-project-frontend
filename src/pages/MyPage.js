@@ -1,7 +1,9 @@
 import React from 'react'
+import { useState } from 'react'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 import { OutlinedButton } from 'lib/Buttons'
+import { ProgressBar } from 'lib/ProgressBar'
 
 const MyPageContainer = styled.article`
   position: relative;
@@ -76,6 +78,9 @@ const MyPageTitle = styled.div`
   padding: 5px 32px;
   margin: 16px 0px;
 `
+const UpdateButton = styled(OutlinedButton)`
+  border: 2px solid #20a4f3;
+`
 
 export const MyPage = () => {
   return (
@@ -83,19 +88,24 @@ export const MyPage = () => {
       <MyPageOverlay />
       <MyPageBackground>
         <MyPageSummary>
-          <MyPageImage src="skitouring_2.jpeg" alt="skitouring" />
+          <div>
+            <MyPageImage src="skitouring_2.jpeg" alt="skitouring" />
+            {/*  <ProgressBar precentage={parseInt(user.times/15 * 100)} /> */}
+            <ProgressBar precentage={45} />
+            <UpdateButton title="Update" />
+          </div>
           <MyPageDescription>
             <MyPageTitle>
               <h1>Title</h1>
               <IconSkis src="skis.svg" alt="skis" />
             </MyPageTitle>
-            <h2>Subtitle</h2>
+            <h2>Welcome Name</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed leo erat, lacinia et nulla id, dapibus tristique orci. Etiam non tellus ante. Sed scelerisque mattis augue, sed bibendum elit aliquet nec. Praesent non scelerisque lectus, accumsan viverra ante</p>
             <MyPageTitle>
               <h1>Title</h1>
               <IconDumbbell src="dumbbell.svg" alt="dumbbell" />
             </MyPageTitle>
-            <h2>Subtitle</h2>
+            <h2>Medium training – let &apos;s go!</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed leo erat, lacinia et nulla id, dapibus tristique orci. Etiam non tellus ante. Sed scelerisque mattis augue, sed bibendum elit aliquet nec. Praesent non scelerisque lectus, accumsan viverra ante</p>
             <Link to="/">
               <OutlinedButton title="Log out" />

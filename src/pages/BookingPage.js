@@ -42,7 +42,7 @@ const BookingForm = styled.form`
   height: 500px;
   padding: 40px 30px 30px 30px;
   background: transparent;
-  border: 1px solid white;
+  border: 2px solid white;
   border-radius: 6px;
   z-index: 1;
   `
@@ -51,7 +51,7 @@ const SubmitButton = styled(Button)`
   bottom: 24px;
   align-self: center;
 `
-const URL = 'https://localhost:8080/users'
+const URL = 'https://active-vaycay-backend.herokuapp.com/users'
 
 export const BookingPage = () => {
   const [name, setName] = useState('')
@@ -63,7 +63,7 @@ export const BookingPage = () => {
   const [failed, setFailed] = useState(false)
   const history = useHistory()
 
-  const handleSubmit = event => {
+  const handleSubmit = (event) => {
     event.preventDefault()
     fetch(URL, {
       method: 'POST',
@@ -81,12 +81,12 @@ export const BookingPage = () => {
           return res.json()
         }
       })
-      .then(({ accessToken }) => {
-        if (accessToken) {
-          window.localStorage.setItem('accessToken', accessToken)
-          history.push('/mypage')
-        }
-      })
+      /*   .then(({ accessToken }) => {
+          if (accessToken) {
+            window.localStorage.setItem('accessToken', accessToken)
+            history.push('/mypage')
+          }
+        }) */
       .catch((err) => console.log('Error:', err))
   }
 
@@ -156,6 +156,7 @@ export const BookingPage = () => {
         </BookingForm>
       </BookingBackground>
     </BookingContainer>
+
   )
 }
 

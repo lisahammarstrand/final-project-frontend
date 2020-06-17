@@ -26,7 +26,7 @@ const StyledButton = styled.button`
 `;
 
 const ButtonText = styled.p`
-  font-size: 18px;
+  font-size: 16px;
   font-weight: normal;
   margin: 0;
 `;
