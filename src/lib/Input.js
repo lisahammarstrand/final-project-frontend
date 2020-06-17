@@ -7,6 +7,7 @@ font-size: 16px;
 border: none;
 color: white;
 width: 95%;
+padding: 5px;
 background: transparent;
 border-bottom: 1px solid #011627;
 &:focus, &:active {

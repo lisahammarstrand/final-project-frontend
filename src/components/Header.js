@@ -31,7 +31,9 @@ export const Header = () => {
           <HeaderImage src="logo_mountains.png" alt="logo_mountains" />
         </Link>
         <HeaderTitle>TITLE OF THIS PAGE</HeaderTitle>
-        <OutlinedButton title="My page" />
+        <Link to="/login">
+          <OutlinedButton title="My page" />
+        </Link>
       </HeaderContainer>
       <Route path="/package">
         <Link className="back-link" to="/">

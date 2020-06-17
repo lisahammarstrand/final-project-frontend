@@ -67,7 +67,6 @@ const IntroDescription = styled.section`
     flex-direction: row;
     max-width: 90%;
   }
-
 `
 const ProgressImage = styled.img`
   width: 150px;

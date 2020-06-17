@@ -4,9 +4,8 @@ import { Header } from 'components/Header'
 import { StartPage } from 'pages/StartPage'
 import { PackageDetails } from 'pages/PackageDetails'
 import { BookingPage } from 'pages/BookingPage'
-import { Summary } from 'pages/Summary'
+import { LoginPage } from 'pages/LoginPage'
 import { MyPage } from 'pages/MyPage'
-import { Profile } from 'pages/Profile'
 import { Footer } from 'components/Footer'
 import { GlobalStyle } from 'components/GlobalStyle'
 
@@ -25,14 +24,11 @@ export const App = () => {
           <Route path="/booking" exact>
             <BookingPage />
           </Route>
-          <Route path="/summary" exact>
-            <Summary />
+          <Route path="/login" exact>
+            <LoginPage />
           </Route>
           <Route path="/mypage" exact>
             <MyPage />
-          </Route>
-          <Route path="/profile" exact>
-            <Profile />
           </Route>
         </Switch>
       </main>

@@ -22,10 +22,11 @@ transition: ease-out;
   100% { width: 75%;}
   }
 `
-export const ProgressBar = () => {
+// add on line 22 
+export const ProgressBar = ({ precentage }) => {
   return (
     <Tracker>
-      <ProgressInTracker />
+      <ProgressInTracker precentage={precentage} />
     </Tracker>
   )
 }

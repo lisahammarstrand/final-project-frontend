@@ -2,34 +2,14 @@ import React from 'react'
 import { useState } from 'react'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
+import { PageContainer, PageBackground, PageOverlay } from 'lib/PageBackground'
 import { OutlinedButton } from 'lib/Buttons'
 import { ProgressBar } from 'lib/ProgressBar'
 
-const MyPageContainer = styled.article`
-  position: relative;
-  color: white;
-  width: 100%;
-`
-const MyPageBackground = styled.div`
-  min-height: 100vh;
-  background-image: url("skitouring_2.jpeg");
-  background-size: cover;
-  display: flex;
-  flex-direction: column;
+const MyPageBackground = styled(PageBackground)`
   align-items: center;
-  z-index: -1;
+  
 `
-const MyPageOverlay = styled.div`
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(1,23,39,0.3);
-  display: flex;
-  flex-direction: column;
-  z-index: 0;
-  `
 const MyPageSummary = styled.div`
   position: absolute;
   top: 50px;
@@ -84,8 +64,8 @@ const UpdateButton = styled(OutlinedButton)`
 
 export const MyPage = () => {
   return (
-    <MyPageContainer>
-      <MyPageOverlay />
+    <PageContainer>
+      <PageOverlay />
       <MyPageBackground>
         <MyPageSummary>
           <div>
@@ -113,6 +93,6 @@ export const MyPage = () => {
           </MyPageDescription>
         </MyPageSummary>
       </MyPageBackground>
-    </MyPageContainer>
+    </PageContainer>
   )
 }

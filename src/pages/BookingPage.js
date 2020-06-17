@@ -3,49 +3,16 @@ import styled from 'styled-components'
 import { useState } from 'react'
 import { useHistory } from 'react-router-dom'
 import { Route, Link } from 'react-router-dom'
+import { PageContainer, PageBackground, PageOverlay } from 'lib/PageBackground'
+import { Form } from 'lib/Form'
 import { Label } from 'lib/Label'
 import { Input } from 'lib/Input'
 import { Select } from 'lib/Select'
 import { Button } from 'lib/Buttons'
 
-const BookingContainer = styled.section`
-  position: relative;
-  color: white;
-  width: 100%;
-  `
-const BookingBackground = styled.div`
-  min-height: 100vh;
-  background-image: url("skitouring_2.jpeg");
-  background-size: cover;
-  display: flex;
-  flex-direction: column;
+const BookingBackground = styled(PageBackground)`
   align-items: center;
-  z-index: -1;
 `
-const BookingOverlay = styled.div`
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(1,23,39,0.3);
-  display: flex;
-  flex-direction: column;
-  z-index: 0;
-  `
-const BookingForm = styled.form`
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  top: 50px;
-  width: 80%;
-  height: 500px;
-  padding: 40px 30px 30px 30px;
-  background: transparent;
-  border: 2px solid white;
-  border-radius: 6px;
-  z-index: 1;
-  `
 const SubmitButton = styled(Button)`
   position absolute;
   bottom: 24px;
@@ -91,10 +58,10 @@ export const BookingPage = () => {
   }
 
   return (
-    <BookingContainer>
-      <BookingOverlay />
+    <PageContainer>
+      <PageOverlay />
       <BookingBackground>
-        <BookingForm onSubmit={handleSubmit}>
+        <Form onSubmit={handleSubmit}>
           {failed && (
             <p>Oops could not registrer your booking. Please check your inputs and try again.</p>
           )}
@@ -153,9 +120,9 @@ export const BookingPage = () => {
             title="Submit"
             type="submit"
             onClick={handleSubmit} />
-        </BookingForm>
+        </Form>
       </BookingBackground>
-    </BookingContainer>
+    </PageContainer>
 
   )
 }

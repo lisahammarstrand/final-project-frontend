@@ -1,32 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
+import { PageContainer, PageBackground, PageOverlay } from 'lib/PageBackground'
 import { Button } from 'lib/Buttons'
 
-const PackageDetailsContainer = styled.article`
-  position: relative;
-  color: white;
-  width: 100%;
-`
-const PackageDetailsBackground = styled.div`
-  min-height: 100vh;
-  background-image: url("skitouring_2.jpeg");
-  background-size: cover;
-  display: flex;
-  flex-direction: column;
-  z-index: -1;
-`
-const DetailsOverlay = styled.div`
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(1,23,39,0.3);
-  display: flex;
-  flex-direction: column;
-  z-index: 0;
-  `
 const DetailsSummary = styled.div`
   display: flex;
   flex-direction: column;
@@ -72,9 +49,9 @@ const DetailsTitle = styled.div`
 
 export const PackageDetails = () => {
   return (
-    <PackageDetailsContainer>
-      <DetailsOverlay />
-      <PackageDetailsBackground>
+    <PageContainer>
+      <PageOverlay />
+      <PageBackground>
         <DetailsSummary>
           <DetailsImage src="skitouring_2.jpeg" alt="skitouring" />
           <DetailsDescription>
@@ -95,7 +72,7 @@ export const PackageDetails = () => {
             </Link>
           </DetailsDescription>
         </DetailsSummary>
-      </PackageDetailsBackground>
-    </PackageDetailsContainer>
+      </PageBackground>
+    </PageContainer>
   )
 }
