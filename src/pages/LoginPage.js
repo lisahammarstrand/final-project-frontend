@@ -15,35 +15,31 @@ const LoginBackground = styled(PageBackground)`
 const LoginForm = styled(Form)`
   height: 300px;
   `
-const SubmitButton = styled(Button)`
+const LoginButton = styled(Button)`
   position absolute;
   bottom: 24px;
   align-self: center;
 `
-const URL = 'https://active-vaycay-backend.herokuapp.com/sessions'
 
 export const LoginPage = () => {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
-  const [registrered, setRegistered] = useState(false)
-  const [failed, setFailed] = useState(false)
+  const [errorMessage, setErrorMessage] = useState('')
   const history = useHistory()
+  const URL = 'https://active-vaycay-backend.herokuapp.com/sessions'
 
-  const handleSubmit = (event) => {
+  const handleSignIn = (event) => {
     event.preventDefault()
+    setErrorMessage('')
     fetch(URL, {
       method: 'POST',
       body: JSON.stringify({ email, password }),
       headers: { 'Content-Type': 'application/json' }
     })
       .then((res) => {
-        if (res.status !== 201) {
-          return (
-            res.json()
-              .then((json) => console.log(json.message)), setFailed(true)
-          )
+        if (!res.ok) {
+          throw new Error('Oops could not sign you in. Please check your details and try again.')
         } else {
-          setRegistered(true)
           return res.json()
         }
       })
@@ -53,16 +49,16 @@ export const LoginPage = () => {
           history.push('/mypage')
         }
       })
-      .catch((err) => console.log('Error:', err))
+      .catch((err) => {
+        setErrorMessage(err.message)
+      })
   }
+
   return (
     <PageContainer>
       <PageOverlay />
       <LoginBackground>
-        <LoginForm onSubmit={handleSubmit}>
-          {failed && (
-            <p>Oops could not sign you in. Please check your inputs and try again.</p>
-          )}
+        <LoginForm onSubmit={handleSignIn}>
           <Label>
             Email
             <Input
@@ -79,10 +75,11 @@ export const LoginPage = () => {
               value={password}
               onChange={(event) => setPassword(event.target.value)} />
           </Label>
-          <SubmitButton
-            title="Submit"
+          <div>{errorMessage}</div>
+          <LoginButton
+            title="Sign in"
             type="submit"
-            onClick={handleSubmit} />
+            onClick={handleSignIn} />
         </LoginForm>
       </LoginBackground>
     </PageContainer>

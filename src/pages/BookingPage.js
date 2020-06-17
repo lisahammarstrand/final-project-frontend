@@ -48,12 +48,12 @@ export const BookingPage = () => {
           return res.json()
         }
       })
-      /*   .then(({ accessToken }) => {
-          if (accessToken) {
-            window.localStorage.setItem('accessToken', accessToken)
-            history.push('/mypage')
-          }
-        }) */
+      .then(({ accessToken }) => {
+        if (accessToken) {
+          window.localStorage.setItem('accessToken', accessToken)
+          history.push('/mypage')
+        }
+      })
       .catch((err) => console.log('Error:', err))
   }
 
