@@ -1,5 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
+import { Title } from 'lib/Title'
+import { IconSkis, IconDumbbell } from 'lib/Icons'
 import { PackageCard } from 'components/PackageCard'
 
 const StartPageWrapper = styled.section`
@@ -32,21 +34,8 @@ const IntroSection = styled.article`
   margin: 16px;
   z-index: 1;
 `
-const IntroTitle = styled.div`
-display: flex;
-background: #011627;
-padding: 5px 32px;
-margin: 16px 0px;
-`
-
-const IconSkis = styled.img`
-  width: 40px;
-  margin: 0px 5px 0px 16px;
-`
-const IconDumbbell = styled.img`
-  width: 40px;
+const IconDumbbellStart = styled(IconDumbbell)`
   margin: 0px;
-  transform: rotate(-50deg);
 `
 const IconAdventure = styled.img`
   width: 40px;
@@ -89,12 +78,12 @@ export const StartPage = () => {
     <StartPageWrapper>
       <StartPageOverlay />
       <IntroSection>
-        <IntroTitle>
+        <Title>
           <h1>Intro title Lorem ipsum</h1>
           <IconSkis src="skis.svg" alt="skis" />
           {/*  <IconAdventure src="adventure.svg" alt="adventure" /> */}
-          <IconDumbbell src="dumbbell.svg" alt="dumbbell" />
-        </IntroTitle>
+          <IconDumbbellStart src="dumbbell.svg" alt="dumbbell" />
+        </Title>
         <IntroDescription>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed leo erat, lacinia et nulla id, dapibus tristique orci. Etiam non tellus ante. Sed scelerisque mattis augue, sed bibendum elit aliquet nec. Praesent non scelerisque lectus, accumsan viverra ante</p>
           {/*  <ProgressImage src="progress_levels.png" alt="progress-levels" /> */}
