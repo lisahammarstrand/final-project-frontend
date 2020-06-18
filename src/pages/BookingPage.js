@@ -9,6 +9,8 @@ import { Label } from 'lib/Label'
 import { Input } from 'lib/Input'
 import { Select } from 'lib/Select'
 import { Button } from 'lib/Buttons'
+import { Confirmation } from 'components/Confirmation'
+
 
 const BookingBackground = styled(PageBackground)`
   align-items: center;
@@ -48,12 +50,12 @@ export const BookingPage = () => {
           return res.json()
         }
       })
-      .then(({ accessToken }) => {
-        if (accessToken) {
-          window.localStorage.setItem('accessToken', accessToken)
-          history.push('/mypage')
-        }
-      })
+      /*    .then(({ accessToken }) => {
+           if (accessToken) {
+             window.localStorage.setItem('accessToken', accessToken)
+             history.push('/mypage')
+           }
+         }) */
       .catch((err) => console.log('Error:', err))
   }
 
@@ -61,69 +63,75 @@ export const BookingPage = () => {
     <PageContainer>
       <PageOverlay />
       <BookingBackground>
-        <Form onSubmit={handleSubmit}>
-          {failed && (
-            <p>Oops could not registrer your booking. Please check your inputs and try again.</p>
-          )}
-          <Label>
-            Name
-            <Input
-              type="text"
-              required
-              value={name}
-              onChange={(event) => setName(event.target.value)} />
-          </Label>
-          <Label>
-            Email
-            <Input
-              type="text"
-              required
-              value={email}
-              onChange={(event) => setEmail(event.target.value)} />
-          </Label>
-          <Label>
-            Password
-            <Input
-              type="password"
-              required
-              value={password}
-              onChange={(event) => setPassword(event.target.value)} />
-          </Label>
-          <Label>
-            Package
-            <Select
-              type="text"
-              required
-              value={activepackage}
-              onChange={(event) => setActivePackage(event.target.value)}>
-              <option value="">Select package</option>
-              <option value="Riksgränsen">Backcountry skiing in Riksgränsen</option>
-              <option value="Funäsdalen">Skitouring in Funäsfjällen</option>
-              <option value="Kittelfjäll">Skitouring in Kittelfjäll</option>
-              <option value="Storulvån">Skitouring in Storulvån</option>
-            </Select>
-          </Label>
-          <Label>
-            Training
-            <Select
-              type="text"
-              required
-              value={training}
-              onChange={(event) => setTraining(event.target.value)}>
-              <option value="">Select training</option>
-              <option value="Soft">Soft</option>
-              <option value="Medium">Medium</option>
-              <option value="Tough">Tough</option>
-            </Select>
-          </Label>
-          <SubmitButton
-            title="Submit"
-            type="submit"
-            onClick={handleSubmit} />
-        </Form>
+        {!registrered && (
+          <Form onSubmit={handleSubmit}>
+            {!failed && <h2>Welocome to enter your details below</h2>}
+            {failed && (
+              <p>Oops could not registrer your booking. Please check your inputs and try again.</p>
+            )}
+            <Label>
+              Name
+              <Input
+                type="text"
+                required
+                value={name}
+                onChange={(event) => setName(event.target.value)} />
+            </Label>
+            <Label>
+              Email
+              <Input
+                type="text"
+                required
+                value={email}
+                onChange={(event) => setEmail(event.target.value)} />
+            </Label>
+            <Label>
+              Password
+              <Input
+                type="password"
+                required
+                value={password}
+                onChange={(event) => setPassword(event.target.value)} />
+            </Label>
+            <Label>
+              Package
+              <Select
+                type="text"
+                required
+                value={activepackage}
+                onChange={(event) => setActivePackage(event.target.value)}>
+                <option value="">Select package</option>
+                <option value="Riksgränsen">Backcountry skiing in Riksgränsen</option>
+                <option value="Funäsdalen">Skitouring in Funäsfjällen</option>
+                <option value="Kittelfjäll">Skitouring in Kittelfjäll</option>
+                <option value="Storulvån">Skitouring in Storulvån</option>
+              </Select>
+            </Label>
+            <Label>
+              Training
+              <Select
+                type="text"
+                required
+                value={training}
+                onChange={(event) => setTraining(event.target.value)}>
+                <option value="">Select training</option>
+                <option value="Soft">Soft</option>
+                <option value="Medium">Medium</option>
+                <option value="Tough">Tough</option>
+              </Select>
+            </Label>
+            <SubmitButton
+              title="Submit"
+              type="submit"
+              onClick={handleSubmit} />
+          </Form>
+        )}
+        {/*  Confirmation page */}
+        {registrered && (
+          <Confirmation />
+        )}
       </BookingBackground>
     </PageContainer>
-
   )
 }
 

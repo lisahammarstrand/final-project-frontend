@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import { PageContainer, PageBackground, PageOverlay } from 'lib/PageBackground'
 import { Title } from 'lib/Title'
 import { IconSkis, IconDumbbell } from 'lib/Icons'
+import { DetailsImage } from 'lib/DetailsImage'
 import { Button } from 'lib/Buttons'
 
 const DetailsSummary = styled.div`
@@ -16,10 +17,6 @@ const DetailsSummary = styled.div`
   @media (min-width: 650px) {
     flex-direction: row;
   }
-`
-const DetailsImage = styled.img`
-  width: 300px;
-  border: 2px solid white;
 `
 const DetailsDescription = styled.div`
   margin-left: 20px;

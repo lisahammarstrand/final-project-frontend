@@ -8,6 +8,7 @@ import { LoginPage } from 'pages/LoginPage'
 import { MyPage } from 'pages/MyPage'
 import { Footer } from 'components/Footer'
 import { GlobalStyle } from 'components/GlobalStyle'
+import { Confirmation } from 'components/Confirmation'
 
 export const App = () => {
   return (
@@ -23,6 +24,9 @@ export const App = () => {
           </Route>
           <Route path="/booking" exact>
             <BookingPage />
+          </Route>
+          <Route path="/confirmation" exact>
+            <Confirmation />
           </Route>
           <Route path="/login" exact>
             <LoginPage />

@@ -1,12 +1,13 @@
-import React from 'react'
-import { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
-import { Link } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 import { PageContainer, PageBackground, PageOverlay } from 'lib/PageBackground'
 import { Title } from 'lib/Title'
 import { IconSkis, IconDumbbell } from 'lib/Icons'
+import { DetailsImage } from 'lib/DetailsImage'
 import { OutlinedButton } from 'lib/Buttons'
 import { ProgressBar } from 'lib/ProgressBar'
+import { Loader } from 'lib/Loader'
 
 const MyPageBackground = styled(PageBackground)`
   align-items: center;
@@ -28,10 +29,6 @@ const MyPageSummary = styled.div`
     flex-direction: row;
   }
 `
-const MyPageImage = styled.img`
-  width: 300px;
-  border: 2px solid white;
-`
 const MyPageDescription = styled.div`
   margin-left: 20px;
   max-width: 350px;
@@ -47,17 +44,46 @@ const MyPageDescription = styled.div`
 const UpdateButton = styled(OutlinedButton)`
   border: 2px solid #20a4f3;
 `
-
 export const MyPage = () => {
+  /* const { userId } = useParams() */
+  const URL = 'https://active-vaycay-backend.herokuapp.com/users'
+  const accessToken = window.localStorage.getItem('accessToken')
+  const [userData, setUserData] = useState()
+
+  useEffect(() => {
+    fetch(URL, {
+      method: 'GET',
+      headers: { Authorization: accessToken }
+    })
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error('Please log in to access your page', JSON)
+        } else {
+          return response.json()
+        }
+      })
+      .then((data) => {
+        setUserData(data)
+      })
+      .catch((err) => console.log('Error:', err))
+  }, [accessToken])
+
+  /* if (userData === undefined) {
+    return (
+      <Loader />
+    )
+  } else { */
+
   return (
     <PageContainer>
       <PageOverlay />
       <MyPageBackground>
         <MyPageSummary>
           <div>
-            <MyPageImage src="skitouring_2.jpeg" alt="skitouring" />
+            <DetailsImage src="skitouring_2.jpeg" alt="skitouring" />
             {/*  <ProgressBar precentage={parseInt(user.times/15 * 100)} /> */}
             <ProgressBar precentage={45} />
+            <p>Your workouts: {userData.times}/20</p>
             <UpdateButton title="Update" />
           </div>
           <MyPageDescription>
@@ -65,16 +91,18 @@ export const MyPage = () => {
               <h1>Title</h1>
               <IconSkis src="skis.svg" alt="skis" />
             </Title>
-            <h2>Welcome Name</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed leo erat, lacinia et nulla id, dapibus tristique orci. Etiam non tellus ante. Sed scelerisque mattis augue, sed bibendum elit aliquet nec. Praesent non scelerisque lectus, accumsan viverra ante</p>
+            <h2>Welcome {userData.name}</h2>
+            <p>We &apos;re excited that you&apos;re going {userData.activepackage} with us! Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed leo erat, lacinia et nulla id, dapibus tristique orci. </p>
             <Title>
               <h1>Title</h1>
               <IconDumbbell src="dumbbell.svg" alt="dumbbell" />
             </Title>
-            <h2>Medium training – let &apos;s go!</h2>
+            <h2>{userData.training} training – let &apos;s go!</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed leo erat, lacinia et nulla id, dapibus tristique orci. Etiam non tellus ante. Sed scelerisque mattis augue, sed bibendum elit aliquet nec. Praesent non scelerisque lectus, accumsan viverra ante</p>
             <Link to="/">
-              <OutlinedButton title="Log out" />
+              <OutlinedButton
+                title="Log out"
+                onClick={() => window.localStorage.removeItem('accessToken')} />
             </Link>
           </MyPageDescription>
         </MyPageSummary>
@@ -82,3 +110,4 @@ export const MyPage = () => {
     </PageContainer>
   )
 }
+/* } */
