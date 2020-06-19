@@ -48,7 +48,7 @@ export const MyPage = () => {
   /* const { userId } = useParams() */
   const URL = 'https://active-vaycay-backend.herokuapp.com/users'
   const accessToken = window.localStorage.getItem('accessToken')
-  const [userData, setUserData] = useState()
+  const [userData, setUserData] = useState({})
 
   useEffect(() => {
     fetch(URL, {

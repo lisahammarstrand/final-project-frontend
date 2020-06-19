@@ -80,6 +80,9 @@ export const LoginPage = () => {
             title="Sign in"
             type="submit"
             onClick={handleSignIn} />
+          <Link to="/booking">
+            <p>No account? Go to booking page</p>
+          </Link>
         </LoginForm>
       </LoginBackground>
     </PageContainer>
