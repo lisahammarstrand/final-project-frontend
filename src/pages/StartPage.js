@@ -94,28 +94,33 @@ export const StartPage = () => {
         <PackageCard
           background="skitouring_2.jpeg"
           title="Riksgränsen"
-          dumbbell="dumbbell.svg"
-          dumbbell="dumbbell.svg"
-          dumbbell="dumbbell.svg"
+          dumbbell1="dumbbell.svg"
+          alt="dumbbell"
+          dumbbell2="dumbbell.svg"
+          alt="dumbbell2"
           date="May 5–9 2021"
-          subtitle="Backcountry Skiing" />
+          subtitle="Off-Piste" />
         <PackageCard
           background="skitouring_funasdalen.jpeg"
           title="Funäsfjällen"
-          dumbbell="dumbbell.svg"
+          dumbbell1="dumbbell.svg"
+          alt="dumbbell"
           date="March 3–7 2021"
           subtitle="Skitouring" />
         <PackageCard
           background="skitouring_storulvan.jpeg"
           title="Storulvån"
-          dumbbell="dumbbell.svg"
+          dumbbell1="dumbbell.svg"
+          alt="dumbbell"
           date="April 1–4 2021"
           subtitle="Skitouring" />
         <PackageCard
           background="skitouring_gen.jpeg"
           title="Kittelfjäll"
-          dumbbell="dumbbell.svg"
-          dumbbell="dumbbell.svg"
+          dumbbell1="dumbbell.svg"
+          alt="dumbbell"
+          dumbbell2="dumbbell.svg"
+          alt="dumbbell2"
           date="April 7–11 2021"
           subtitle="Skitouring" />
       </PackageCardContainer>

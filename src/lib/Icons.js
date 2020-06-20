@@ -7,6 +7,6 @@ export const IconSkis = styled.img`
 `
 export const IconDumbbell = styled.img`
   width: 40px;
-  margin-left: 10px;
+  margin-left: 5px;
   transform: rotate(-50deg);
   `

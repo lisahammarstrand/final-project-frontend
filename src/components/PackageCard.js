@@ -27,17 +27,16 @@ const CardHeader = styled.div`
   justify-content: space-between;
   align-items: center;
 `
-const PackageTitle = styled(Title)`
+const PackageCardTitle = styled(Title)`
   justify-content: space-between;
   align-items: center;
   padding: 0px 16px;
-  margin-left: 16px;
-  margin-bottom: 10px;
-  margin-top: 10px;
+  margin: 10px 16px;
 `
-const DumbbellIcon = styled.img.attrs((props) => props.dumbbell, { src: 'src="dumbbell.svg"' })`
+const DumbbellIcon = styled.img`
   width: 30px;
   height: 30px;
+  margin-left: 10px;
   transform: rotate(-50deg);
 `
 const PackageSubTitle = styled.h2`
@@ -50,7 +49,7 @@ const PackageSubTitle = styled.h2`
   background: #011627;
   color: white;
 `
-const CardOverlay = styled.div`
+/* const CardOverlay = styled.div`
   position: absolute;
   top: 0;
   left: 0;
@@ -64,27 +63,26 @@ const CardOverlay = styled.div`
   &:hover {
     visibility: visible;
   } */
-  `
+
 const PackageCardButton = styled(Button)`
   position absolute;
   bottom: 24px;
   align-self: center;
 `
-export const PackageCard = ({ title, subtitle, date, background, dumbbell }) => {
+export const PackageCard = ({ title, subtitle, date, background, dumbbell1, dumbbell2, dumbbell3 }) => {
   return (
     <Link to="/package">
       <CardContainer background={background}>
-        {/* <CardOverlay> */}
         <CardHeader>
-          <PackageTitle>
+          <PackageCardTitle>
             <h1>{title}</h1>
-            <DumbbellIcon dumbbell={dumbbell} />
-          </PackageTitle>
+            {dumbbell1 && <DumbbellIcon src={dumbbell1} alt="" />}
+            {dumbbell2 && <DumbbellIcon src={dumbbell2} alt="" />}
+          </PackageCardTitle>
         </CardHeader>
         <PackageSubTitle>{date}</PackageSubTitle>
         <PackageSubTitle>{subtitle}</PackageSubTitle>
         <PackageCardButton title="Learn more" />
-        {/*  </CardOverlay> */}
       </CardContainer>
     </Link>
   )

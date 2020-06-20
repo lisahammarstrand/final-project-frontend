@@ -32,7 +32,7 @@ export const Header = () => {
         </Link>
         <HeaderTitle>TITLE OF THIS PAGE</HeaderTitle>
         <Link to="/login">
-          <OutlinedButton title="My page" />
+          <OutlinedButton title="Sign in" />
         </Link>
       </HeaderContainer>
       <Route path="/package">

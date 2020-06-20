@@ -19,19 +19,28 @@ export const App = () => {
           <Route path="/" exact>
             <StartPage />
           </Route>
-          <Route path="/package" exact>
+          <Route path="/riksgransen">
             <PackageDetails />
           </Route>
-          <Route path="/booking" exact>
+          <Route path="/funasfjallen">
+            <PackageDetails />
+          </Route>
+          <Route path="/storulvan">
+            <PackageDetails />
+          </Route>
+          <Route path="/kittelfjall">
+            <PackageDetails />
+          </Route>
+          <Route path="/booking">
             <BookingPage />
           </Route>
-          <Route path="/confirmation" exact>
+          <Route path="/confirmation">
             <Confirmation />
           </Route>
-          <Route path="/login" exact>
+          <Route path="/login">
             <LoginPage />
           </Route>
-          <Route path="/mypage" exact>
+          <Route path="/mypage" >
             <MyPage />
           </Route>
         </Switch>
