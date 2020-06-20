@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import { Title } from 'lib/Title'
 import { IconSkis, IconDumbbell } from 'lib/Icons'
 import { PackageCard } from 'components/PackageCard'
+import { DumbbellIcon } from 'components/PackageCard'
 
 const StartPageWrapper = styled.section`
   position: relative;
@@ -90,10 +91,33 @@ export const StartPage = () => {
         </IntroDescription>
       </IntroSection>
       <PackageCardContainer>
-        <PackageCard title="Backcountry Skiing" subtitle="in Riksgränsen" />
-        <PackageCard title="Backcountry Skiing" subtitle="in Riksgränsen" />
-        <PackageCard title="Backcountry Skiing" subtitle="in Riksgränsen" />
-        <PackageCard title="Backcountry Skiing" subtitle="in Riksgränsen" />
+        <PackageCard
+          background="skitouring_2.jpeg"
+          title="Riksgränsen"
+          dumbbell="dumbbell.svg"
+          dumbbell="dumbbell.svg"
+          dumbbell="dumbbell.svg"
+          date="May 5–9 2021"
+          subtitle="Backcountry Skiing" />
+        <PackageCard
+          background="skitouring_funasdalen.jpeg"
+          title="Funäsfjällen"
+          dumbbell="dumbbell.svg"
+          date="March 3–7 2021"
+          subtitle="Skitouring" />
+        <PackageCard
+          background="skitouring_storulvan.jpeg"
+          title="Storulvån"
+          dumbbell="dumbbell.svg"
+          date="April 1–4 2021"
+          subtitle="Skitouring" />
+        <PackageCard
+          background="skitouring_gen.jpeg"
+          title="Kittelfjäll"
+          dumbbell="dumbbell.svg"
+          dumbbell="dumbbell.svg"
+          date="April 7–11 2021"
+          subtitle="Skitouring" />
       </PackageCardContainer>
     </StartPageWrapper>
   )

@@ -45,8 +45,8 @@ const UpdateButton = styled(OutlinedButton)`
   border: 2px solid #20a4f3;
 `
 export const MyPage = () => {
-  /* const { userId } = useParams() */
-  const URL = 'https://active-vaycay-backend.herokuapp.com/users'
+  const { userId } = useParams()
+  const URL = `https://active-vaycay-backend.herokuapp.com/users/${userId}`
   const accessToken = window.localStorage.getItem('accessToken')
   const [userData, setUserData] = useState({})
 
