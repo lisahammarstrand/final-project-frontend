@@ -71,7 +71,7 @@ const PackageCardButton = styled(Button)`
 `
 export const PackageCard = ({ title, subtitle, date, background, dumbbell1, dumbbell2, dumbbell3 }) => {
   return (
-    <Link to="/package">
+    <Link to="/riksgransen">
       <CardContainer background={background}>
         <CardHeader>
           <PackageCardTitle>
