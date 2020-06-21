@@ -3,12 +3,11 @@ import styled from 'styled-components'
 import { useState } from 'react'
 
 const Tracker = styled.div`
-width: 60%;
+width: 80%;
 height: 40px;
-margin: 40px 16px;
+margin: 16px;
 background: transparent;
 border: 2px solid #20a4f3;
-border-radius: 4px;
 `
 const ProgressInTracker = styled.div`
 width: 0%;    
@@ -19,10 +18,10 @@ transition: ease-out;
 
 @keyframes showProgress {
   0% { width: 0%;}
-  100% { width: 75%;}
+  100% { width: 50%;}
+  /* 100% { width: ${(props) => props.precentage};} */
   }
 `
-// add on line 22 
 export const ProgressBar = ({ precentage }) => {
   return (
     <Tracker>

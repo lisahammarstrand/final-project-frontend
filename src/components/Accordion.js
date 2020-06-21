@@ -39,6 +39,7 @@ const ChevronIcon = styled.img`
 const AccordionContent = styled.div`
   background-color: #20a4f3;
   margin: 0px;
+  padding: 16px;
   transition: 0.6s ease;
 
   &:active {

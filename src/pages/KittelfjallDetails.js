@@ -82,14 +82,24 @@ export const KittelfjallDetails = () => {
             </Title>
             <h2>Get the most out of your adventure</h2>
             <p>We want you to have your best possible adventure, and really encourage you to do the workout included. Our activities are not exceptionally tough, but it’s by far more fun when you’re in an ok shape. And – rewards are waiting if you follow through.</p>
+            <p>A full set of completed workouts = 20 times before departure, will get you sunglasses, gloves and a goodie bag with power bars from our partner The Outdoor Company. If you manage to do 10 workouts, well not bad. You well deserve a goodie bag with power bars.</p>
             <Accordion
               title="Workout"
               content="
-              May 5 Arrival & Dinner</br>
-              <p>May 6 With skis strapped to our backpacks, we follow our guide up to the peak of Nordalsfjäll.</p>
-              <p>May 7 With the off-piste guide, you will explore the area connected by the lift-system.</p>
-              <p>May 8 Try Skitouring Vassitjåkkothe</p>
-              <p>May Breakfast & Departure</p>
+              STRENGTH
+              Air squats – Regular squats but with a light lift of the heels going up 
+              Lunges – Switch lega each lunge
+              Plank – Switch between straight arms and forearms
+              Pushups – Regular or on your knees
+
+              Each excersize: 20 seconds
+              Rest: 10 seconds
+              Rounds: 8
+
+              CARDIO
+              Basically any cardio is useful as long as a major part of your muscles are used and the intensity is high enough to increase your heart rate. To prepare your endurance for ski touring find the nearest ski slope or hill and walk up and down. As a reference, Hammarbybacken in Stockholm is 93,5 altimeters. Start with a few turns and increase each time. With or without skis.
+
+              Each cardio workout: min 1 hour
               " />
             <Link to="/booking">
               <Button title="Book now" />

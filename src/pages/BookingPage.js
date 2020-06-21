@@ -9,6 +9,7 @@ import { Label } from 'lib/Label'
 import { Input } from 'lib/Input'
 import { Select } from 'lib/Select'
 import { Button } from 'lib/Buttons'
+import { Title } from 'lib/Title'
 import { Confirmation } from 'components/Confirmation'
 
 
@@ -63,6 +64,7 @@ export const BookingPage = () => {
     <PageContainer>
       <PageOverlay />
       <BookingBackground>
+        {/*   <Title><h1>Book your next adventure!</h1></Title> */}
         {!registrered && (
           <Form onSubmit={handleSubmit}>
             {!failed && <h2>Welocome to enter your details below</h2>}
@@ -101,10 +103,10 @@ export const BookingPage = () => {
                 value={activepackage}
                 onChange={(event) => setActivePackage(event.target.value)}>
                 <option value="">Select package</option>
-                <option value="Riksgränsen">Backcountry skiing in Riksgränsen</option>
-                <option value="Funäsdalen">Skitouring in Funäsfjällen</option>
-                <option value="Kittelfjäll">Skitouring in Kittelfjäll</option>
-                <option value="Storulvån">Skitouring in Storulvån</option>
+                <option value="Riksgränsen">Off-piste skiing in Riksgränsen, May 5–9 2021</option>
+                <option value="Funäsdalen">Skitouring in Funäsfjällen, March 3–7 2021</option>
+                <option value="Storulvån">Skitouring in Storulvån, April 1–4 2021</option>
+                <option value="Kittelfjäll">Skitouring in Kittelfjäll, April 7–11 2021</option>
               </Select>
             </Label>
             <Label>
