@@ -2,7 +2,10 @@ import React from 'react'
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import { Header } from 'components/Header'
 import { StartPage } from 'pages/StartPage'
-import { PackageDetails } from 'pages/PackageDetails'
+import { RiksgransenDetails } from 'pages/RiksgransenDetails'
+import { FunasfjallenDetails } from 'pages/FunasfjallenDetails'
+import { KittelfjallDetails } from 'pages/KittelfjallDetails'
+import { StorulvanDetails } from 'pages/StorulvanDetails'
 import { BookingPage } from 'pages/BookingPage'
 import { LoginPage } from 'pages/LoginPage'
 import { MyPage } from 'pages/MyPage'
@@ -20,16 +23,16 @@ export const App = () => {
             <StartPage />
           </Route>
           <Route path="/riksgransen">
-            <PackageDetails />
+            <RiksgransenDetails />
           </Route>
           <Route path="/funasfjallen">
-            <PackageDetails />
+            <FunasfjallenDetails />
           </Route>
           <Route path="/storulvan">
-            <PackageDetails />
+            <StorulvanDetails />
           </Route>
           <Route path="/kittelfjall">
-            <PackageDetails />
+            <KittelfjallDetails />
           </Route>
           <Route path="/booking">
             <BookingPage />

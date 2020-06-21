@@ -49,27 +49,13 @@ const PackageSubTitle = styled.h2`
   background: #011627;
   color: white;
 `
-/* const CardOverlay = styled.div`
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(1,23,39,0.3);
-  display: flex;
-  flex-direction: column;
- /*  visibility: hidden;
-
-  &:hover {
-    visibility: visible;
-  } */
 
 const PackageCardButton = styled(Button)`
   position absolute;
   bottom: 24px;
   align-self: center;
 `
-export const PackageCard = ({ title, subtitle, date, background, dumbbell1, dumbbell2, dumbbell3 }) => {
+export const PackageCard = ({ title, subtitle, date, background, dumbbell1, dumbbell2 }) => {
   return (
     <Link to="/riksgransen">
       <CardContainer background={background}>

@@ -7,6 +7,10 @@ import { IconSkis, IconDumbbell } from 'lib/Icons'
 import { Button } from 'lib/Buttons'
 import { Accordion } from 'components/Accordion'
 
+const StorulvanBackground = styled(PageBackground)`
+  background-image: url("skitouring_storulvan.jpeg")
+  `
+
 const DetailsSummary = styled.div`
   display: flex;
   flex-direction: column;
@@ -43,37 +47,35 @@ const PackageSubTitle = styled.h2`
   color: white;
 `
 
-export const PackageDetails = () => {
+export const StorulvanDetails = () => {
   return (
     <PageContainer>
       <PageOverlay />
-      <PageBackground>
+      <StorulvanBackground>
         <DetailsSummary>
           <DetailsDescription>
             <Title>
-              <h1>Riksgränsen Off-Piste</h1>
+              <h1>Storulvån Skitouring</h1>
               <IconSkis src="skis.svg" alt="skis" />
             </Title>
-            <PackageSubTitle>May 5–9 2021</PackageSubTitle>
-            <PackageSubTitle>10 000 SEK</PackageSubTitle>
-            <p>Having the Northern Arctic Ocean as a snow-blower, it is no surprise that Riksgränsen is reputed to provide among the best skiing in Sweden.
-            The area provides plenty of easy accessible off-piste, like Nordalsfjäll where the Scandinavian Big Mountain Championships are held every year.
+            <PackageSubTitle>April 1–4 2021</PackageSubTitle>
+            <PackageSubTitle>6 000 SEK</PackageSubTitle>
+            <p>Storulvån lies at the end of the road deep in the mountain realm, as a safe pair of arms at the foot of the mountain. It attracts a wonderful mixture of skiers, people out to enjoy the good life, and experienced mountaineering experts, all through the year. The silence and wide open spaces beckon from right outside the door.
             </p>
             <Accordion
               title="Program"
               content="
-              May 5 Arrival & Dinner</br>
-              <p>May 6 With skis strapped to our backpacks, we follow our guide up to the peak of Nordalsfjäll.</p>
-              <p>May 7 With the off-piste guide, you will explore the area connected by the lift-system.</p>
-              <p>May 8 Try Skitouring Vassitjåkkothe</p>
-              <p>May Breakfast & Departure</p>
+              April 1 Arrival & Dinner</br>
+              <p>April 2 We head for Getryggen, straight out from the station. This is a perfect tour to start with. 650 altimeter. Level easy.</p>
+              <p>April 3 Sönner-Tväråklumpen. Also a close-by tour. 680 altimeter. Level medium.</p>
+              <p>April 4 Early braekfast and then heading to Storsnasen for an easy tour before departure. 705 altimeter. Level easy.</p>
               " />
             <Accordion
               title="Accommodation"
-              content="We are staying at Hotell Riksgränsen right in the center of it all. Full meal plan included." />
+              content="We are staying at Storulvån Mountain Station, right by the foot of the house-mountain Getryggen. Full meal plan included." />
             <Accordion
               title="Travel"
-              content="Train is recommended. Step aboard the train in Stockholm or Gothenburg at night and wake up amidst the fantastic mountain scenery the next day. Travel arrangement is not included." />
+              content="Train is recommended. Step aboard the train in Stockholm or Gothenburg at night get off at Enafors the next day. Bus connection to Storulvån. Travel arrangement is not included." />
             <Title>
               <h1>Get ready</h1>
               <IconDumbbell src="dumbbell.svg" alt="dumbbell" />
@@ -94,7 +96,7 @@ export const PackageDetails = () => {
             </Link>
           </DetailsDescription>
         </DetailsSummary>
-      </PageBackground>
+      </StorulvanBackground>
     </PageContainer>
   )
 }
