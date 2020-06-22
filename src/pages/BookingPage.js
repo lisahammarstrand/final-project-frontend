@@ -21,7 +21,7 @@ const SubmitButton = styled(Button)`
   bottom: 24px;
   align-self: center;
 `
-const URL = 'https://active-vaycay-backend.herokuapp.com/users'
+const URL = 'http://localhost:8080/users'
 
 export const BookingPage = () => {
   const [name, setName] = useState('')
@@ -103,10 +103,10 @@ export const BookingPage = () => {
                 value={activepackage}
                 onChange={(event) => setActivePackage(event.target.value)}>
                 <option value="">Select package</option>
-                <option value="Riksgränsen">Off-piste skiing in Riksgränsen, May 5–9 2021</option>
-                <option value="Funäsdalen">Skitouring in Funäsfjällen, March 3–7 2021</option>
-                <option value="Storulvån">Skitouring in Storulvån, April 1–4 2021</option>
-                <option value="Kittelfjäll">Skitouring in Kittelfjäll, April 7–11 2021</option>
+                <option value="Off-piste skiing in Riksgränsen, May 5–9 2021">Off-piste skiing in Riksgränsen, May 5–9 2021</option>
+                <option value="Skitouring in Funäsfjällen, March 3–7 2021">Skitouring in Funäsfjällen, March 3–7 2021</option>
+                <option value="Skitouring in Storulvån, April 1–4 2021">Skitouring in Storulvån, April 1–4 2021</option>
+                <option value="Skitouring in Kittelfjäll, April 7–11 2021">Skitouring in Kittelfjäll, April 7–11 2021</option>
               </Select>
             </Label>
             <Label>

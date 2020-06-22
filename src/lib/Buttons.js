@@ -14,9 +14,6 @@ const StyledButton = styled.button`
   margin: 5px;
   cursor: pointer;
   transition: 0.5s;
- /*  position: absolute;
-  bottom: 24px;
-  align-self: center; */
   
   &:hover {
     transform: scale(1.1);

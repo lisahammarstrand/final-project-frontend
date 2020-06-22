@@ -51,10 +51,10 @@ const UpdateButton = styled(OutlinedButton)`
   border: 2px solid #20a4f3;
 `
 export const MyPage = () => {
-  /* const { userId } = useParams() */
-  const URL = 'https://active-vaycay-backend.herokuapp.com/users'
+  /*  const { userId } = useParams() */
+  const URL = 'http://localhost:8080/profile'
   const accessToken = window.localStorage.getItem('accessToken')
-  const [userData, setUserData] = useState({ times: 'Loading ...', name: 'Loading ...', activepackage: 'Loading ...', training: 'Loading ...' })
+  const [userData, setUserData] = useState({ userId: '', times: 'Loading ...', name: 'Loading ...', activepackage: 'Loading ...', training: 'Loading ...' })
 
   useEffect(() => {
     fetch(URL, {
@@ -74,12 +74,20 @@ export const MyPage = () => {
       .catch((err) => console.log('Error:', err))
   }, [accessToken])
 
-  /* if (userData === undefined) {
-    return (
-      <Loader />
-    )
-  } else { */
+  const onUpdate = () => {
+    userData.times += 1
+    setUserData(userData)
+  }
 
+  const handleClick = (userId) => {
+    console.log('test')
+    fetch(`http://localhost:8080/profile/${userId}`, {
+      method: 'PUT',
+      body: '',
+      headers: { 'Content-Type': 'application/json' }
+    }).then(() => onUpdate(userId))
+
+  }
   return (
     <PageContainer>
       <PageOverlay />
@@ -92,14 +100,14 @@ export const MyPage = () => {
             </Title>
             <h2>Welcome {userData.name}</h2>
             <p>We &apos;re excited that you&apos;re going on your next adventure with us! You have booked:</p>
-            <p>{userData.activepackage}</p>
+            <h2>{userData.activepackage}</h2>
             <Title>
               <h1>Get ready</h1>
               <IconDumbbell src="dumbbell.svg" alt="dumbbell" />
             </Title>
             <h2>{userData.training} training – let &apos;s go!</h2>
             <p>We want you to have your best possible adventure, it’s by far more fun when you’re in an ok shape. And – rewards are waiting if you follow through.</p>
-            <p>20 workouts before departure = sunglasses, gloves and a goodie bag with power bars from our partner The Outdoor Company. 10 workouts – not bad = a goodie bag with power bars.</p>
+            <p>20 workouts before departure = sunglasses <span>😎</span>from our partner The Outdoor Company, and a goodie bag with power bars . 10 workouts – not bad = a goodie bag with power bars.</p>
             <Accordion
               title="Workout"
               content="
@@ -121,18 +129,19 @@ export const MyPage = () => {
             <ProgressbarContainer>
               {/*  <ProgressBar precentage={parseInt(user.times/20 * 100)} /> */}
               <ProgressBar precentage={25} />
-              <p>Your current workouts: {userData.times}/20</p>
-              <UpdateButton title="Update" />
-            </ProgressbarContainer>
+              <h2>Your current workouts: {userData.times}/20</h2>
+              <UpdateButton
+                title="Update"
+                onClick={() => handleClick(userData._id)} />
+            </ProgressbarContainer >
             <Link to="/">
               <OutlinedButton
                 title="Log out"
                 onClick={() => window.localStorage.removeItem('accessToken')} />
             </Link>
-          </MyPageDescription>
-        </MyPageSummary>
-      </MyPageBackground>
-    </PageContainer>
+          </MyPageDescription >
+        </MyPageSummary >
+      </MyPageBackground >
+    </PageContainer >
   )
 }
-/* } */

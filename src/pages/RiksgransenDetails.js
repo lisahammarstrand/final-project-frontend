@@ -42,7 +42,9 @@ const PackageSubTitle = styled.h2`
   background: #011627;
   color: white;
 `
-
+const BookNowButton = styled(Button)`
+  margin-top: 24px;
+`
 export const RiksgransenDetails = () => {
   return (
     <PageContainer>
@@ -80,7 +82,7 @@ export const RiksgransenDetails = () => {
             </Title>
             <h2>Get the most out of your adventure</h2>
             <p>We want you to have your best possible adventure, and really encourage you to do the workout included. Our activities are not exceptionally tough, but it’s by far more fun when you’re in an ok shape. And – rewards are waiting if you follow through.</p>
-            <p>A full set of completed workouts = 20 times before departure, will get you sunglasses, gloves and a goodie bag with power bars from our partner The Outdoor Company. If you manage to do 10 workouts, well not bad. You well deserve a goodie bag with power bars.</p>
+            <p>A full set of completed workouts = 20 times before departure, will get you sunglasses <span>😎</span>from our partner The Outdoor Company, and a goodie bag with power bars. If you manage to do 10 workouts – well not bad. You deserve a goodie bag with power bars.</p>
             <Accordion
               title="Workout"
               content="
@@ -100,7 +102,7 @@ export const RiksgransenDetails = () => {
               Each cardio workout: min 1 hour
               " />
             <Link to="/booking">
-              <Button title="Book now" />
+              <BookNowButton title="Book now" />
             </Link>
           </DetailsDescription>
         </DetailsSummary>

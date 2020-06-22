@@ -40,7 +40,13 @@ const AccordionContent = styled.div`
   background-color: #20a4f3;
   margin: 0px;
   padding: 16px;
-  transition: 0.6s ease;
+  animation: showContent 1s forwards;
+  transition: ease-out;
+
+  @keyframes showContent {
+    0% {height: 0px;}
+    100% {height: auto;}
+  }
 
   &:active {
     visibility: visible;

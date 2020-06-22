@@ -22,28 +22,28 @@ export const App = () => {
           <Route path="/" exact>
             <StartPage />
           </Route>
-          <Route path="/riksgransen">
+          <Route path="/riksgransen" exact>
             <RiksgransenDetails />
           </Route>
-          <Route path="/funasfjallen">
+          <Route path="/funasfjallen" exact>
             <FunasfjallenDetails />
           </Route>
-          <Route path="/storulvan">
+          <Route path="/storulvan" exact>
             <StorulvanDetails />
           </Route>
-          <Route path="/kittelfjall">
+          <Route path="/kittelfjall" exact>
             <KittelfjallDetails />
           </Route>
-          <Route path="/booking">
+          <Route path="/booking" exact>
             <BookingPage />
           </Route>
-          <Route path="/confirmation">
+          <Route path="/confirmation" exact>
             <Confirmation />
           </Route>
-          <Route path="/login">
+          <Route path="/login" exact>
             <LoginPage />
           </Route>
-          <Route path="/mypage" >
+          <Route path="/mypage" exact>
             <MyPage />
           </Route>
         </Switch>

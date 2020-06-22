@@ -16,16 +16,19 @@ const FooterLink = styled.a`
   color: #f6f7f8;
   margin-left: 16px;
 `
+const FooterImage = styled.img`
+  width: 20px;
+  height: auto;
+`
 
 export const Footer = () => {
   return (
     <FooterContainer>
-      <p>&copy; LHP 2020</p>
+      <p>LHP 2020</p>
       <div>
-        <FooterLink href="contact">Contact</FooterLink>
-        <FooterLink href="about">About</FooterLink>
-        <FooterLink href="facebook">FB</FooterLink>
-        <FooterLink href="instagram">Insta</FooterLink>
+        <FooterLink href="">Contact</FooterLink>
+        <FooterLink href=""><FooterImage src="facebook-f.svg" /></FooterLink>
+        <FooterLink href=""><FooterImage src="instagram.svg" /></FooterLink>
       </div>
     </FooterContainer>
   )

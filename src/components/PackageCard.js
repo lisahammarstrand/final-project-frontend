@@ -57,19 +57,17 @@ const PackageCardButton = styled(Button)`
 `
 export const PackageCard = ({ title, subtitle, date, background, dumbbell1, dumbbell2 }) => {
   return (
-    <Link to="/riksgransen">
-      <CardContainer background={background}>
-        <CardHeader>
-          <PackageCardTitle>
-            <h1>{title}</h1>
-            {dumbbell1 && <DumbbellIcon src={dumbbell1} alt="" />}
-            {dumbbell2 && <DumbbellIcon src={dumbbell2} alt="" />}
-          </PackageCardTitle>
-        </CardHeader>
-        <PackageSubTitle>{date}</PackageSubTitle>
-        <PackageSubTitle>{subtitle}</PackageSubTitle>
-        <PackageCardButton title="Learn more" />
-      </CardContainer>
-    </Link>
+    <CardContainer background={background}>
+      <CardHeader>
+        <PackageCardTitle>
+          <h1>{title}</h1>
+          {dumbbell1 && <DumbbellIcon src={dumbbell1} alt="" />}
+          {dumbbell2 && <DumbbellIcon src={dumbbell2} alt="" />}
+        </PackageCardTitle>
+      </CardHeader>
+      <PackageSubTitle>{date}</PackageSubTitle>
+      <PackageSubTitle>{subtitle}</PackageSubTitle>
+      <PackageCardButton title="Learn more" />
+    </CardContainer>
   )
 }

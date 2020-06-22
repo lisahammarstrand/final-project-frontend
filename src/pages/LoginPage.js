@@ -26,7 +26,7 @@ export const LoginPage = () => {
   const [password, setPassword] = useState('')
   const [errorMessage, setErrorMessage] = useState('')
   const history = useHistory()
-  const URL = 'https://active-vaycay-backend.herokuapp.com/sessions'
+  const URL = 'http://localhost:8080/sessions'
 
   const handleSignIn = (event) => {
     event.preventDefault()
