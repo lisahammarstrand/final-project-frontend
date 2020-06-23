@@ -1,14 +1,12 @@
 import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
-import { Link, useParams } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { PageContainer, PageBackground, PageOverlay } from 'lib/PageBackground'
 import { Title } from 'lib/Title'
 import { IconSkis, IconDumbbell } from 'lib/Icons'
-/* import { DetailsImage } from 'lib/DetailsImage' */
 import { OutlinedButton } from 'lib/Buttons'
 import { ProgressBar } from 'lib/ProgressBar'
 import { Accordion } from 'components/Accordion'
-import { Loader } from 'lib/Loader'
 
 const MyPageBackground = styled(PageBackground)`
   align-items: center;
@@ -51,7 +49,6 @@ const UpdateButton = styled(OutlinedButton)`
   border: 2px solid #20a4f3;
 `
 export const MyPage = () => {
-  /*  const { userId } = useParams() */
   const URL = 'http://localhost:8080/profile'
   const accessToken = window.localStorage.getItem('accessToken')
   const [userData, setUserData] = useState({ userId: '', times: 'Loading ...', name: 'Loading ...', activepackage: 'Loading ...', training: 'Loading ...' })
