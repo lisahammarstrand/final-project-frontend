@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
 
-
 const AccordionSection = styled.section`
   display: flex;
   flex-direction: column;
@@ -55,7 +54,6 @@ const AccordionContent = styled.div`
 
 export const Accordion = ({ title, content }) => {
   const [active, setActive] = useState(false)
-
 
   return (
     <AccordionSection>

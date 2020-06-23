@@ -120,7 +120,8 @@ export const MyPage = () => {
               <IconDumbbell src="dumbbell.svg" alt="dumbbell" />
             </Title>
             <h2>{userData.training} training – let &apos;s go!</h2>
-            <p>We want you to have your best possible adventure, it’s by far more fun when you’re in an ok shape.
+            <p>We want you to have your best possible adventure, it’s by far
+            more fun when you’re in an ok shape.
             And – rewards are waiting if you follow through.
             </p>
             <p>20 workouts before departure = sunglasses from our partner The Outdoor Company <span role="img" aria-label="emoji">😎</span>, and a goodie bag with power bars . 10 workouts – not bad = a goodie bag with power bars.</p>
@@ -140,7 +141,14 @@ export const MyPage = () => {
                     <li>Rounds: 8</li>
                   </ul>
                   <h2>CARDIO</h2>
-                  <p>Basically any cardio is useful as long as a major part of your muscles are used and the intensity is high enough to increase your heart rate. To prepare your endurance for ski touring find the nearest ski slope or hill and walk up and down. As a reference, Hammarbybacken in Stockholm is 93,5 altimeters. Start with a few turns and increase each time. With or without skis.</p>
+                  <p>Basically any cardio is useful as long as a major part of
+                  your muscles are used and the intensity is high enough to
+                  increase your heart rate. To prepare your endurance for
+                  ski touring find the nearest ski slope or hill
+                  and walk up and down. As a reference, Hammarbybacken in
+                  Stockholm is 93,5 altimeters. Start with a few turns and increase each time.
+                  With or without skis.
+                  </p>
                   <p>Each cardio workout: min 1 hour</p>
                 </>
               } />
@@ -151,7 +159,6 @@ export const MyPage = () => {
               <UpdateButton
                 title="Update"
                 onClick={() => handleClick(userData.userId)} />
-              {/* <button type="button" onClick={() => handleClick(userData.userId)}>UpdateStats</button> */}
             </ProgressbarContainer>
             <Link to="/">
               <LogOutButton
@@ -165,4 +172,3 @@ export const MyPage = () => {
   )
 }
 
-{/*  <ProgressBar precentage={parseInt(user.times/20 * 100)} /> */ }

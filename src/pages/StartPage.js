@@ -117,13 +117,19 @@ export const StartPage = () => {
         </Title>
         <IntroDescription>
           <ReadMoreText onClick={() => setShowText(!showText)}>
-            <p>Great that you’re here! We want to offer you the opportunity to explore some unique skiing in the Swedish mountains. Four destinations, chosen for their reliable snow conditions and excellent skiing in authentic settings. Read more >></p>
+            <p>Great that you’re here! We want to offer you the opportunity
+            to explore some unique skiing in the Swedish mountains.
+            Four destinations, chosen for their reliable snow conditions and excellent skiing in
+            authentic settings. Read more
+            </p>
           </ReadMoreText>
           <MoreText>
             {showText &&
               <div>
-                <p>Our philosophy is pretty simple, the more prepared you are, the more you will enjoy the adventure. That is why we encourage you to get your strength and cardio in shape,
-                starting the very minute you make your reservation. You’ll be rewarded with a small bonus and most important – a more solid adventure!
+                <p>Our philosophy is pretty simple, the more prepared you are, the more you will
+                enjoy the adventure. That is why we encourage you to get your strength and
+                cardio in shape, starting the very minute you make your reservation.
+                You’ll be rewarded with a small bonus and most important – a more solid adventure!
                 </p>
               </div>}
           </MoreText>
@@ -137,7 +143,6 @@ export const StartPage = () => {
             dumbbell1="dumbbell.svg"
             alt="dumbbell"
             dumbbell2="dumbbell.svg"
-            alt="dumbbell2"
             date="May 5–9 2021"
             subtitle="Off-Piste" />
         </Link>
@@ -166,7 +171,6 @@ export const StartPage = () => {
             dumbbell1="dumbbell.svg"
             alt="dumbbell"
             dumbbell2="dumbbell.svg"
-            alt="dumbbell2"
             date="April 7–11 2021"
             subtitle="Skitouring" />
         </Link>

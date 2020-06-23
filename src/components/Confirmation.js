@@ -15,8 +15,6 @@ export const Confirmation = () => {
   const ConfirmationPageBackground = styled(PageBackground)`
     align-items: center;
     `
-
-
   const ConfirmationContainer = styled.section`
     display: flex;
     flex-direction: column;
@@ -34,8 +32,12 @@ export const Confirmation = () => {
           <Title>
             <h1>Thank you for your reservation!</h1>
           </Title>
-          <p>We look forward to exploring the mountains with you! You will receive a confirmation by email shortly.</p>
-          <p>You can also sign in to your account and check your details. This is also where you can check and update your workout stats.</p>
+          <p>We look forward to exploring the mountains with you!
+          You will receive a confirmation by email shortly.
+          </p>
+          <p>You can also sign in to your account and check your details.
+          This is also where you can check and update your workout stats.
+          </p>
           <Link to="/login">
             <Button
               type="button"

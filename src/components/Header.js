@@ -1,5 +1,5 @@
 import React from 'react'
-import { Route, Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 import { OutlinedButton } from 'lib/Buttons'
 
@@ -65,14 +65,11 @@ export const Header = () => {
           <SignInButton title="Sign in" />
         </Link>
       </HeaderContainer>
-      <Route path="/riksgransen">
+      {/* <Route path="/riksgransen">
         <Link className="back-link" to="/">
           ⬅️All adventures
         </Link>
-      </Route>
+      </Route> */}
     </>
   )
 }
-
-
-

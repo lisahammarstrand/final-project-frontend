@@ -1,8 +1,5 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
-import { useState } from 'react'
-import { useHistory } from 'react-router-dom'
-import { Route, Link } from 'react-router-dom'
 import { PageContainer, PageBackground, PageOverlay } from 'lib/PageBackground'
 import { Form } from 'lib/Form'
 import { Label } from 'lib/Label'
@@ -11,7 +8,6 @@ import { Select } from 'lib/Select'
 import { Button } from 'lib/Buttons'
 import { Title } from 'lib/Title'
 import { Confirmation } from 'components/Confirmation'
-
 
 const BookingBackground = styled(PageBackground)`
   align-items: center;
@@ -36,7 +32,6 @@ export const BookingPage = () => {
   const [training, setTraining] = useState('')
   const [registrered, setRegistered] = useState(false)
   const [failed, setFailed] = useState(false)
-  const history = useHistory()
 
   const handleSubmit = (event) => {
     event.preventDefault()
@@ -127,7 +122,6 @@ export const BookingPage = () => {
               onClick={handleSubmit} />
           </Form>
         )}
-        {/*  Confirmation page */}
         {registrered && (
           <Confirmation />
         )}
