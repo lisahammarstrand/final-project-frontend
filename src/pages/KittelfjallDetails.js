@@ -67,11 +67,11 @@ export const KittelfjallDetails = () => {
             <Accordion
               title="Program"
               content={<>
-                <p>April 7 Arrival & Dinner</p>
-                <p>April 8 Today we follow our guide for two classical tours – Sadeln and Norgesvängen – starting from the top of the skilift. Level medium.</p>
-                <p>April 9 Full day tour to Daune, a beautiful and quite mountain offering birch forrest skiing as well as open mountain. Level easy.</p>
-                <p>April 10 Borkafjäll with it's impressive vertical rock wall. Beautiful run down towards Lake Borka. 600 altimeters. Level medium.</p>
-                <p>May Breakfast & Departure</p>
+                <li>April 7 Arrival & Dinner</li>
+                <li>April 8 Today we follow our guide for two classical tours – Sadeln and Norgesvängen – starting from the top of the skilift. Level medium.</li>
+                <li>April 9 Full day tour to Daune, a beautiful and quite mountain offering birch forrest skiing as well as open mountain. Level easy.</li>
+                <li>April 10 Borkafjäll with it's impressive vertical rock wall. Beautiful run down towards Lake Borka. 600 altimeters. Level medium.</li>
+                <li>May Breakfast & Departure</li>
               </>}
             />
             <Accordion
@@ -86,7 +86,7 @@ export const KittelfjallDetails = () => {
             </Title>
             <h2>Get the most out of your adventure</h2>
             <p>We want you to have your best possible adventure, and really encourage you to do the workout included. Our activities are not exceptionally tough, but it’s by far more fun when you’re in an ok shape. And – rewards are waiting if you follow through.</p>
-            <p>A full set of completed workouts = 20 times before departure, will get you sunglasses <span>😎</span>from our partner The Outdoor Company, and a goodie bag with power bars. If you manage to do 10 workouts – well not bad. You deserve a goodie bag with power bars.</p>
+            <p>A full set of completed workouts = 20 times before departure, will get you sunglasses <span role="img" aria-label="emoji">😎</span>from our partner The Outdoor Company, and a goodie bag with power bars. If you manage to do 10 workouts – well not bad. You deserve a goodie bag with power bars.</p>
             <Accordion
               title="Workout"
               content={<> <h2>STRENGTH</h2>

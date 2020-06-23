@@ -56,9 +56,6 @@ const AccordionContent = styled.div`
 export const Accordion = ({ title, content }) => {
   const [active, setActive] = useState(false)
 
-  /*   const toggleAccordion = () => {
-      setActive(active === true ? 'active' : false)
-    } */
 
   return (
     <AccordionSection>

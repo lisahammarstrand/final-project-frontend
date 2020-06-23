@@ -54,6 +54,6 @@ export const TextButton = styled(Button)`
   border: none;
 
   &:hover {
-    background: #ff3366;
+    transform: scale(1.1);
   }
 `;

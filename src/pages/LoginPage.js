@@ -1,8 +1,6 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
-import { useState } from 'react'
-import { useHistory } from 'react-router-dom'
-import { Route, Link } from 'react-router-dom'
+import { Link, useHistory } from 'react-router-dom'
 import { PageContainer, PageBackground, PageOverlay } from 'lib/PageBackground'
 import { Form } from 'lib/Form'
 import { Label } from 'lib/Label'
@@ -26,7 +24,7 @@ export const LoginPage = () => {
   const [password, setPassword] = useState('')
   const [errorMessage, setErrorMessage] = useState('')
   const history = useHistory()
-  const URL = 'http://localhost:8080/sessions'
+  const URL = 'https://active-vaycay-backend.herokuapp.com/sessions'
 
   const handleSignIn = (event) => {
     event.preventDefault()

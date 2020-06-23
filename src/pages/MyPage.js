@@ -34,7 +34,7 @@ const MyPageDescription = styled.div`
 
   @media (min-width: 650px) {
     align-items: flex-start;
-    max-width: 400px;
+    max-width: 90%;
   }
 `
 const ProgressbarContainer = styled.div`
@@ -47,9 +47,15 @@ const ProgressbarContainer = styled.div`
   `
 const UpdateButton = styled(OutlinedButton)`
   border: 2px solid #20a4f3;
+  margin-top: 20px;
+`
+const LogOutButton = styled(OutlinedButton)`
+bottom: 24px;
+margin-top: 32px;
+align-self: center;
 `
 export const MyPage = () => {
-  const URL = 'http://localhost:8080/profile'
+  const URL = 'https://active-vaycay-backend.herokuapp.com/profile'
   const accessToken = window.localStorage.getItem('accessToken')
   const [userData, setUserData] = useState({ userId: '', times: 'Loading ...', name: 'Loading ...', activepackage: 'Loading ...', training: 'Loading ...' })
 
@@ -83,21 +89,17 @@ export const MyPage = () => {
 
   const handleClick = (userId) => {
     console.log('handleClick', userId)
-    fetch(`http://localhost:8080/profile/${userId}/updatestats`, {
+    fetch(`https://active-vaycay-backend.herokuapp.com/profile/${userId}/updatestats`, {
       method: 'PUT',
       body: '',
       headers: { 'Content-Type': 'application/json' }
     })
       .then((response) => response.json())
       .then(() => {
-        console.log('testar')
         onUpdate(userId)
       })
   }
 
-  console.log(userData);
-
-  /*  JSON.stringify(userData) */
   return (
     <PageContainer>
       <PageOverlay />
@@ -144,13 +146,15 @@ export const MyPage = () => {
               } />
 
             <ProgressbarContainer>
-              {/*  <ProgressBar precentage={parseInt(user.times/20 * 100)} /> */}
               <ProgressBar precentage={5 * userData.times} />
               <h2>Your current workouts: {userData.times}/20</h2>
-              <button type="button" onClick={() => handleClick(userData.userId)}>UpdateStats</button>
+              <UpdateButton
+                title="Update"
+                onClick={() => handleClick(userData.userId)} />
+              {/* <button type="button" onClick={() => handleClick(userData.userId)}>UpdateStats</button> */}
             </ProgressbarContainer>
             <Link to="/">
-              <OutlinedButton
+              <LogOutButton
                 title="Log out"
                 onClick={() => window.localStorage.removeItem('accessToken')} />
             </Link>
@@ -160,3 +164,5 @@ export const MyPage = () => {
     </PageContainer>
   )
 }
+
+{/*  <ProgressBar precentage={parseInt(user.times/20 * 100)} /> */ }

@@ -14,48 +14,65 @@ const HeaderContainer = styled.header`
   margin: 0px;
   border-bottom: 1px solid white;
 `
-/* const HeaderTitle = styled.h1`
-  font-size: 20px;
-  color: #f6f7f8;
-` */
+const HamburgerIcon = styled.img`
+  width: 40px;
+  margin-left: 16px;
+  border-radius: 4px;
+
+  @media (min-width: 768px) {
+    display: none;
+  }
+`
 const HeaderImage = styled.img`
   width: 50px;
   margin-left: 16px;
 `
-/* const Navbar = styled.nav`
-  height: 60px;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  padding: 0 16px;
-` */
+const Navbar = styled.nav`
+  display: none;
+
+  @media (min-width: 768px) {
+    height: 60px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    padding: 10px;
+  }
+`
 const SignInButton = styled(OutlinedButton)`
   margin-right: 16px; 
+  margin-bottom: 0px;
 `
+
 export const Header = () => {
   return (
     <>
       <HeaderContainer>
-        <Link to="/">
-          <HeaderImage src="logo_mountains.png" alt="logo_mountains" />
-        </Link>
-        {/* <HeaderTitle>TITLE OF THIS PAGE</HeaderTitle> */}
-        {/*  <Navbar>
-          <a href="">About</a>
-          <a href="">Book now</a>
-        </Navbar> */}
+        <div>
+          <HamburgerIcon src="hamburger_menu.svg" alt="hamburger_menu" />
+          <Link to="/">
+            <HeaderImage src="logo_mountains.png" alt="logo_mountains" />
+          </Link>
+        </div>
+        <Navbar>
+          <Link to="/" exact>
+            <span className="nav">All adventures</span>
+          </Link>
+          <Link to="/booking" exact>
+            <span className="nav">Book now</span>
+          </Link>
+        </Navbar>
         <Link to="/login">
           <SignInButton title="Sign in" />
         </Link>
       </HeaderContainer>
       <Route path="/riksgransen">
         <Link className="back-link" to="/">
-          ⬅️All packages
+          ⬅️All adventures
         </Link>
       </Route>
     </>
   )
 }
 
-{/*  <i className="fas fa-arrow-circle-left"></i> */ }
+
 

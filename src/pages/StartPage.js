@@ -1,11 +1,9 @@
-import React from 'react'
-import { Route, Link } from 'react-router-dom'
+import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 import { Title } from 'lib/Title'
 import { IconSkis, IconDumbbell } from 'lib/Icons'
 import { PackageCard } from 'components/PackageCard'
-import { DumbbellIcon } from 'components/PackageCard'
-
 
 const StartPageWrapper = styled.section`
   position: relative;
@@ -40,6 +38,21 @@ const IntroSection = styled.article`
 const IconDumbbellStart = styled(IconDumbbell)`
   margin: 0px;
 `
+const ReadMoreText = styled.div`
+  margin: 0px 16px;
+  background-color: transparent;
+  color: white;
+  border: none;
+  outline: none;
+  margin: 0px;
+
+  @media (min-width: 650px) {
+    max-width: 620px;
+  }
+  @media (min-width: 1024px) {
+    max-width: 90%;
+  }
+`
 const IntroDescription = styled.section`
   display: flex;
   flex-direction: column;
@@ -48,6 +61,27 @@ const IntroDescription = styled.section`
   max-width: 350px;
   margin: 0px 16px;
 
+  @media (min-width: 650px) {
+    max-width: 620px;
+  }
+  @media (min-width: 1024px) {
+    max-width: 90%;
+  }
+`
+const MoreText = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 350px;
+  margin: 0px;
+  animation: showContent 1s forwards;
+  transition: ease-out;
+
+  @keyframes showContent {
+    0% {height: 0px;}
+    100% {height: auto;}
+  }
   @media (min-width: 650px) {
     max-width: 620px;
   }
@@ -70,6 +104,8 @@ const PackageCardContainer = styled.section`
   }
 `
 export const StartPage = () => {
+  const [showText, setShowText] = useState(false)
+
   return (
     <StartPageWrapper>
       <StartPageOverlay />
@@ -80,8 +116,17 @@ export const StartPage = () => {
           <IconDumbbellStart src="dumbbell.svg" alt="dumbbell" />
         </Title>
         <IntroDescription>
-          <p>Great that you’re here! We want to offer you the opportunity to explore some unique skiing in the Swedish mountains. Four destinations, chosen for their reliable snow conditions and excellent skiing in authentic settings.</p>
-          <p>Our philosophy is pretty simple, the more prepared you are, the more you will enjoy the adventure. That is why we encourage you to get your strength and cardio in shape, starting the very minute you make your reservation. You’ll be rewarded with a small bonus and most important – a more solid adventure! </p>
+          <ReadMoreText onClick={() => setShowText(!showText)}>
+            <p>Great that you’re here! We want to offer you the opportunity to explore some unique skiing in the Swedish mountains. Four destinations, chosen for their reliable snow conditions and excellent skiing in authentic settings. Read more >></p>
+          </ReadMoreText>
+          <MoreText>
+            {showText &&
+              <div>
+                <p>Our philosophy is pretty simple, the more prepared you are, the more you will enjoy the adventure. That is why we encourage you to get your strength and cardio in shape,
+                starting the very minute you make your reservation. You’ll be rewarded with a small bonus and most important – a more solid adventure!
+                </p>
+              </div>}
+          </MoreText>
         </IntroDescription>
       </IntroSection>
       <PackageCardContainer>

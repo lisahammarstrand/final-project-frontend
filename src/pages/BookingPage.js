@@ -21,7 +21,12 @@ const SubmitButton = styled(Button)`
   bottom: 24px;
   align-self: center;
 `
-const URL = 'http://localhost:8080/users'
+const BookingTitle = styled(Title)`
+  position: absolute;
+  z-index: 2;
+  top: 40px;
+`
+const URL = 'https://active-vaycay-backend.herokuapp.com/users'
 
 export const BookingPage = () => {
   const [name, setName] = useState('')
@@ -51,12 +56,6 @@ export const BookingPage = () => {
           return res.json()
         }
       })
-      /*    .then(({ accessToken }) => {
-           if (accessToken) {
-             window.localStorage.setItem('accessToken', accessToken)
-             history.push('/mypage')
-           }
-         }) */
       .catch((err) => console.log('Error:', err))
   }
 
@@ -64,10 +63,10 @@ export const BookingPage = () => {
     <PageContainer>
       <PageOverlay />
       <BookingBackground>
-        {/*   <Title><h1>Book your next adventure!</h1></Title> */}
+        <BookingTitle><h1>Yes, great decision!</h1></BookingTitle>
         {!registrered && (
           <Form onSubmit={handleSubmit}>
-            {!failed && <h2>Welocome to enter your details below</h2>}
+            {!failed && <h2>Glad you are joining us on your next adventure! Welcome to enter your details:</h2>}
             {failed && (
               <p>Oops could not registrer your booking. Please check your inputs and try again.</p>
             )}

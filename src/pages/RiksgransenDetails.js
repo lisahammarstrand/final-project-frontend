@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 import { PageContainer, PageBackground, PageOverlay } from 'lib/PageBackground'
@@ -84,7 +84,7 @@ export const RiksgransenDetails = () => {
             </Title>
             <h2>Get the most out of your adventure</h2>
             <p>We want you to have your best possible adventure, and really encourage you to do the workout included. Our activities are not exceptionally tough, but it’s by far more fun when you’re in an ok shape. And – rewards are waiting if you follow through.</p>
-            <p>A full set of completed workouts = 20 times before departure, will get you sunglasses from our partner The Outdoor Company <span>😎</span>and a goodie bag with power bars. If you manage to do 10 workouts – well not bad. You deserve a goodie bag with power bars.</p>
+            <p>A full set of completed workouts = 20 times before departure, will get you sunglasses from our partner The Outdoor Company <span role="img" aria-label="emoji">😎</span>and a goodie bag with power bars. If you manage to do 10 workouts – well not bad. You deserve a goodie bag with power bars.</p>
             <Accordion
               title="Workout"
               content={<> <h2>STRENGTH</h2>
