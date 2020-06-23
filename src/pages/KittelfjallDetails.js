@@ -66,19 +66,20 @@ export const KittelfjallDetails = () => {
             </p>
             <Accordion
               title="Program"
-              content="
-              April 7 Arrival & Dinner</br>
-              <p>April 8 Today we follow our guide for two classical tours – Sadeln and Norgesvängen – starting from the top of the skilift. Level medium.</p>
-              <p>April 9 Full day tour to Daune, a beautiful and quite mountain offering birch forrest skiing as well as open mountain. Level easy.</p>
-              <p>April 10 Borkafjäll with it's impressive vertical rock wall. Beautiful run down towards Lake Borka. 600 altimeters. Level medium.</p>
-              <p>May Breakfast & Departure</p>
-              " />
+              content={<>
+                <p>April 7 Arrival & Dinner</p>
+                <p>April 8 Today we follow our guide for two classical tours – Sadeln and Norgesvängen – starting from the top of the skilift. Level medium.</p>
+                <p>April 9 Full day tour to Daune, a beautiful and quite mountain offering birch forrest skiing as well as open mountain. Level easy.</p>
+                <p>April 10 Borkafjäll with it's impressive vertical rock wall. Beautiful run down towards Lake Borka. 600 altimeters. Level medium.</p>
+                <p>May Breakfast & Departure</p>
+              </>}
+            />
             <Accordion
               title="Accommodation"
-              content="We are staying at Hotell Kittelfjäll, right by the foot of the mountain. Full meal plan included." />
+              content={<>We are staying at Hotell Kittelfjäll, right by the foot of the mountain. Full meal plan included.</>} />
             <Accordion
               title="Travel"
-              content="Train with bus connection is recommended. Step aboard the train in Stockholm or Gothenburg at night and wake up in Vilhelmina the next day. Bus connection to Kittelfjäll. Travel arrangement is not included." />
+              content={<>Train with bus connection is recommended. Step aboard the train in Stockholm or Gothenburg at night and wake up in Vilhelmina the next day. Bus connection to Kittelfjäll. Travel arrangement is not included.</>} />
             <Title>
               <h1>Get ready</h1>
               <IconDumbbell src="dumbbell.svg" alt="dumbbell" />
@@ -88,22 +89,22 @@ export const KittelfjallDetails = () => {
             <p>A full set of completed workouts = 20 times before departure, will get you sunglasses <span>😎</span>from our partner The Outdoor Company, and a goodie bag with power bars. If you manage to do 10 workouts – well not bad. You deserve a goodie bag with power bars.</p>
             <Accordion
               title="Workout"
-              content="
-              STRENGTH
-              Air squats – Regular squats but with a light lift of the heels going up 
-              Lunges – Switch lega each lunge
-              Plank – Switch between straight arms and forearms
-              Pushups – Regular or on your knees
-
-              Each excersize: 20 seconds
-              Rest: 10 seconds
-              Rounds: 8
-
-              CARDIO
-              Basically any cardio is useful as long as a major part of your muscles are used and the intensity is high enough to increase your heart rate. To prepare your endurance for ski touring find the nearest ski slope or hill and walk up and down. As a reference, Hammarbybacken in Stockholm is 93,5 altimeters. Start with a few turns and increase each time. With or without skis.
-
-              Each cardio workout: min 1 hour
-              " />
+              content={<> <h2>STRENGTH</h2>
+                <ul>
+                  <li>Air squats – Regular squats but with a light lift of the heels going up</li>
+                  <li>Lunges – Switch lega each lunge</li>
+                  <li>Plank – Switch between straight arms and forearms</li>
+                  <li>Pushups – Regular or on your knees</li>
+                </ul>
+                <ul>
+                  <li>Each excersize: 20 seconds</li>
+                  <li>Rest: 10 seconds</li>
+                  <li>Rounds: 8</li>
+                </ul>
+                <h2>CARDIO</h2>
+                <p>Basically any cardio is useful as long as a major part of your muscles are used and the intensity is high enough to increase your heart rate. To prepare your endurance for ski touring find the nearest ski slope or hill and walk up and down. As a reference, Hammarbybacken in Stockholm is 93,5 altimeters. Start with a few turns and increase each time. With or without skis.</p>
+                <p>Each cardio workout: min 1 hour</p>
+              </>} />
             <Link to="/booking">
               <BookNowButton title="Book now" />
             </Link>

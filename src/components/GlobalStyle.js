@@ -19,4 +19,10 @@ h2 {
 p {
   margin: 10px 0px;
 }
+ul {
+  list-type-style: none;
+}
+li {
+  list-type-style: none;
+}
 `

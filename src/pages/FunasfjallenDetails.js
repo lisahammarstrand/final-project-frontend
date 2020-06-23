@@ -67,19 +67,21 @@ export const FunasfjallenDetails = () => {
             </p>
             <Accordion
               title="Program"
-              content="
-              March 3 Arrival & Dinner</br>
-              <p>March 4 We follow our guide up to the peak of Lill-Skarven and Stor-Skarven. Bonus of waffels at Andersborg.</p>
-              <p>March 5 Explore Hamrafjället and Småhamrarna.</p>
-              <p>March 6 Tour to Norway</p>
-              <p>March 7 Breakfast & Departure</p>
-              " />
+              content={<>
+                <ul>
+                  <li>March 3 Arrival & Dinner</li>
+                  <li>March 4 We follow our guide up to the peak of Lill-Skarven and Stor-Skarven. Bonus of waffels at Andersborg.</li>
+                  <li>March 5 Explore Hamrafjället and Småhamrarna.</li>
+                  <li>March 6 Tour to Norway</li>
+                  <li>March 7 Breakfast & Departure</li>
+                </ul></>}
+            />
             <Accordion
               title="Accommodation"
-              content="We are staying at Fjällnäs Skilodge beutiful situated amidst the mountains. Full meal plan included." />
+              content={<>We are staying at Fjällnäs Skilodge beutiful situated amidst the mountains. Full meal plan included.</>} />
             <Accordion
               title="Travel"
-              content="Train with bus connection is recommended. Step aboard the train in Stockholm or Gothenburg at night and wake up in Sveg the next day. Bus connection to Funäsdalen. Travel arrangement is not included." />
+              content={<><p>Train with bus connection is recommended. Step aboard the train in Stockholm or Gothenburg at night and wake up in Sveg the next day. Bus connection to Funäsdalen. Travel arrangement is not included.</p></>} />
             <Title>
               <h1>Get ready</h1>
               <IconDumbbell src="dumbbell.svg" alt="dumbbell" />
@@ -88,22 +90,22 @@ export const FunasfjallenDetails = () => {
             <p>A full set of completed workouts = 20 times before departure, will get you sunglasses <span>😎</span>from our partner The Outdoor Company, and a goodie bag with power bars. If you manage to do 10 workouts – well not bad. You deserve a goodie bag with power bars.</p>
             <Accordion
               title="Workout"
-              content="
-              STRENGTH
-              Air squats – Regular squats but with a light lift of the heels going up 
-              Lunges – Switch lega each lunge
-              Plank – Switch between straight arms and forearms
-              Pushups – Regular or on your knees
-
-              Each excersize: 20 seconds
-              Rest: 10 seconds
-              Rounds: 8
-
-              CARDIO
-              Basically any cardio is useful as long as a major part of your muscles are used and the intensity is high enough to increase your heart rate. To prepare your endurance for ski touring find the nearest ski slope or hill and walk up and down. As a reference, Hammarbybacken in Stockholm is 93,5 altimeters. Start with a few turns and increase each time. With or without skis.
-
-              Each cardio workout: min 1 hour
-              " />
+              content={<> <h2>STRENGTH</h2>
+                <ul>
+                  <li>Air squats – Regular squats but with a light lift of the heels going up</li>
+                  <li>Lunges – Switch lega each lunge</li>
+                  <li>Plank – Switch between straight arms and forearms</li>
+                  <li>Pushups – Regular or on your knees</li>
+                </ul>
+                <ul>
+                  <li>Each excersize: 20 seconds</li>
+                  <li>Rest: 10 seconds</li>
+                  <li>Rounds: 8</li>
+                </ul>
+                <h2>CARDIO</h2>
+                <p>Basically any cardio is useful as long as a major part of your muscles are used and the intensity is high enough to increase your heart rate. To prepare your endurance for ski touring find the nearest ski slope or hill and walk up and down. As a reference, Hammarbybacken in Stockholm is 93,5 altimeters. Start with a few turns and increase each time. With or without skis.</p>
+                <p>Each cardio workout: min 1 hour</p>
+              </>} />
             <Link to="/booking">
               <BookNowButton title="Book now" />
             </Link>

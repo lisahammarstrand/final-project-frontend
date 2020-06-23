@@ -59,6 +59,7 @@ export const MyPage = () => {
       headers: { Authorization: accessToken }
     })
       .then((response) => {
+        console.log(response);
         if (!response.ok) {
           throw new Error('Please log in to access your page', JSON)
         } else {
@@ -66,25 +67,37 @@ export const MyPage = () => {
         }
       })
       .then((data) => {
+        console.log(data);
         setUserData(data)
       })
       .catch((err) => console.log('Error:', err))
   }, [accessToken])
 
-  const onUpdate = () => {
-    userData.times += 1
-    setUserData(userData)
+  const onUpdate = (userId) => {
+    console.log(userId, 'in update')
+    setUserData((prevState) => ({
+      ...prevState,
+      times: prevState.times + 1
+    }));
   }
 
   const handleClick = (userId) => {
-    console.log('test')
-    fetch(`http://localhost:8080/profile/${userId}`, {
+    console.log('handleClick', userId)
+    fetch(`http://localhost:8080/profile/${userId}/updatestats`, {
       method: 'PUT',
       body: '',
       headers: { 'Content-Type': 'application/json' }
-    }).then(() => onUpdate(userId))
-
+    })
+      .then((response) => response.json())
+      .then(() => {
+        console.log('testar')
+        onUpdate(userId)
+      })
   }
+
+  console.log(userData);
+
+  /*  JSON.stringify(userData) */
   return (
     <PageContainer>
       <PageOverlay />
@@ -96,49 +109,54 @@ export const MyPage = () => {
               <IconSkis src="skis.svg" alt="skis" />
             </Title>
             <h2>Welcome {userData.name}</h2>
-            <p>We &apos;re excited that you&apos;re going on your next adventure with us! You have booked:</p>
+            <p>We &apos;re excited that you&apos;re going on your next adventure with us!
+            You have booked:
+            </p>
             <h2>{userData.activepackage}</h2>
             <Title>
               <h1>Get ready</h1>
               <IconDumbbell src="dumbbell.svg" alt="dumbbell" />
             </Title>
             <h2>{userData.training} training – let &apos;s go!</h2>
-            <p>We want you to have your best possible adventure, it’s by far more fun when you’re in an ok shape. And – rewards are waiting if you follow through.</p>
-            <p>20 workouts before departure = sunglasses <span>😎</span>from our partner The Outdoor Company, and a goodie bag with power bars . 10 workouts – not bad = a goodie bag with power bars.</p>
+            <p>We want you to have your best possible adventure, it’s by far more fun when you’re in an ok shape.
+            And – rewards are waiting if you follow through.
+            </p>
+            <p>20 workouts before departure = sunglasses from our partner The Outdoor Company <span role="img" aria-label="emoji">😎</span>, and a goodie bag with power bars . 10 workouts – not bad = a goodie bag with power bars.</p>
             <Accordion
               title="Workout"
-              content="
-              STRENGTH
-              Air squats – Regular squats but with a light lift of the heels going up 
-              Lunges – Switch lega each lunge
-              Plank – Switch between straight arms and forearms
-              Pushups – Regular or on your knees
+              content={
+                <> <h2>STRENGTH</h2>
+                  <ul>
+                    <li>Air squats – Regular squats but with a light lift of the heels going up</li>
+                    <li>Lunges – Switch lega each lunge</li>
+                    <li>Plank – Switch between straight arms and forearms</li>
+                    <li>Pushups – Regular or on your knees</li>
+                  </ul>
+                  <ul>
+                    <li>Each excersize: 20 seconds</li>
+                    <li>Rest: 10 seconds</li>
+                    <li>Rounds: 8</li>
+                  </ul>
+                  <h2>CARDIO</h2>
+                  <p>Basically any cardio is useful as long as a major part of your muscles are used and the intensity is high enough to increase your heart rate. To prepare your endurance for ski touring find the nearest ski slope or hill and walk up and down. As a reference, Hammarbybacken in Stockholm is 93,5 altimeters. Start with a few turns and increase each time. With or without skis.</p>
+                  <p>Each cardio workout: min 1 hour</p>
+                </>
+              } />
 
-              Each excersize: 20 seconds
-              Rest: 10 seconds
-              Rounds: 8
-
-              CARDIO
-              Basically any cardio is useful as long as a major part of your muscles are used and the intensity is high enough to increase your heart rate. To prepare your endurance for ski touring find the nearest ski slope or hill and walk up and down. As a reference, Hammarbybacken in Stockholm is 93,5 altimeters. Start with a few turns and increase each time. With or without skis.
-
-              Each cardio workout: min 1 hour
-              " />
             <ProgressbarContainer>
               {/*  <ProgressBar precentage={parseInt(user.times/20 * 100)} /> */}
-              <ProgressBar precentage={25} />
+              <ProgressBar precentage={5 * userData.times} />
               <h2>Your current workouts: {userData.times}/20</h2>
-              <UpdateButton
-                title="Update"
-                onClick={() => handleClick(userData._id)} />
-            </ProgressbarContainer >
+              <button type="button" onClick={() => handleClick(userData.userId)}>UpdateStats</button>
+            </ProgressbarContainer>
             <Link to="/">
               <OutlinedButton
                 title="Log out"
                 onClick={() => window.localStorage.removeItem('accessToken')} />
             </Link>
-          </MyPageDescription >
-        </MyPageSummary >
-      </MyPageBackground >
-    </PageContainer >
+          </MyPageDescription>
+        </MyPageSummary>
+      </MyPageBackground>
+    </PageContainer>
   )
 }

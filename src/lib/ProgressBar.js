@@ -18,7 +18,7 @@ transition: ease-out;
 
 @keyframes showProgress {
   0% { width: 0%;}
-  100% { width: 50%;}
+  100% { width: ${(props) => props.precentage};}
   /* 100% { width: ${(props) => props.precentage};} */
   }
 `

@@ -50,11 +50,12 @@ export const Header = () => {
       </HeaderContainer>
       <Route path="/riksgransen">
         <Link className="back-link" to="/">
-          {/*  <i className="fas fa-arrow-circle-left"></i> */}
-           ⬅️All packages
+          ⬅️All packages
         </Link>
       </Route>
     </>
   )
 }
+
+{/*  <i className="fas fa-arrow-circle-left"></i> */ }
 
