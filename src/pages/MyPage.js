@@ -16,7 +16,7 @@ const MyPageSummary = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center; 
-  width: 80%;
+  max-width: 620px;
   margin: 24px 0px;
   background: transparent;
   border: none;
@@ -35,7 +35,7 @@ const MyPageDescription = styled.div`
 
   @media (min-width: 650px) {
     align-items: flex-start;
-    max-width: 90%;
+    max-width: 620px;
   }
 `
 const ProgressbarContainer = styled.div`
@@ -47,9 +47,9 @@ const ProgressbarContainer = styled.div`
   padding: 16px;
   `
 const LogOutButton = styled(OutlinedButton)`
-bottom: 24px;
-margin-top: 32px;
-align-self: center;
+  bottom: 24px;
+  margin-top: 32px;
+  align-self: center;
 `
 export const MyPage = () => {
   const URL = 'https://active-vaycay-backend.herokuapp.com/profile'
