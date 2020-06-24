@@ -38,18 +38,6 @@ const IntroSection = styled.article`
 const IconDumbbellStart = styled(IconDumbbell)`
   margin: 0px;
 `
-const ReadMoreText = styled.div`
-  margin: 0px 16px;
-  background-color: transparent;
-  color: white;
-  border: none;
-  outline: none;
-  margin: 0px;
-
-  @media (min-width: 650px) {
-    max-width: 620px;
-  }
-`
 const IntroDescription = styled.section`
   display: flex;
   flex-direction: column;
@@ -58,24 +46,6 @@ const IntroDescription = styled.section`
   max-width: 350px;
   margin: 0px 16px;
 
-  @media (min-width: 650px) {
-    max-width: 620px;
-  }
-`
-const MoreText = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  max-width: 350px;
-  margin: 0px;
-  animation: showContent 1s forwards;
-  transition: ease-out;
-
-  @keyframes showContent {
-    0% {height: 0px;}
-    100% {height: auto;}
-  }
   @media (min-width: 650px) {
     max-width: 620px;
   }
