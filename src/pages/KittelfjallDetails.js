@@ -117,9 +117,9 @@ export const KittelfjallDetails = () => {
             <span role="img" aria-label="emoji"> 😎</span>
             </p>
             <Accordion
-              title="Workout"
+              title="Workout Strength"
               content={
-                <> <h2>STRENGTH</h2>
+                <>
                   <ul>
                     <li>Air squats – Regular squats but with a light lift of the heels going up</li>
                     <li>Lunges – Switch lega each lunge</li>
@@ -131,13 +131,20 @@ export const KittelfjallDetails = () => {
                     <li>Rest: 10 seconds</li>
                     <li>Rounds: 8</li>
                   </ul>
-                  <h2>CARDIO</h2>
-                  <p>Basically any cardio is useful as long as a major part of your muscles
-                  are used and the intensity is high enough to increase your heart rate.
-                  To prepare your endurance for ski touring find the nearest ski slope or
-                  hill and walk up and down.
-                  As a reference, Hammarbybacken in Stockholm is 93,5 altimeters.
-                  Start with a few turns and increase each time. With or without skis.
+                </>
+              } />
+            <Accordion
+              title="Workout Cardio"
+              content={
+                <>
+                  <p>Basically any cardio is useful as long as a
+                  major part of your muscles are used and the
+                  intensity is high enough to increase your
+                  heart rate. To prepare your endurance for
+                  ski touring find the nearest ski slope or
+                  hill and walk up and down. As a reference, Hammarbybacken in Stockholm
+                  is 93,5 altimeters. Start with a few turns and increase each time.
+                  With or without skis.
                   </p>
                   <p>Each cardio workout: min 1 hour</p>
                 </>

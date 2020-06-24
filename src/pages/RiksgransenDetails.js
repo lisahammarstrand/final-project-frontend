@@ -117,10 +117,9 @@ export const RiksgransenDetails = () => {
             <span role="img" aria-label="emoji"> 😎</span>
             </p>
             <Accordion
-              title="Workout"
+              title="Workout Strength"
               content={
                 <>
-                  <h2>STRENGTH</h2>
                   <ul>
                     <li>Air squats – Regular squats but with a light lift of the heels going up</li>
                     <li>Lunges – Switch lega each lunge</li>
@@ -132,7 +131,12 @@ export const RiksgransenDetails = () => {
                     <li>Rest: 10 seconds</li>
                     <li>Rounds: 8</li>
                   </ul>
-                  <h2>CARDIO</h2>
+                </>
+              } />
+            <Accordion
+              title="Workout Cardio"
+              content={
+                <>
                   <p>Basically any cardio is useful as long as a
                   major part of your muscles are used and the
                   intensity is high enough to increase your

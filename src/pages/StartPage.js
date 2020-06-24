@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 import { Title } from 'lib/Title'
@@ -96,7 +96,6 @@ const PackageCardContainer = styled.section`
   }
 `
 export const StartPage = () => {
-  const [showText, setShowText] = useState(false)
 
   return (
     <StartPageWrapper>
@@ -108,23 +107,16 @@ export const StartPage = () => {
           <IconDumbbellStart src="dumbbell.svg" alt="dumbbell" />
         </Title>
         <IntroDescription>
-          <ReadMoreText onClick={() => setShowText(!showText)}>
-            <p>Great that you’re here! We want to offer you the opportunity
-            to explore some unique skiing in the Swedish mountains.
-            Four destinations, chosen for their reliable snow conditions and excellent skiing in
-            authentic settings. Read more
-            </p>
-          </ReadMoreText>
-          <MoreText>
-            {showText &&
-              <div>
-                <p>Our philosophy is pretty simple, the more prepared you are, the more you will
-                enjoy the adventure. That is why we encourage you to get your strength and
-                cardio in shape, starting the very minute you make your reservation.
-                You’ll be rewarded with a small bonus and most important – a more solid adventure!
-                </p>
-              </div>}
-          </MoreText>
+          <p>Great that you’re here! We want to offer you the opportunity
+          to explore some unique skiing in the Swedish mountains.
+          Four destinations, chosen for their reliable snow conditions and excellent skiing in
+          authentic settings.
+          </p>
+          <p>Our philosophy is pretty simple, the more prepared you are, the more you will
+          enjoy the adventure. That is why we encourage you to get your strength and
+          cardio in shape, starting the very minute you make your reservation.
+          You’ll be rewarded with a bonus and most important – a more solid adventure!
+          </p>
         </IntroDescription>
       </IntroSection>
       <PackageCardContainer>

@@ -31,7 +31,7 @@ const ChevronIcon = styled.img`
   height: 20px;
   transition: transform 0.6s ease;
 
-  &:active {
+  &:active, &:hover {
    transform: rotate(90deg);
 }
 `
@@ -44,7 +44,7 @@ const AccordionContent = styled.div`
 
   @keyframes showContent {
     0% {height: 0px;}
-    100% {height: auto;}
+    100% {height: 200px;}
   }
 
   &:active {
