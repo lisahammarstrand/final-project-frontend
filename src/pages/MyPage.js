@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
+import moment from 'moment'
 import { Link } from 'react-router-dom'
 import { PageContainer, PageBackground, PageOverlay } from 'lib/PageBackground'
 import { Title } from 'lib/Title'
@@ -16,7 +17,7 @@ const MyPageSummary = styled.div`
   flex-direction: column;
   align-items: center; 
   width: 80%;
-  padding: 50px;
+  margin: 24px 0px;
   background: transparent;
   border: none;
   border-radius: 6px;
@@ -45,10 +46,6 @@ const ProgressbarContainer = styled.div`
   width: 100%;
   padding: 16px;
   `
-const UpdateButton = styled(OutlinedButton)`
-  border: 2px solid #20a4f3;
-  margin-top: 20px;
-`
 const LogOutButton = styled(OutlinedButton)`
 bottom: 24px;
 margin-top: 32px;
@@ -124,7 +121,10 @@ export const MyPage = () => {
             more fun when you’re in an ok shape.
             And – rewards are waiting if you follow through.
             </p>
-            <p>20 workouts before departure = sunglasses from our partner The Outdoor Company <span role="img" aria-label="emoji">😎</span>, and a goodie bag with power bars . 10 workouts – not bad = a goodie bag with power bars.</p>
+            <p>20 workouts = complimentary dinner at your destination <span role="img" aria-label="emoji">🍽</span></p>
+            <p>10 workouts – not bad = sunglasses from our partner The Outdoor Company <span role="img" aria-label="emoji">😎</span>
+            </p>
+
             <Accordion
               title="Workout"
               content={
@@ -154,11 +154,10 @@ export const MyPage = () => {
               } />
 
             <ProgressbarContainer>
+              <h2>{moment().format('MMM Do YYYY')}</h2>
               <ProgressBar precentage={5 * userData.times} />
               <h2>Your current workouts: {userData.times}/20</h2>
-              <UpdateButton
-                title="Update"
-                onClick={() => handleClick(userData.userId)} />
+              <button className="updateStats" type="button" onClick={() => handleClick(userData.userId)}>Update</button>
             </ProgressbarContainer>
             <Link to="/">
               <LogOutButton

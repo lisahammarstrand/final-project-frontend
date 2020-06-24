@@ -14,12 +14,13 @@ const DetailsSummary = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start; 
-  padding: 50px;
+  align-items: center; 
+  padding: 24px;
   z-index: 1;
 
   @media (min-width: 650px) {
     flex-direction: row;
+    align-items: flex-start; 
   }
 `
 const DetailsDescription = styled.div`
@@ -28,13 +29,9 @@ const DetailsDescription = styled.div`
   flex-direction: column;
   align-items: center;
 
-  @media (min-width: 768px) {
+  @media (min-width: 650px) {
     align-items: flex-start;
-    width: 90%;
-  }
-  @media (min-width: 1024px) {
-    align-items: flex-start;
-    max-width: 800px;
+    max-width: 620px;
   }
 `
 const PackageSubTitle = styled.h2`
@@ -113,7 +110,12 @@ export const KittelfjallDetails = () => {
             exceptionally tough, but it’s by far more fun when you’re in an ok shape.
             And – rewards are waiting if you follow through.
             </p>
-            <p>A full set of completed workouts = 20 times before departure, will get you sunglasses <span role="img" aria-label="emoji">😎</span>from our partner The Outdoor Company, and a goodie bag with power bars. If you manage to do 10 workouts – well not bad. You deserve a goodie bag with power bars.</p>
+            <p>A full set of completed workouts = 20 times before departure,
+            will get you a complimentary dinner at your destination <span role="img" aria-label="emoji"> 🍽</span>
+              If you manage to do 10 workouts – well not bad.
+              You deserve a pair of sunglasses from our partner The Outdoor Company
+            <span role="img" aria-label="emoji"> 😎</span>
+            </p>
             <Accordion
               title="Workout"
               content={

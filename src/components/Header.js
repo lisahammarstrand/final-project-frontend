@@ -19,7 +19,7 @@ const HamburgerIcon = styled.img`
   margin-left: 16px;
   border-radius: 4px;
 
-  @media (min-width: 768px) {
+  @media (min-width: 650px) {
     display: none;
   }
 `
@@ -30,7 +30,7 @@ const HeaderImage = styled.img`
 const Navbar = styled.nav`
   display: none;
 
-  @media (min-width: 768px) {
+  @media (min-width: 650px) {
     height: 60px;
     display: flex;
     align-items: flex-end;

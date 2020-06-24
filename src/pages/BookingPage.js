@@ -13,14 +13,14 @@ const BookingBackground = styled(PageBackground)`
   align-items: center;
 `
 const SubmitButton = styled(Button)`
-  position absolute;
   bottom: 24px;
   align-self: center;
 `
 const BookingTitle = styled(Title)`
-  position: absolute;
+  position: relative;
+  margin-top: 0;
+  align-self: center;
   z-index: 2;
-  top: 40px;
 `
 const URL = 'https://active-vaycay-backend.herokuapp.com/users'
 
@@ -58,10 +58,15 @@ export const BookingPage = () => {
     <PageContainer>
       <PageOverlay />
       <BookingBackground>
-        <BookingTitle><h1>Yes, great decision!</h1></BookingTitle>
         {!registrered && (
           <Form onSubmit={handleSubmit}>
-            {!failed && <h2>Glad you are joining us on your next adventure! Welcome to enter your details:</h2>}
+            {!failed &&
+              <>
+                <BookingTitle><h1>Yes, great decision!</h1></BookingTitle>
+                <h2>Glad you are joining us on your next adventure!
+                Welcome to enter your details:
+                </h2>
+              </>}
             {failed && (
               <p>Oops could not registrer your booking. Please check your inputs and try again.</p>
             )}

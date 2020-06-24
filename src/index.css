@@ -41,3 +41,24 @@ main {
   margin-right: 12px;
 }
 
+.updateStats {
+  display: block;
+  height: 45px;
+  width: auto;
+  font-size: 16px;
+  background: transparent;
+  color: white;
+  border: 2px solid #20a4f3;
+  border-radius: 6px;
+  padding: 10px 20px;
+  margin: 16px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+  
+.updateStats:hover {
+    transform: scale(1.1);
+}
+  
+
+

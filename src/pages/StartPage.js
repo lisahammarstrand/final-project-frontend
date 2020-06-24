@@ -49,9 +49,6 @@ const ReadMoreText = styled.div`
   @media (min-width: 650px) {
     max-width: 620px;
   }
-  @media (min-width: 1024px) {
-    max-width: 90%;
-  }
 `
 const IntroDescription = styled.section`
   display: flex;
@@ -63,9 +60,6 @@ const IntroDescription = styled.section`
 
   @media (min-width: 650px) {
     max-width: 620px;
-  }
-  @media (min-width: 1024px) {
-    max-width: 90%;
   }
 `
 const MoreText = styled.div`
@@ -85,9 +79,6 @@ const MoreText = styled.div`
   @media (min-width: 650px) {
     max-width: 620px;
   }
-  @media (min-width: 1024px) {
-    max-width: 90%;
-  }
 `
 const PackageCardContainer = styled.section`
   display: flex;
@@ -101,6 +92,7 @@ const PackageCardContainer = styled.section`
   @media (min-width: 650px) {
     flex-direction: row;
     flex-wrap: wrap;
+    max-width: 800px;
   }
 `
 export const StartPage = () => {
