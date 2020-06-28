@@ -23,6 +23,10 @@ export const Confirmation = () => {
     width: 80%;
     margin-top: 50px;
     z-index: 1;
+
+    @media (min-width: 650px) {
+      max-width: 620px;
+    }
   `
   return (
     <PageContainer>

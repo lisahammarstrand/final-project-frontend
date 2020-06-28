@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import { PageContainer, PageBackground, PageOverlay } from 'lib/PageBackground'
 import { Title } from 'lib/Title'
 import { IconSkis, IconDumbbell } from 'lib/Icons'
-import { Button } from 'lib/Buttons'
+import { Button, TextButton } from 'lib/Buttons'
 import { Accordion } from 'components/Accordion'
 
 const StorulvanBackground = styled(PageBackground)`
@@ -45,6 +45,9 @@ const PackageSubTitle = styled.h2`
 `
 const BookNowButton = styled(Button)`
   margin-top: 24px;
+`
+const BackButton = styled(TextButton)`
+  padding: 10px 0px;
 `
 export const StorulvanDetails = () => {
   return (
@@ -156,6 +159,9 @@ export const StorulvanDetails = () => {
               } />
             <Link to="/booking">
               <BookNowButton title="Book now" />
+            </Link>
+            <Link to="/">
+              <BackButton title={<><span role="img" aria-label="emoji"> ⬅️</span>All adventures</>} />
             </Link>
           </DetailsDescription>
         </DetailsSummary>

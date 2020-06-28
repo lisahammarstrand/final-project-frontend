@@ -12,6 +12,7 @@ import { MyPage } from 'pages/MyPage'
 import { Footer } from 'components/Footer'
 import { GlobalStyle } from 'components/GlobalStyle'
 import { Confirmation } from 'components/Confirmation'
+import { About } from 'pages/About'
 
 export const App = () => {
   return (
@@ -45,6 +46,9 @@ export const App = () => {
           </Route>
           <Route path="/mypage" exact>
             <MyPage />
+          </Route>
+          <Route path="/about" exact>
+            <About />
           </Route>
         </Switch>
       </main>

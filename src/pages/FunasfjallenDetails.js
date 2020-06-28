@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import { PageContainer, PageBackground, PageOverlay } from 'lib/PageBackground'
 import { Title } from 'lib/Title'
 import { IconSkis, IconDumbbell } from 'lib/Icons'
-import { Button } from 'lib/Buttons'
+import { Button, TextButton } from 'lib/Buttons'
 import { Accordion } from 'components/Accordion'
 
 const FunasfjallenBackground = styled(PageBackground)`
@@ -45,6 +45,9 @@ const PackageSubTitle = styled.h2`
 `
 const BookNowButton = styled(Button)`
   margin-top: 24px;
+`
+const BackButton = styled(TextButton)`
+  padding: 10px 0px;
 `
 export const FunasfjallenDetails = () => {
   return (
@@ -107,10 +110,10 @@ export const FunasfjallenDetails = () => {
             in an ok shape. And – rewards are waiting if you follow through.
             </p>
             <p>A full set of completed workouts = 20 times before departure,
-            will get you a complimentary dinner at your destination <span role="img" aria-label="emoji"> 🍽</span>
+            will get you a complimentary dinner at your destination <span role="img" aria-label="dinner-emoji"> 🍽</span>
               If you manage to do 10 workouts – well not bad.
               You deserve a pair of sunglasses from our partner The Outdoor Company
-            <span role="img" aria-label="emoji"> 😎</span>
+            <span role="img" aria-label="sunglass-emoji"> 😎</span>
             </p>
             <Accordion
               title="Workout Strength"
@@ -147,6 +150,9 @@ export const FunasfjallenDetails = () => {
               } />
             <Link to="/booking">
               <BookNowButton title="Book now" />
+            </Link>
+            <Link to="/">
+              <BackButton title={<><span role="img" aria-label="emoji"> ⬅️</span>All adventures</>} />
             </Link>
           </DetailsDescription>
         </DetailsSummary>

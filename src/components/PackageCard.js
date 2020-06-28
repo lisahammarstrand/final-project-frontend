@@ -16,10 +16,6 @@ const CardContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-
- /*  &:hover {
-    visibility: visible;
-  } */
 `
 const CardHeader = styled.div`
   display: flex;

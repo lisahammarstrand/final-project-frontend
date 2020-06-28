@@ -60,16 +60,14 @@ export const Header = () => {
           <Link to="/booking" exact>
             <span className="nav">Book now</span>
           </Link>
+          <Link to="/about" exact>
+            <span className="nav">About</span>
+          </Link>
         </Navbar>
         <Link to="/login">
           <SignInButton title="Sign in" />
         </Link>
       </HeaderContainer>
-      {/* <Route path="/riksgransen">
-        <Link className="back-link" to="/">
-          ⬅️All adventures
-        </Link>
-      </Route> */}
     </>
   )
 }
