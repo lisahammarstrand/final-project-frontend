@@ -85,7 +85,7 @@ export const StartPage = () => {
           <p>Our philosophy is pretty simple, the more prepared you are, the more you will
           enjoy the adventure. That is why we encourage you to get your strength and
           cardio in shape, starting the very minute you make your reservation.
-          You’ll be rewarded with a bonus and most important – a more solid adventure!
+          You’ll be rewarded with a bonus, and most important – a more solid adventure!
           </p>
         </IntroDescription>
       </IntroSection>

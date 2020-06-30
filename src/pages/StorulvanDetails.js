@@ -11,6 +11,9 @@ const StorulvanBackground = styled(PageBackground)`
   background-image: url("skitouring_storulvan.jpeg")
   `
 
+const StorulvanPageOverlay = styled(PageOverlay)`
+  background: rgba(1,23,39,0.5);
+`
 const DetailsSummary = styled.div`
   display: flex;
   flex-direction: column;
@@ -52,7 +55,7 @@ const BackButton = styled(TextButton)`
 export const StorulvanDetails = () => {
   return (
     <PageContainer>
-      <PageOverlay />
+      <StorulvanPageOverlay />
       <StorulvanBackground>
         <DetailsSummary>
           <DetailsDescription>
@@ -61,7 +64,7 @@ export const StorulvanDetails = () => {
               <IconSkis src="skis.svg" alt="skis" />
             </Title>
             <PackageSubTitle>April 1–4 2021</PackageSubTitle>
-            <PackageSubTitle>6 000 SEK</PackageSubTitle>
+            <PackageSubTitle>5 000 SEK</PackageSubTitle>
             <p>Storulvån lies at the end of the road deep in the mountain realm,
             as a safe pair of arms at the foot of the mountain.
             It attracts a wonderful mixture of skiers, people out to enjoy the good life,
@@ -73,7 +76,7 @@ export const StorulvanDetails = () => {
               content={
                 <>
                   <ul>
-                    <li>April 1 Arrival & Dinner
+                    <li>April 1 Arrival & Welcome
                     </li>
                     <li>April 2 We head for Getryggen, straight out from the station.
                     This is a perfect tour to start with. 650 altimeter. Level easy.
@@ -81,7 +84,7 @@ export const StorulvanDetails = () => {
                     <li>April 3 Sönner-Tväråklumpen.
                     Also a close-by tour. 680 altimeter. Level medium.
                     </li>
-                    <li>April 4 Early braekfast and then heading to Storsnasen
+                    <li>April 4 Early breakfast and then heading to Storsnasen
                     for an easy tour before departure. 705 altimeter. Level easy.
                     </li>
                   </ul>
@@ -92,7 +95,7 @@ export const StorulvanDetails = () => {
               content={
                 <>
                   <p>We are staying at Storulvån Mountain Station,
-                  right by the foot of the house-mountain Getryggen. Full meal plan included.
+                  right by the foot of the house-mountain Getryggen. Breakfast included.
                   </p>
                 </>
               } />
@@ -119,10 +122,11 @@ export const StorulvanDetails = () => {
             if you follow through.
             </p>
             <p>A full set of completed workouts = 20 times before departure,
-            will get you a complimentary dinner at your destination <span role="img" aria-label="emoji"> 🍽</span>
+            will get you a complimentary dinner at your destination
+            <span className="bonus-emoji" role="img" aria-label="emoji"> 🍽 </span>
               If you manage to do 10 workouts – well not bad.
               You deserve a pair of sunglasses from our partner The Outdoor Company
-            <span role="img" aria-label="emoji"> 😎</span>
+            <span className="bonus-emoji" role="img" aria-label="emoji"> 😎</span>
             </p>
             <Accordion
               title="Workout Strength"
@@ -130,12 +134,12 @@ export const StorulvanDetails = () => {
                 <>
                   <ul>
                     <li>Air squats – Regular squats but with a light lift of the heels going up</li>
-                    <li>Lunges – Switch lega each lunge</li>
+                    <li>Lunges – Switch leg each lunge</li>
                     <li>Plank – Switch between straight arms and forearms</li>
                     <li>Pushups – Regular or on your knees</li>
                   </ul>
                   <ul>
-                    <li>Each excersize: 20 seconds</li>
+                    <li>Each exercise: 20 seconds</li>
                     <li>Rest: 10 seconds</li>
                     <li>Rounds: 8</li>
                   </ul>
@@ -152,7 +156,7 @@ export const StorulvanDetails = () => {
                   ski touring find the nearest ski slope or
                   hill and walk up and down. As a reference, Hammarbybacken in Stockholm
                   is 93,5 altimeters. Start with a few turns and increase each time.
-                  With or without skis.
+                  With or without skis and poles.
                   </p>
                   <p>Each cardio workout: min 1 hour</p>
                 </>

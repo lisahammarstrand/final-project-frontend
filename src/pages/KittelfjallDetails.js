@@ -61,7 +61,7 @@ export const KittelfjallDetails = () => {
               <IconSkis src="skis.svg" alt="skis" />
             </Title>
             <PackageSubTitle>April 7–11 2021</PackageSubTitle>
-            <PackageSubTitle>9 000 SEK</PackageSubTitle>
+            <PackageSubTitle>8 000 SEK</PackageSubTitle>
             <p>Situated far east in the Lappland mountains, Kittelfjäll gets enormous
             dumps of dry inland snow.
             This mythical area has probably the most powder days in Scandinavia,
@@ -71,7 +71,7 @@ export const KittelfjallDetails = () => {
               title="Program"
               content={
                 <>
-                  <li>April 7 Arrival & Dinner</li>
+                  <li>April 7 Arrival & Welcome</li>
                   <li>April 8 Today we follow our guide for two classical tours –
                   Sadeln and Norgesvängen – starting from the top of the skilift. Level medium.
                   </li>
@@ -81,7 +81,7 @@ export const KittelfjallDetails = () => {
                   <li>April 10 Borkafjäll with it&apos;s impressive vertical rock wall.
                   Beautiful run down towards Lake Borka. 600 altimeters. Level medium.
                   </li>
-                  <li>May Breakfast & Departure</li>
+                  <li>April 11 Breakfast & Departure</li>
                 </>
               } />
             <Accordion
@@ -89,7 +89,7 @@ export const KittelfjallDetails = () => {
               content={
                 <>
                   <p>We are staying at Hotell Kittelfjäll, right by the foot of the mountain.
-                  Full meal plan included.
+                  Breakfast included.
                   </p>
                 </>
               } />
@@ -114,10 +114,11 @@ export const KittelfjallDetails = () => {
             And – rewards are waiting if you follow through.
             </p>
             <p>A full set of completed workouts = 20 times before departure,
-            will get you a complimentary dinner at your destination <span role="img" aria-label="emoji"> 🍽</span>
+            will get you a complimentary dinner at your destination
+            <span className="bonus-emoji" role="img" aria-label="emoji"> 🍽 </span>
               If you manage to do 10 workouts – well not bad.
               You deserve a pair of sunglasses from our partner The Outdoor Company
-            <span role="img" aria-label="emoji"> 😎</span>
+            <span className="bonus-emoji" role="img" aria-label="emoji"> 😎</span>
             </p>
             <Accordion
               title="Workout Strength"
@@ -125,12 +126,12 @@ export const KittelfjallDetails = () => {
                 <>
                   <ul>
                     <li>Air squats – Regular squats but with a light lift of the heels going up</li>
-                    <li>Lunges – Switch lega each lunge</li>
+                    <li>Lunges – Switch leg each lunge</li>
                     <li>Plank – Switch between straight arms and forearms</li>
                     <li>Pushups – Regular or on your knees</li>
                   </ul>
                   <ul>
-                    <li>Each excersize: 20 seconds</li>
+                    <li>Each exercise: 20 seconds</li>
                     <li>Rest: 10 seconds</li>
                     <li>Rounds: 8</li>
                   </ul>
@@ -147,7 +148,7 @@ export const KittelfjallDetails = () => {
                   ski touring find the nearest ski slope or
                   hill and walk up and down. As a reference, Hammarbybacken in Stockholm
                   is 93,5 altimeters. Start with a few turns and increase each time.
-                  With or without skis.
+                  With or without skis and poles.
                   </p>
                   <p>Each cardio workout: min 1 hour</p>
                 </>

@@ -58,7 +58,7 @@ export const RiksgransenDetails = () => {
               <IconSkis src="skis.svg" alt="skis" />
             </Title>
             <PackageSubTitle>May 5–9 2021</PackageSubTitle>
-            <PackageSubTitle>10 000 SEK</PackageSubTitle>
+            <PackageSubTitle>9 000 SEK</PackageSubTitle>
             <p>Having the Northern Arctic Ocean as a snow-blower,
             it is no surprise that Riksgränsen is reputed to provide among
             the best skiing in Sweden.
@@ -70,14 +70,14 @@ export const RiksgransenDetails = () => {
               content={
                 <>
                   <ul>
-                    <li> May 5 Arrival & Dinner</li>
+                    <li> May 5 Arrival & Welcome</li>
                     <li>May 6 With skis strapped to our backpacks,
                     we follow our guide up to the peak of Nordalsfjäll.
                     </li>
-                    <li>May 7 With the off-piste guide, you will explore the area
+                    <li>May 7 With your off-piste guide, you will explore the area
                     connected by the lift-system.
                     </li>
-                    <li>May 8 Try Skitouring Vassitjåkkothe
+                    <li>May 8 Try Skitouring Vassitjåkko, a classic must for any enthusiast.
                     </li>
                     <li>May 9 Breakfast & Departure
                     </li>
@@ -90,7 +90,7 @@ export const RiksgransenDetails = () => {
                 <>
                   <p>We are staying at Hotell Riksgränsen
                   right in the center of it all.
-                  Full meal plan included.
+                  Breakfast included.
                   </p>
                 </>
               } />
@@ -115,10 +115,11 @@ export const RiksgransenDetails = () => {
             fun when you’re in an ok shape. And – rewards are waiting if you follow through.
             </p>
             <p>A full set of completed workouts = 20 times before departure,
-            will get you a complimentary dinner at your destination <span role="img" aria-label="emoji"> 🍽</span>
+            will get you a complimentary dinner at your destination
+            <span className="bonus-emoji" role="img" aria-label="emoji"> 🍽 </span>
               If you manage to do 10 workouts – well not bad.
               You deserve a pair of sunglasses from our partner The Outdoor Company
-            <span role="img" aria-label="emoji"> 😎</span>
+            <span className="bonus-emoji" role="img" aria-label="emoji"> 😎</span>
             </p>
             <Accordion
               title="Workout Strength"
@@ -126,12 +127,12 @@ export const RiksgransenDetails = () => {
                 <>
                   <ul>
                     <li>Air squats – Regular squats but with a light lift of the heels going up</li>
-                    <li>Lunges – Switch lega each lunge</li>
+                    <li>Lunges – Switch leg each lunge</li>
                     <li>Plank – Switch between straight arms and forearms</li>
                     <li>Pushups – Regular or on your knees</li>
                   </ul>
                   <ul>
-                    <li>Each excersize: 20 seconds</li>
+                    <li>Each exercise: 20 seconds</li>
                     <li>Rest: 10 seconds</li>
                     <li>Rounds: 8</li>
                   </ul>
@@ -148,7 +149,7 @@ export const RiksgransenDetails = () => {
                   ski touring find the nearest ski slope or
                   hill and walk up and down. As a reference, Hammarbybacken in Stockholm
                   is 93,5 altimeters. Start with a few turns and increase each time.
-                  With or without skis.
+                  With or without skis and poles.
                   </p>
                   <p>Each cardio workout: min 1 hour</p>
                 </>

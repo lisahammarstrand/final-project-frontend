@@ -122,7 +122,7 @@ export const BookingPage = () => {
               </Select>
             </Label>
             <SubmitButton
-              title="Submit"
+              title="Book"
               type="submit"
               onClick={handleSubmit} />
           </Form>

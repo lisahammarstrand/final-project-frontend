@@ -61,23 +61,23 @@ export const FunasfjallenDetails = () => {
               <IconSkis src="skis.svg" alt="skis" />
             </Title>
             <PackageSubTitle>March 3–7 2021</PackageSubTitle>
-            <PackageSubTitle>7 000 SEK</PackageSubTitle>
-            <p>Having the Northern Arctic Ocean as a snow-blower,
-            it is no surprise that Riksgränsen is reputed to provide among the best skiing in
-            Sweden. The area provides plenty of easy accessible off-piste,
-            like Nordalsfjäll where the Scandinavian Big Mountain Championships are held every year.
+            <PackageSubTitle>6 000 SEK</PackageSubTitle>
+            <p>To make your way up to the mountain tops with the help of ascension skins
+            under your skis and your own strength and energy is an experience that will
+            leave you with lifelong memories. The Funäsfjällen area is the perfect arena
+            for memorable ski touring adventures.
             </p>
             <Accordion
               title="Program"
               content={
                 <>
                   <ul>
-                    <li>March 3 Arrival & Dinner</li>
+                    <li>March 3 Arrival & Welcome</li>
                     <li>March 4 We follow our guide up to the peak of Lill-Skarven and Stor-Skarven.
                     Bonus of waffels at Andersborg.
                     </li>
                     <li>March 5 Explore Hamrafjället and Småhamrarna.</li>
-                    <li>March 6 Tour to Norway</li>
+                    <li>March 6 Tour to Norway and the famous Storviglen</li>
                     <li>March 7 Breakfast & Departure</li>
                   </ul>
                 </>
@@ -86,7 +86,7 @@ export const FunasfjallenDetails = () => {
               title="Accommodation"
               content={
                 <>We are staying at Fjällnäs Skilodge beutiful situated amidst the mountains.
-                Full meal plan included.
+                Breakfast included.
                 </>
               } />
             <Accordion
@@ -110,10 +110,11 @@ export const FunasfjallenDetails = () => {
             in an ok shape. And – rewards are waiting if you follow through.
             </p>
             <p>A full set of completed workouts = 20 times before departure,
-            will get you a complimentary dinner at your destination <span role="img" aria-label="dinner-emoji"> 🍽</span>
+            will get you a complimentary dinner at your destination
+            <span className="bonus-emoji" role="img" aria-label="dinner-emoji"> 🍽 </span>
               If you manage to do 10 workouts – well not bad.
               You deserve a pair of sunglasses from our partner The Outdoor Company
-            <span role="img" aria-label="sunglass-emoji"> 😎</span>
+            <span className="bonus-emoji" role="img" aria-label="sunglass-emoji"> 😎</span>
             </p>
             <Accordion
               title="Workout Strength"
@@ -121,12 +122,12 @@ export const FunasfjallenDetails = () => {
                 <>
                   <ul>
                     <li>Air squats – Regular squats but with a light lift of the heels going up</li>
-                    <li>Lunges – Switch lega each lunge</li>
+                    <li>Lunges – Switch leg each lunge</li>
                     <li>Plank – Switch between straight arms and forearms</li>
                     <li>Pushups – Regular or on your knees</li>
                   </ul>
                   <ul>
-                    <li>Each excersize: 20 seconds</li>
+                    <li>Each exersice: 20 seconds</li>
                     <li>Rest: 10 seconds</li>
                     <li>Rounds: 8</li>
                   </ul>
@@ -143,7 +144,7 @@ export const FunasfjallenDetails = () => {
                   ski touring find the nearest ski slope or
                   hill and walk up and down. As a reference, Hammarbybacken in Stockholm
                   is 93,5 altimeters. Start with a few turns and increase each time.
-                  With or without skis.
+                  With or without skis and poles.
                   </p>
                   <p>Each cardio workout: min 1 hour</p>
                 </>

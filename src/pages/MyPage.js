@@ -119,10 +119,12 @@ export const MyPage = () => {
             <h2>{userData.training} training – let &apos;s go!</h2>
             <p>We want you to have your best possible adventure, it’s by far
             more fun when you’re in an ok shape.
-            And – rewards are waiting if you follow through.
+            And – rewards are waiting if you follow through. Log each time you complete your workout.
+            Strenght + Cardio = 1 workout.
             </p>
-            <p>20 workouts = complimentary dinner at your destination <span role="img" aria-label="emoji">🍽</span></p>
-            <p>10 workouts – not bad = sunglasses from our partner The Outdoor Company <span role="img" aria-label="emoji">😎</span>
+            <p>20 workouts = complimentary dinner at your destination
+              <span className="bonus-emoji" role="img" aria-label="emoji"> 🍽</span></p>
+            <p>10 workouts – not bad = sunglasses from our partner The Outdoor Company <span className="bonus-emoji" role="img" aria-label="emoji">😎</span>
             </p>
 
             <Accordion
@@ -131,12 +133,12 @@ export const MyPage = () => {
                 <>
                   <ul>
                     <li>Air squats – Regular squats but with a light lift of the heels going up</li>
-                    <li>Lunges – Switch lega each lunge</li>
+                    <li>Lunges – Switch leg each lunge</li>
                     <li>Plank – Switch between straight arms and forearms</li>
                     <li>Pushups – Regular or on your knees</li>
                   </ul>
                   <ul>
-                    <li>Each excersize: 20 seconds</li>
+                    <li>Each exercise: 20 seconds</li>
                     <li>Rest: 10 seconds</li>
                     <li>Rounds: 8</li>
                   </ul>
@@ -153,7 +155,7 @@ export const MyPage = () => {
                   ski touring find the nearest ski slope or
                   hill and walk up and down. As a reference, Hammarbybacken in Stockholm
                   is 93,5 altimeters. Start with a few turns and increase each time.
-                  With or without skis.
+                  With or without skis and poles.
                   </p>
                   <p>Each cardio workout: min 1 hour</p>
                 </>
