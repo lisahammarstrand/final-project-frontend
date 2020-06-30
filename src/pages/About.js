@@ -1,8 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Link, useHistory } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { PageContainer, PageBackground, PageOverlay } from 'lib/PageBackground'
 import { Title } from 'lib/Title'
+import { TextButton } from 'lib/Buttons'
 
 const AboutSection = styled.article`
   display: flex;
@@ -27,6 +28,9 @@ const AboutDescription = styled.section`
     align-items: flex-start;
     text-align: left;
   }
+`
+const BackButton = styled(TextButton)`
+  padding: 10px 0px;
 `
 export const About = () => {
   return (
@@ -54,11 +58,12 @@ export const About = () => {
             optimism in these unpredictable times. (All content is just placeholder material.)
             </p>
             <h2>Continous development</h2>
-            <p>My intention with this project was to have a more developed  ”My page” where you could log
-            your workout statistics and get alerts when you are close to reaching bonus
-            goals. The time frame set limits and this is something I will continue to
-            work on. There are plenty of opportunities for this section, and what
-              I created now is just an example to get the imagination going.</p>
+            <p>My intention with this project was to have a more developed ”My page” where
+            you could log your workout statistics and get alerts when you are close to
+            reaching bonus goals. The time frame set limits and this is something I will
+            continue to work on. There are plenty of opportunities for this section, and what
+            I created now is just an example to get the imagination going.
+            </p>
             <h2>Tech</h2>
             <p>To build the frontend I used <b>React, React Router, React Hooks </b>and
               <b> Styled Components.
@@ -66,14 +71,20 @@ export const About = () => {
             how to structure and create reusable components. This is something I will
               explore further, more pages and components are suitable to be reusable.
             </p>
-            <p>Tech in the backend – here I used <b>Expressjs, Node.js, MongoDB, Mongoose</b> to create an
+            <p>Tech in the backend – here I used
+              <b>Expressjs, Node.js, MongoDB, Mongoose
+              </b> to create an
             API with RESTful endpoints, and storing and fetching data. Crypto and
             bcrypt is implemented for secure password handling.
             </p>
-            <p>For deployment I used <b>Netlify</b> for the frontend and <b>Heroku</b> for the backend.
+            <p>For deployment I used <b>Netlify</b> for the frontend and
+              <b>Heroku</b> for the backend.
 
             </p>
           </AboutDescription>
+          <Link to="/">
+            <BackButton title={<><span role="img" aria-label="emoji"> ⬅️</span>All adventures</>} />
+          </Link>
         </AboutSection>
       </PageBackground>
     </PageContainer>

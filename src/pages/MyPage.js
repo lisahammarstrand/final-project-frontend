@@ -77,7 +77,7 @@ export const MyPage = () => {
   }, [accessToken])
 
   const onUpdate = (userId) => {
-    console.log(userId, 'in update')
+    console.log(userId, 'on update')
     setUserData((prevState) => ({
       ...prevState,
       times: prevState.times + 1
@@ -119,12 +119,15 @@ export const MyPage = () => {
             <h2>{userData.training} training – let &apos;s go!</h2>
             <p>We want you to have your best possible adventure, it’s by far
             more fun when you’re in an ok shape.
-            And – rewards are waiting if you follow through. Log each time you complete your workout.
+            And – rewards are waiting if you follow through.
+            Log each time you complete your workout.
             Strenght + Cardio = 1 workout.
             </p>
             <p>20 workouts = complimentary dinner at your destination
-              <span className="bonus-emoji" role="img" aria-label="emoji"> 🍽</span></p>
-            <p>10 workouts – not bad = sunglasses from our partner The Outdoor Company <span className="bonus-emoji" role="img" aria-label="emoji">😎</span>
+              <span className="bonus-emoji" role="img" aria-label="emoji"> 🍽</span>
+            </p>
+            <p>10 workouts – not bad = sunglasses from our partner The Outdoor Company
+              <span className="bonus-emoji" role="img" aria-label="emoji">😎</span>
             </p>
 
             <Accordion

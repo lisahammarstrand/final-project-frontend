@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 import { OutlinedButton } from 'lib/Buttons'
-/* import { HamburgerMenu } from 'components/HbgMenu' */
 
 const HeaderContainer = styled.header`
   position: relative;

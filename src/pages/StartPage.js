@@ -66,7 +66,6 @@ const PackageCardContainer = styled.section`
   }
 `
 export const StartPage = () => {
-
   return (
     <StartPageWrapper>
       <StartPageOverlay />
