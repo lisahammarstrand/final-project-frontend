@@ -17,7 +17,7 @@ const MyPageSummary = styled.div`
   flex-direction: column;
   align-items: center; 
   max-width: 620px;
-  margin: 24px 0px;
+  padding: 24px;
   background: transparent;
   border: none;
   border-radius: 6px;
@@ -32,11 +32,9 @@ const MyPageDescription = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: center;
 
   @media (min-width: 650px) {
     align-items: flex-start;
-    text-align: left;
     max-width: 620px;
   }
 `
