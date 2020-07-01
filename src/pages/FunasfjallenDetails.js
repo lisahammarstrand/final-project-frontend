@@ -28,10 +28,9 @@ const DetailsDescription = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
 
   @media (min-width: 650px) {
-    align-items: flex-start;
     max-width: 620px;
   }
 `
