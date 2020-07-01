@@ -24,10 +24,9 @@ const DetailsDescription = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
 
   @media (min-width: 650px) {
-    align-items: flex-start;
     max-width: 620px;
   }
 `
@@ -44,6 +43,9 @@ const BookNowButton = styled(Button)`
 `
 const BackButton = styled(TextButton)`
   padding: 10px 0px;
+`
+const Links = styled.div`
+  align-self: center;
 `
 
 export const RiksgransenDetails = () => {
@@ -154,12 +156,14 @@ export const RiksgransenDetails = () => {
                   <p>Each cardio workout: min 1 hour</p>
                 </>
               } />
-            <Link to="/booking">
-              <BookNowButton title="Book now" />
-            </Link>
-            <Link to="/">
-              <BackButton title={<><span role="img" aria-label="emoji"> ⬅️</span>All events</>} />
-            </Link>
+            <Links>
+              <Link to="/booking">
+                <BookNowButton title="Book now" />
+              </Link>
+              <Link to="/">
+                <BackButton title={<><span role="img" aria-label="emoji"> ⬅️</span>All events</>} />
+              </Link>
+            </Links>
           </DetailsDescription>
         </DetailsSummary>
       </PageBackground>

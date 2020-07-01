@@ -49,6 +49,9 @@ const BookNowButton = styled(Button)`
 const BackButton = styled(TextButton)`
   padding: 10px 0px;
 `
+const Links = styled.div`
+  align-self: center;
+`
 export const FunasfjallenDetails = () => {
   return (
     <PageContainer>
@@ -149,12 +152,14 @@ export const FunasfjallenDetails = () => {
                   <p>Each cardio workout: min 1 hour</p>
                 </>
               } />
-            <Link to="/booking">
-              <BookNowButton title="Book now" />
-            </Link>
-            <Link to="/">
-              <BackButton title={<><span role="img" aria-label="emoji"> ⬅️</span>All events</>} />
-            </Link>
+            <Links>
+              <Link to="/booking">
+                <BookNowButton title="Book now" />
+              </Link>
+              <Link to="/">
+                <BackButton title={<><span role="img" aria-label="emoji"> ⬅️</span>All events</>} />
+              </Link>
+            </Links>
           </DetailsDescription>
         </DetailsSummary>
       </FunasfjallenBackground>

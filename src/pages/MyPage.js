@@ -16,25 +16,22 @@ const MyPageSummary = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center; 
-  max-width: 620px;
-  padding: 24px;
-  background: transparent;
-  border: none;
-  border-radius: 6px;
+  justify-content: center;
+  padding: 24px 32px;
   z-index: 1;
 
   @media (min-width: 650px) {
     flex-direction: row;
+    align-items: flex-start;
   }
 `
 const MyPageDescription = styled.div`
-  max-width: 350px;
+  width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
 
   @media (min-width: 650px) {
-    align-items: flex-start;
     max-width: 620px;
   }
 `
@@ -49,6 +46,9 @@ const ProgressbarContainer = styled.div`
 const LogOutButton = styled(OutlinedButton)`
   bottom: 24px;
   margin-top: 32px;
+  align-self: center;
+`
+const Links = styled.div`
   align-self: center;
 `
 export const MyPage = () => {
@@ -170,11 +170,13 @@ export const MyPage = () => {
               <h2>Your current workouts: {userData.times}/20</h2>
               <button className="updateStats" type="button" onClick={() => handleClick(userData.userId)}>Update</button>
             </ProgressbarContainer>
-            <Link to="/">
-              <LogOutButton
-                title="Log out"
-                onClick={() => window.localStorage.removeItem('accessToken')} />
-            </Link>
+            <Links>
+              <Link to="/">
+                <LogOutButton
+                  title="Log out"
+                  onClick={() => window.localStorage.removeItem('accessToken')} />
+              </Link>
+            </Links>
           </MyPageDescription>
         </MyPageSummary>
       </MyPageBackground>
