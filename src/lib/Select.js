@@ -15,5 +15,5 @@ export const Select = styled.select`
     outline: none;
     border-color: #2eb4c6;
     border-bottom: 2px solid #2eb4c6;
-}
+  }
 `

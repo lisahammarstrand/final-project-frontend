@@ -84,6 +84,5 @@ export const LoginPage = () => {
         </LoginForm>
       </LoginBackground>
     </PageContainer>
-
   )
 }

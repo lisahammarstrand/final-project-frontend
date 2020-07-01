@@ -153,7 +153,7 @@ export const FunasfjallenDetails = () => {
               <BookNowButton title="Book now" />
             </Link>
             <Link to="/">
-              <BackButton title={<><span role="img" aria-label="emoji"> ⬅️</span>All adventures</>} />
+              <BackButton title={<><span role="img" aria-label="emoji"> ⬅️</span>All events</>} />
             </Link>
           </DetailsDescription>
         </DetailsSummary>

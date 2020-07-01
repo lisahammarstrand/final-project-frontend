@@ -48,7 +48,7 @@ const HamburgerMenu = styled.nav`
   }
   
   &:active {
-  visibility: visible;
+    visibility: visible;
   }
 
   @media (min-width: 650px) {
@@ -124,7 +124,7 @@ export const Header = () => {
                   onClick={() => setOpenHamburger(!openHamburger)} />
                 <HbgNavList>
                   <Link to="/" exact>
-                    <HbgListItem>All adventures</HbgListItem>
+                    <HbgListItem>All events</HbgListItem>
                   </Link>
                   <Link to="/booking" exact>
                     <HbgListItem>Book now</HbgListItem>
@@ -138,7 +138,7 @@ export const Header = () => {
         </div>
         <Navbar>
           <Link to="/" exact>
-            <span className="nav">All adventures</span>
+            <span className="nav">All events</span>
           </Link>
           <Link to="/booking" exact>
             <span className="nav">Book now</span>
@@ -150,7 +150,6 @@ export const Header = () => {
         <Link to="/login">
           <SignInButton title="Sign in" />
         </Link>
-
       </HeaderContainer>
     </>
   )

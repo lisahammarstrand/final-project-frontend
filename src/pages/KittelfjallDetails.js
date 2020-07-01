@@ -71,17 +71,19 @@ export const KittelfjallDetails = () => {
               title="Program"
               content={
                 <>
-                  <li>April 7 Arrival & Welcome</li>
-                  <li>April 8 Today we follow our guide for two classical tours –
-                  Sadeln and Norgesvängen – starting from the top of the skilift. Level medium.
-                  </li>
-                  <li>April 9 Full day tour to Daune, a beautiful and quite mountain
-                  offering birch forrest skiing as well as open mountain. Level easy.
-                  </li>
-                  <li>April 10 Borkafjäll with it&apos;s impressive vertical rock wall.
-                  Beautiful run down towards Lake Borka. 600 altimeters. Level medium.
-                  </li>
-                  <li>April 11 Breakfast & Departure</li>
+                  <ul>
+                    <li>April 7 Arrival & Welcome</li>
+                    <li>April 8 Today we follow our guide for two classical tours –
+                    Sadeln and Norgesvängen – starting from the top of the skilift. Level medium.
+                    </li>
+                    <li>April 9 Full day tour to Daune, a beautiful and quite mountain
+                    offering birch forrest skiing as well as open mountain. Level easy.
+                    </li>
+                    <li>April 10 Borkafjäll with it&apos;s impressive vertical rock wall.
+                    Beautiful run down towards Lake Borka. 600 altimeters. Level medium.
+                    </li>
+                    <li>April 11 Breakfast & Departure</li>
+                  </ul>
                 </>
               } />
             <Accordion
@@ -157,7 +159,7 @@ export const KittelfjallDetails = () => {
               <BookNowButton title="Book now" />
             </Link>
             <Link to="/">
-              <BackButton title={<><span role="img" aria-label="emoji"> ⬅️</span>All adventures</>} />
+              <BackButton title={<><span role="img" aria-label="emoji"> ⬅️</span>All events</>} />
             </Link>
           </DetailsDescription>
         </DetailsSummary>

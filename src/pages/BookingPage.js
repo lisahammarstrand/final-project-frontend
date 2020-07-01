@@ -101,7 +101,7 @@ export const BookingPage = () => {
                 required
                 value={activepackage}
                 onChange={(event) => setActivePackage(event.target.value)}>
-                <option value="">Select package</option>
+                <option value="">Select event</option>
                 <option value="Off-piste skiing in Riksgränsen, May 5–9 2021">Off-piste skiing in Riksgränsen, May 5–9 2021</option>
                 <option value="Skitouring in Funäsfjällen, March 3–7 2021">Skitouring in Funäsfjällen, March 3–7 2021</option>
                 <option value="Skitouring in Storulvån, April 1–4 2021">Skitouring in Storulvån, April 1–4 2021</option>
@@ -109,13 +109,13 @@ export const BookingPage = () => {
               </Select>
             </Label>
             <Label>
-              Training
+              Workout level
               <Select
                 type="text"
                 required
                 value={training}
                 onChange={(event) => setTraining(event.target.value)}>
-                <option value="">Select training</option>
+                <option value="">Select workout level</option>
                 <option value="Soft">Soft</option>
                 <option value="Medium">Medium</option>
                 <option value="Tough">Tough</option>

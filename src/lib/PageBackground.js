@@ -1,9 +1,9 @@
 import styled from 'styled-components'
 
 export const PageContainer = styled.article`
-position: relative;
-color: white;
-width: 100%;
+  position: relative;
+  color: white;
+  width: 100%;
 `
 export const PageBackground = styled.div`
   min-height: 100vh;
@@ -23,4 +23,4 @@ export const PageOverlay = styled.div`
   display: flex;
   flex-direction: column;
   z-index: 0;
-  `
+`

@@ -25,7 +25,7 @@ const StartPageOverlay = styled.div`
   bottom: 0;
   background: rgba(1,23,39,0.3);
   z-index: 0;
-  `
+`
 const IntroSection = styled.article`
   display: flex;
   flex-direction: column;

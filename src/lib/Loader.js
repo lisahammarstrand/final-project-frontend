@@ -1,6 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
 
+// This loader is not used because I couldn't make it visible.
+// I would still lika to keep it in the project for future use.
+
 export const LoaderBackground = styled.div` 
   position: relative;
   display: flex;
@@ -25,13 +28,13 @@ export const Spinner = styled.div`
   animation: spin 3s linear infinite;
   z-index: 1;
 
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
 `
 export const Loader = () => {
   return (

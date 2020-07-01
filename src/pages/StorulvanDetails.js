@@ -9,10 +9,9 @@ import { Accordion } from 'components/Accordion'
 
 const StorulvanBackground = styled(PageBackground)`
   background-image: url("skitouring_storulvan.jpeg")
-  `
-
+`
 const StorulvanPageOverlay = styled(PageOverlay)`
-  background: rgba(1,23,39,0.5);
+  background: rgba(1,23,39,0.4);
 `
 const DetailsSummary = styled.div`
   display: flex;
@@ -165,7 +164,7 @@ export const StorulvanDetails = () => {
               <BookNowButton title="Book now" />
             </Link>
             <Link to="/">
-              <BackButton title={<><span role="img" aria-label="emoji"> ⬅️</span>All adventures</>} />
+              <BackButton title={<><span role="img" aria-label="emoji"> ⬅️</span>All events</>} />
             </Link>
           </DetailsDescription>
         </DetailsSummary>

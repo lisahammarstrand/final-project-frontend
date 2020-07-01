@@ -33,7 +33,7 @@ const ChevronIcon = styled.img`
 
   &:active, &:hover {
    transform: rotate(90deg);
-}
+  }
 `
 const AccordionContent = styled.div`
   background-color: #20a4f3;
@@ -57,7 +57,6 @@ export const Accordion = ({ title, content }) => {
 
   return (
     <AccordionSection>
-
       <AccordionButton onClick={() => setActive(!active)}>
         <h2>{title}</h2>
         <ChevronIcon src="chevron-right-solid.svg" alt="chevron-icon" />

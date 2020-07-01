@@ -52,8 +52,7 @@ export const About = () => {
             rather than discovering a week before departure that your
             physical shape is not that great. The basic idea is to reward guests who
             follow through with their workout program with a bonus.
-            I also missed skiing so much this winter,
-            after cancelling two ski touring adventures. Flipping through some images,
+            I also missed skiing so much this winter. Flipping through some images,
             I found myself dreaming of snow and wanted to create some positiveness and
             optimism in these unpredictable times. (All content is just placeholder material.)
             </p>
@@ -79,11 +78,10 @@ export const About = () => {
             </p>
             <p>For deployment I used <b>Netlify</b> for the frontend and
               <b>Heroku</b> for the backend.
-
             </p>
           </AboutDescription>
           <Link to="/">
-            <BackButton title={<><span role="img" aria-label="emoji"> ⬅️</span>All adventures</>} />
+            <BackButton title={<><span role="img" aria-label="emoji"> ⬅️</span>All events</>} />
           </Link>
         </AboutSection>
       </PageBackground>

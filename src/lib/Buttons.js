@@ -7,7 +7,6 @@ const StyledButton = styled.button`
   width: auto;
   background: #ff3366;
   color: white;
- /*  border: 2px solid white; */
   border: none;
   border-radius: 6px;
   padding: 10px 20px;
@@ -17,24 +16,20 @@ const StyledButton = styled.button`
   
   &:hover {
     transform: scale(1.1);
-   /*  background: transparent;
-    border: 2px solid #ff3366; */
   }
-`;
-
+`
 const ButtonText = styled.p`
   font-size: 16px;
   font-weight: normal;
   margin: 0;
-`;
-
+`
 export const Button = ({ title, className }) => {
   return (
     <StyledButton className={className}>
       {title && <ButtonText>{title}</ButtonText>}
     </StyledButton>
-  );
-};
+  )
+}
 
 export const OutlinedButton = styled(Button)`
   background: transparent;
@@ -43,11 +38,8 @@ export const OutlinedButton = styled(Button)`
 
   &:hover {
     transform: scale(1.1);
-   /*  background: #ff3366;
-    border: 2px solid white; */
   }
-`;
-
+`
 export const TextButton = styled(Button)`
   background: transparent;
   color: white;
@@ -56,4 +48,4 @@ export const TextButton = styled(Button)`
   &:hover {
     transform: scale(1.1);
   }
-`;
+`
