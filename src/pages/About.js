@@ -5,6 +5,9 @@ import { PageContainer, PageBackground, PageOverlay } from 'lib/PageBackground'
 import { Title } from 'lib/Title'
 import { TextButton } from 'lib/Buttons'
 
+const AboutPageOverlay = styled(PageOverlay)`
+background: rgba(1,23,39,0.4);
+`
 const AboutSection = styled.article`
   display: flex;
   flex-direction: column;
@@ -35,7 +38,7 @@ const BackButton = styled(TextButton)`
 export const About = () => {
   return (
     <PageContainer>
-      <PageOverlay />
+      <AboutPageOverlay />
       <PageBackground>
         <AboutSection>
           <Title><h1>Dreaming of snow</h1></Title>
@@ -46,13 +49,13 @@ export const About = () => {
             the Bootcamp, and deep-dive into selected parts. To wrap things up and move ahead.
             </p>
             <p>I had this idea about boosting active outdoor tourism in combination with
-            physical activity, with the objective to make the most of active vacations,
-            and to make the overall experience more enjoyable.
+            physical activity, with the objective to make the overall experience more enjoyable.
             By stimulating a training habit to be better prepared for the adventure,
             rather than discovering a week before departure that your
             physical shape is not that great. The basic idea is to reward guests who
             follow through with their workout program with a bonus.
-            I also missed skiing so much this winter. Flipping through some images,
+            </p>
+            <p> I also missed skiing so much this winter. Flipping through some images,
             I found myself dreaming of snow and wanted to create some positiveness and
             optimism in these unpredictable times. (All content is just placeholder material.)
             </p>
@@ -71,13 +74,13 @@ export const About = () => {
               explore further, more pages and components are suitable to be reusable.
             </p>
             <p>Tech in the backend – here I used
-              <b>Expressjs, Node.js, MongoDB, Mongoose
+              <b> Expressjs, Node.js, MongoDB, Mongoose
               </b> to create an
             API with RESTful endpoints, and storing and fetching data. Crypto and
             bcrypt is implemented for secure password handling.
             </p>
             <p>For deployment I used <b>Netlify</b> for the frontend and
-              <b>Heroku</b> for the backend.
+              <b> Heroku</b> for the backend.
             </p>
           </AboutDescription>
           <Link to="/">

@@ -31,9 +31,11 @@ const DetailsDescription = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
 
   @media (min-width: 650px) {
     align-items: flex-start;
+    text-align: left;
     max-width: 620px;
   }
 `
@@ -83,7 +85,7 @@ export const StorulvanDetails = () => {
                     <li>April 3 Sönner-Tväråklumpen.
                     Also a close-by tour. 680 altimeter. Level medium.
                     </li>
-                    <li>April 4 Early breakfast and then heading to Storsnasen
+                    <li>April 4 Heading to Storsnasen
                     for an easy tour before departure. 705 altimeter. Level easy.
                     </li>
                   </ul>

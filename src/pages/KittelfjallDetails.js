@@ -28,9 +28,11 @@ const DetailsDescription = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
 
   @media (min-width: 650px) {
     align-items: flex-start;
+    text-align: left;
     max-width: 620px;
   }
 `
@@ -73,14 +75,13 @@ export const KittelfjallDetails = () => {
                 <>
                   <ul>
                     <li>April 7 Arrival & Welcome</li>
-                    <li>April 8 Today we follow our guide for two classical tours –
-                    Sadeln and Norgesvängen – starting from the top of the skilift. Level medium.
+                    <li>April 8 Two classic tours – Sadeln and Norgesvängen.
                     </li>
-                    <li>April 9 Full day tour to Daune, a beautiful and quite mountain
-                    offering birch forrest skiing as well as open mountain. Level easy.
+                    <li>April 9 Tour to Daune, a beautiful and quite mountain
+                    offering birch forrest skiing.
                     </li>
                     <li>April 10 Borkafjäll with it&apos;s impressive vertical rock wall.
-                    Beautiful run down towards Lake Borka. 600 altimeters. Level medium.
+                    Beautiful run down towards Lake Borka.
                     </li>
                     <li>April 11 Breakfast & Departure</li>
                   </ul>

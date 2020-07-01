@@ -38,17 +38,25 @@ const ChevronIcon = styled.img`
 const AccordionContent = styled.div`
   background-color: #20a4f3;
   margin: 0px;
-  padding: 16px;
+  padding: 4px 16px;
+  text-align: left;
   animation: showContent 1s forwards;
   transition: ease-out;
 
   @keyframes showContent {
     0% {height: 0px;}
-    100% {height: 200px;}
+    100% {height: 235px;}
   }
 
   &:active {
     visibility: visible;
+  }
+
+  @media (min-width: 650px) {
+    @keyframes showContent {
+      0% {height: 0px;}
+      100% {height: 200px;}
+    }
   }
 `
 
