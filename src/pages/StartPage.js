@@ -43,10 +43,12 @@ const IntroDescription = styled.section`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
   max-width: 350px;
   margin: 0px 16px;
 
   @media (min-width: 650px) {
+    text-align: left;
     max-width: 620px;
   }
 `

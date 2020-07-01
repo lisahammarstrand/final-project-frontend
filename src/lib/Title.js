@@ -7,6 +7,7 @@ export const Title = styled.div`
   margin: 16px 0px;
   color: white;
   align-items: center;
+  text-align: left;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering:optimizeLegibility;

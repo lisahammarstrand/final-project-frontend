@@ -64,7 +64,6 @@ export const BookingPage = () => {
               <>
                 <BookingTitle><h1>Yes, great decision!</h1></BookingTitle>
                 <h2>Glad you are joining us on your next adventure!
-                Welcome to enter your details:
                 </h2>
               </>}
             {failed && (
