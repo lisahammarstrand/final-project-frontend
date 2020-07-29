@@ -2,7 +2,9 @@ import React from 'react'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 import { PageContainer, PageBackground, PageOverlay } from 'lib/PageBackground'
+import { DetailsSummary, DetailsDescription } from 'lib/DetailsSummaryDescription'
 import { Title } from 'lib/Title'
+import { PackageSubTitle } from 'lib/PackageSubTitle'
 import { IconSkis, IconDumbbell } from 'lib/Icons'
 import { Button, TextButton } from 'lib/Buttons'
 import { Accordion } from 'components/Accordion'
@@ -12,37 +14,6 @@ const StorulvanBackground = styled(PageBackground)`
 `
 const StorulvanPageOverlay = styled(PageOverlay)`
   background: rgba(1,23,39,0.4);
-`
-const DetailsSummary = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center; 
-  padding: 24px;
-  z-index: 1;
-
-  @media (min-width: 650px) {
-    flex-direction: row;
-    align-items: flex-start; 
-  }
-`
-const DetailsDescription = styled.div`
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-
-  @media (min-width: 650px) {
-    max-width: 620px;
-  }
-`
-const PackageSubTitle = styled.h2`
-  display: inline-block;
-  font-size: 20px;
-  font-weight: normal;
-  padding: 0px 32px;
-  background: #011627;
-  color: white;
 `
 const BookNowButton = styled(Button)`
   margin-top: 24px;
