@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import moment from 'moment'
 import { Link } from 'react-router-dom'
 import { PageContainer, PageBackground, PageOverlay } from 'lib/PageBackground'
+import { DetailsSummary, DetailsDescription } from 'lib/DetailsSummaryDescription'
 import { Title } from 'lib/Title'
 import { IconSkis, IconDumbbell } from 'lib/Icons'
 import { OutlinedButton } from 'lib/Buttons'
@@ -12,28 +13,8 @@ import { Accordion } from 'components/Accordion'
 const MyPageBackground = styled(PageBackground)`
   align-items: center;
 `
-const MyPageSummary = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center; 
-  justify-content: center;
+const MyPageSummary = styled(DetailsSummary)`
   padding: 24px 32px;
-  z-index: 1;
-
-  @media (min-width: 650px) {
-    flex-direction: row;
-    align-items: flex-start;
-  }
-`
-const MyPageDescription = styled.div`
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-
-  @media (min-width: 650px) {
-    max-width: 620px;
-  }
 `
 const ProgressbarContainer = styled.div`
   display: flex;
@@ -102,7 +83,7 @@ export const MyPage = () => {
       <PageOverlay />
       <MyPageBackground>
         <MyPageSummary>
-          <MyPageDescription>
+          <DetailsDescription>
             <Title>
               <h1>Your adventure is waiting</h1>
               <IconSkis src="skis.svg" alt="skis" />
@@ -177,7 +158,7 @@ export const MyPage = () => {
                   onClick={() => window.localStorage.removeItem('accessToken')} />
               </Link>
             </Links>
-          </MyPageDescription>
+          </DetailsDescription>
         </MyPageSummary>
       </MyPageBackground>
     </PageContainer>

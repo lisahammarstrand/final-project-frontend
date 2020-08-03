@@ -44,7 +44,6 @@ const PackageSubTitle = styled.h2`
   background: #011627;
   color: white;
 `
-
 const PackageCardButton = styled(Button)`
   position absolute;
   bottom: 24px;

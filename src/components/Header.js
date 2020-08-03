@@ -79,14 +79,13 @@ const HbgListItem = styled.li`
   &:hover {
     background: #20a4f3;
 `
-
 const HeaderImage = styled.img`
   width: 50px;
   margin-left: 16px;
 `
-
 const Navbar = styled.nav`
   display: none;
+  cursor: pointer;
 
   @media (min-width: 650px) {
     height: 60px;
@@ -96,6 +95,51 @@ const Navbar = styled.nav`
     padding: 10px;
   }
 `
+const EventsDropDown = styled.div`
+  position: absolute;
+  top: 70px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: #011627;
+  color: white;
+  width: 150px;
+  height: 255px;
+  padding: 0px;
+  text-align: left;
+  border-radius: 0px 0px 4px 4px;
+  animation: showMenu 1s forwards;
+  transition: transfrom 0.3s ease-out;
+  z-index: 10;
+  
+  @keyframes showMenu {
+    0% {height: 0px;}
+    100% {height: 255px;}
+  }
+  
+  &:active {
+    visibility: visible;
+  }
+`
+const EventsNavList = styled.ul`
+  position: absolute;
+  top: 0px;
+  width: 150px;
+  height: 255px;
+  margin: 0px;
+  list-style: none;
+  padding: 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around; 
+`
+const EventsListItem = styled.li`
+  padding: 16px;
+  cursor: pointer;
+
+  &:hover {
+    background: #20a4f3;
+`
 const SignInButton = styled(OutlinedButton)`
   margin-right: 16px; 
   margin-bottom: 0px;
@@ -103,6 +147,7 @@ const SignInButton = styled(OutlinedButton)`
 
 export const Header = () => {
   const [openHamburger, setOpenHamburger] = useState(false)
+  const [openDropdown, setOpenDropdown] = useState(false)
 
   return (
     <>
@@ -124,22 +169,53 @@ export const Header = () => {
                   onClick={() => setOpenHamburger(!openHamburger)} />
                 <HbgNavList>
                   <Link to="/" exact>
-                    <HbgListItem>All events</HbgListItem>
+                    <HbgListItem
+                      onClick={() => setOpenHamburger(false)}>All events</HbgListItem>
                   </Link>
                   <Link to="/booking" exact>
-                    <HbgListItem>Book now</HbgListItem>
+                    <HbgListItem
+                      onClick={() => setOpenHamburger(false)}>Book now</HbgListItem>
                   </Link>
                   <Link to="/about" exact>
-                    <HbgListItem>About</HbgListItem>
+                    <HbgListItem
+                      onClick={() => setOpenHamburger(false)}>About</HbgListItem>
                   </Link>
                 </HbgNavList>
               </HamburgerMenu>}
           </div>
         </div>
         <Navbar>
-          <Link to="/" exact>
-            <span className="nav">All events</span>
-          </Link>
+          <div>
+            <div
+              className="nav"
+              onClick={() => setOpenDropdown(!openDropdown)}>
+              Events</div>
+            {openDropdown &&
+              <EventsDropDown>
+                <EventsNavList>
+                  <Link to="/riksgransen" exact>
+                    <EventsListItem
+                      onClick={() => setOpenDropdown(false)}>Riksgränsen</EventsListItem>
+                  </Link>
+                  <Link to="/funasfjallen" exact>
+                    <EventsListItem
+                      onClick={() => setOpenDropdown(false)}>Funäsfjällen</EventsListItem>
+                  </Link>
+                  <Link to="/storulvan" exact>
+                    <EventsListItem
+                      onClick={() => setOpenDropdown(false)}>Storulvån</EventsListItem>
+                  </Link>
+                  <Link to="/kittelfjall" exact>
+                    <EventsListItem
+                      onClick={() => setOpenDropdown(false)}>Kittelfjäll</EventsListItem>
+                  </Link>
+                  <Link to="/" exact>
+                    <EventsListItem
+                      onClick={() => setOpenDropdown(false)}>All events/start</EventsListItem>
+                  </Link>
+                </EventsNavList>
+              </EventsDropDown>}
+          </div>
           <Link to="/booking" exact>
             <span className="nav">Book now</span>
           </Link>
