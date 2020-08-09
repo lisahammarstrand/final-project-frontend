@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useRef, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 import { OutlinedButton } from 'lib/Buttons'
@@ -148,6 +148,21 @@ const SignInButton = styled(OutlinedButton)`
 export const Header = () => {
   const [openHamburger, setOpenHamburger] = useState(false)
   const [openDropdown, setOpenDropdown] = useState(false)
+  const node = useRef(null)
+
+  useEffect(() => {
+    const HandleClickOutside = e => {
+      if (node.current !== null && !node.current.contains(e.target)) {
+        setOpenDropdown(!openDropdown)
+      }
+    }
+    if (openDropdown) {
+      window.addEventListener('click', HandleClickOutside)
+    }
+    return () => {
+      window.removeEventListener('click', HandleClickOutside)
+    }
+  }, [openDropdown])
 
   return (
     <>
@@ -170,7 +185,7 @@ export const Header = () => {
                 <HbgNavList>
                   <Link to="/" exact>
                     <HbgListItem
-                      onClick={() => setOpenHamburger(false)}>All events</HbgListItem>
+                      onClick={() => setOpenHamburger(false)}>All events/Start</HbgListItem>
                   </Link>
                   <Link to="/booking" exact>
                     <HbgListItem
@@ -191,7 +206,7 @@ export const Header = () => {
               onClick={() => setOpenDropdown(!openDropdown)}>
               Events</div>
             {openDropdown &&
-              <EventsDropDown>
+              <EventsDropDown ref={node}>
                 <EventsNavList>
                   <Link to="/riksgransen" exact>
                     <EventsListItem
@@ -211,7 +226,7 @@ export const Header = () => {
                   </Link>
                   <Link to="/" exact>
                     <EventsListItem
-                      onClick={() => setOpenDropdown(false)}>All events/start</EventsListItem>
+                      onClick={() => setOpenDropdown(false)}>All events/Start</EventsListItem>
                   </Link>
                 </EventsNavList>
               </EventsDropDown>}
