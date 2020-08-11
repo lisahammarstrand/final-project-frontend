@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 import { OutlinedButton } from 'lib/Buttons'
+import { HamburgerIcon, HamburgerMenu, CloseIcon, HbgNavList, HbgListItem } from 'lib/HbgMenu'
 
 const HeaderContainer = styled.header`
   position: relative;
@@ -13,71 +14,6 @@ const HeaderContainer = styled.header`
   align-items: center;
   margin: 0px;
   border-bottom: 1px solid white;
-`
-const HamburgerIcon = styled.img`
-  width: 40px;
-  margin-left: 16px;
-  border-radius: 4px;
-  cursor: pointer;
-
-  @media (min-width: 650px) {
-    display: none;
-  }
-`
-const HamburgerMenu = styled.nav`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  background: #011627;
-  color: white;
-  width: 150px;
-  height: 250px;
-  padding: 0px;
-  text-align: left;
-  position: absolute;
-  border-radius: 0px 0px 6px 0px;
-  top: 0;
-  left: 0;
-  animation: showMenu 1s forwards;
-  transition: transfrom 0.3s ease-in-out;
-  z-index: 10;
-  
-  @keyframes showMenu {
-    0% {width: 0px;}
-    100% {width: 200px;}
-  }
-  
-  &:active {
-    visibility: visible;
-  }
-
-  @media (min-width: 650px) {
-    display: none;
-  }
-`
-const CloseIcon = styled.img`
-  position: absolute;
-  width: 35px;
-  top: 16px;
-  left: 16px;
-  cursor: pointer;
-`
-const HbgNavList = styled.ul`
-  position: absolute;
-  top: 50px;
-  width: 100%;
-  list-style: none;
-  padding-left: 6px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-`
-const HbgListItem = styled.li`
-  padding: 20px;
-  cursor: pointer;
-
-  &:hover {
-    background: #20a4f3;
 `
 const HeaderImage = styled.img`
   width: 50px;
@@ -186,6 +122,22 @@ export const Header = () => {
                   <Link to="/" exact>
                     <HbgListItem
                       onClick={() => setOpenHamburger(false)}>All events/Start</HbgListItem>
+                  </Link>
+                  <Link to="/riksgransen" exact>
+                    <HbgListItem
+                      onClick={() => setOpenHamburger(false)}>Riksgränsen</HbgListItem>
+                  </Link>
+                  <Link to="/funasfjallen" exact>
+                    <HbgListItem
+                      onClick={() => setOpenHamburger(false)}>Funäsfjällen</HbgListItem>
+                  </Link>
+                  <Link to="/storulvan" exact>
+                    <HbgListItem
+                      onClick={() => setOpenHamburger(false)}>Storulvån</HbgListItem>
+                  </Link>
+                  <Link to="/kittelfjall" exact>
+                    <HbgListItem
+                      onClick={() => setOpenHamburger(false)}>Kittelfjäll</HbgListItem>
                   </Link>
                   <Link to="/booking" exact>
                     <HbgListItem
