@@ -44,8 +44,8 @@ const AccordionContent = styled.div`
   transition: ease-out;
 
   @keyframes showContent {
-    0% {height: 0px;}
-    100% {height: 235px;}
+    0% {max-height: 0px;}
+    100% {max-height: 235px;}
   }
 
   &:active {
@@ -54,8 +54,8 @@ const AccordionContent = styled.div`
 
   @media (min-width: 650px) {
     @keyframes showContent {
-      0% {height: 0px;}
-      100% {height: 200px;}
+      0% {max-height: 0px;}
+      100% {max-height: 200px;}
     }
   }
 `
