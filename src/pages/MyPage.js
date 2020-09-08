@@ -149,7 +149,15 @@ export const MyPage = () => {
               <h2>{moment().format('MMM Do YYYY')}</h2>
               <ProgressBar precentage={5 * userData.times} />
               <h2>Your current workouts: {userData.times}/20</h2>
-              <button className="updateStats" type="button" onClick={() => handleClick(userData.userId)}>Update</button>
+              {userData.times >= 10 && <p>Well done! Sunglasses are coming your way.</p>}
+              {userData.times >= 20 && <p>Good job! Complimentary dinner is yours.</p>}
+              <button
+                className="updateStats"
+                type="button"
+                onClick={() => handleClick(userData.userId)}
+                disabled={userData.times >= 20}>
+                Update
+              </button>
             </ProgressbarContainer>
             <Links>
               <Link to="/">

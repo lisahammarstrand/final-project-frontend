@@ -87,7 +87,7 @@ export const Header = () => {
   const node = useRef(null)
 
   useEffect(() => {
-    const HandleClickOutside = e => {
+    const HandleClickOutside = (e) => {
       if (node.current !== null && !node.current.contains(e.target)) {
         setOpenDropdown(!openDropdown)
       }
@@ -112,7 +112,7 @@ export const Header = () => {
             <HeaderImage src="logo_mountains.png" alt="logo_mountains" />
           </Link>
           <div>
-            {openHamburger &&
+            {openHamburger && (
               <HamburgerMenu>
                 <CloseIcon
                   src="close_icon.svg"
@@ -121,67 +121,83 @@ export const Header = () => {
                 <HbgNavList>
                   <Link to="/" exact>
                     <HbgListItem
-                      onClick={() => setOpenHamburger(false)}>All events/Start</HbgListItem>
+                      onClick={() => setOpenHamburger(false)}>All events/Start
+                    </HbgListItem>
                   </Link>
                   <Link to="/riksgransen" exact>
                     <HbgListItem
-                      onClick={() => setOpenHamburger(false)}>Riksgränsen</HbgListItem>
+                      onClick={() => setOpenHamburger(false)}>Riksgränsen
+                    </HbgListItem>
                   </Link>
                   <Link to="/funasfjallen" exact>
                     <HbgListItem
-                      onClick={() => setOpenHamburger(false)}>Funäsfjällen</HbgListItem>
+                      onClick={() => setOpenHamburger(false)}>Funäsfjällen
+                    </HbgListItem>
                   </Link>
                   <Link to="/storulvan" exact>
                     <HbgListItem
-                      onClick={() => setOpenHamburger(false)}>Storulvån</HbgListItem>
+                      onClick={() => setOpenHamburger(false)}>Storulvån
+                    </HbgListItem>
                   </Link>
                   <Link to="/kittelfjall" exact>
                     <HbgListItem
-                      onClick={() => setOpenHamburger(false)}>Kittelfjäll</HbgListItem>
+                      onClick={() => setOpenHamburger(false)}>Kittelfjäll
+                    </HbgListItem>
                   </Link>
                   <Link to="/booking" exact>
                     <HbgListItem
-                      onClick={() => setOpenHamburger(false)}>Book now</HbgListItem>
+                      onClick={() => setOpenHamburger(false)}>Book now
+                    </HbgListItem>
                   </Link>
                   <Link to="/about" exact>
                     <HbgListItem
-                      onClick={() => setOpenHamburger(false)}>About</HbgListItem>
+                      onClick={() => setOpenHamburger(false)}>About
+                    </HbgListItem>
                   </Link>
                 </HbgNavList>
-              </HamburgerMenu>}
+              </HamburgerMenu>)}
           </div>
         </div>
         <Navbar>
           <div>
             <div
+              role="menuitem"
+              tabIndex={0}
               className="nav"
-              onClick={() => setOpenDropdown(!openDropdown)}>
-              Events</div>
-            {openDropdown &&
+              onClick={() => setOpenDropdown(!openDropdown)}
+              onKeyDown>
+              Events
+            </div>
+            {openDropdown && (
               <EventsDropDown ref={node}>
                 <EventsNavList>
                   <Link to="/riksgransen" exact>
                     <EventsListItem
-                      onClick={() => setOpenDropdown(false)}>Riksgränsen</EventsListItem>
+                      onClick={() => setOpenDropdown(false)}>Riksgränsen
+                    </EventsListItem>
                   </Link>
                   <Link to="/funasfjallen" exact>
                     <EventsListItem
-                      onClick={() => setOpenDropdown(false)}>Funäsfjällen</EventsListItem>
+                      onClick={() => setOpenDropdown(false)}>Funäsfjällen
+                    </EventsListItem>
                   </Link>
                   <Link to="/storulvan" exact>
                     <EventsListItem
-                      onClick={() => setOpenDropdown(false)}>Storulvån</EventsListItem>
+                      onClick={() => setOpenDropdown(false)}>Storulvån
+                    </EventsListItem>
                   </Link>
                   <Link to="/kittelfjall" exact>
                     <EventsListItem
-                      onClick={() => setOpenDropdown(false)}>Kittelfjäll</EventsListItem>
+                      onClick={() => setOpenDropdown(false)}>Kittelfjäll
+                    </EventsListItem>
                   </Link>
                   <Link to="/" exact>
                     <EventsListItem
-                      onClick={() => setOpenDropdown(false)}>All events/Start</EventsListItem>
+                      onClick={() => setOpenDropdown(false)}>All events/Start
+                    </EventsListItem>
                   </Link>
                 </EventsNavList>
-              </EventsDropDown>}
+              </EventsDropDown>)}
           </div>
           <Link to="/booking" exact>
             <span className="nav">Book now</span>

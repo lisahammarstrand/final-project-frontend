@@ -58,7 +58,13 @@ main {
 }
   
 .updateStats:hover {
-    transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+.updateStats:disabled {
+  transform: none;
+  opacity: 0.6;
+  cursor: not-allowed;
 }
 
 .bonus-emoji {
