@@ -93,6 +93,7 @@ export const RiksgransenDetails = () => {
               If you manage to do 10 workouts – well not bad.
               You deserve a pair of sunglasses from our partner The Outdoor Company
             <span className="bonus-emoji" role="img" aria-label="emoji"> 😎</span>
+            Choose your workout difficulty level – Soft, Medium or Tough.
             </p>
             <Accordion
               title="Workout Strength"
@@ -105,9 +106,9 @@ export const RiksgransenDetails = () => {
                     <li>Pushups – Regular or on your knees</li>
                   </ul>
                   <ul>
-                    <li>Each exercise: 20 seconds</li>
-                    <li>Rest: 10 seconds</li>
-                    <li>Rounds: 8</li>
+                    <li>Each exercise: Soft & Medium 15 sec, Tough 20 sec</li>
+                    <li>Rest: Soft, Medium, Tough 10 sec</li>
+                    <li>Rounds: Soft 4, Medium 6, Tough 8</li>
                   </ul>
                 </>
               } />
@@ -122,9 +123,9 @@ export const RiksgransenDetails = () => {
                   ski touring find the nearest ski slope or
                   hill and walk up and down. As a reference, Hammarbybacken in Stockholm
                   is 93,5 altimeters. Start with a few turns and increase each time.
-                  With or without skis and poles.
+                  With or without skis and poles, depending on the season.
                   </p>
-                  <p>Each cardio workout: min 1 hour</p>
+                  <p>Each cardio workout minimum: Soft 45 min, Medium 60 min, Tough 75 min</p>
                 </>
               } />
             <Links>

@@ -97,7 +97,7 @@ export const MyPage = () => {
               <h1>Get ready</h1>
               <IconDumbbell src="dumbbell.svg" alt="dumbbell" />
             </Title>
-            <h2>{userData.training} training – let &apos;s go!</h2>
+            <h2>{userData.training} workout – let &apos;s go!</h2>
             <p>We want you to have your best possible adventure, it’s by far
             more fun when you’re in an ok shape.
             And – rewards are waiting if you follow through.
@@ -122,9 +122,9 @@ export const MyPage = () => {
                     <li>Pushups – Regular or on your knees</li>
                   </ul>
                   <ul>
-                    <li>Each exercise: 20 seconds</li>
-                    <li>Rest: 10 seconds</li>
-                    <li>Rounds: 8</li>
+                    <li>Each exercise: Soft & Medium 15 sec, Tough 20 sec</li>
+                    <li>Rest: Soft, Medium, Tough 10 sec</li>
+                    <li>Rounds: Soft 4, Medium 6, Tough 8</li>
                   </ul>
                 </>
               } />
@@ -139,17 +139,17 @@ export const MyPage = () => {
                   ski touring find the nearest ski slope or
                   hill and walk up and down. As a reference, Hammarbybacken in Stockholm
                   is 93,5 altimeters. Start with a few turns and increase each time.
-                  With or without skis and poles.
+                  With or without skis and poles, depending on the season.
                   </p>
-                  <p>Each cardio workout: min 1 hour</p>
+                  <p>Each cardio workout minimum: Soft 45 min, Medium 60 min, Tough 75 min</p>
                 </>
               } />
 
             <ProgressbarContainer>
               <h2>{moment().format('MMM Do YYYY')}</h2>
-              <ProgressBar precentage={5 * userData.times} />
+              <ProgressBar percentage={userData.times * 5} />
               <h2>Your current workouts: {userData.times}/20</h2>
-              {userData.times >= 10 && <p>Well done! Sunglasses are coming your way.</p>}
+              {userData.times >= 10 && <p>Well done! You earned a pair of sunglasses.</p>}
               {userData.times >= 20 && <p>Good job! Complimentary dinner is yours.</p>}
               <button
                 className="updateStats"
