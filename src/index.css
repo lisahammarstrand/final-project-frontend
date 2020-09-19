@@ -42,6 +42,10 @@ main {
   margin-right: 12px;
 }
 
+.selected {
+  border-bottom: 1px solid #20a4f3;
+}
+
 .updateStats {
   display: block;
   height: 45px;

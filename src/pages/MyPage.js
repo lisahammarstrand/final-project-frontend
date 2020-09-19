@@ -121,10 +121,14 @@ export const MyPage = () => {
                     <li>Plank – Switch between straight arms and forearms</li>
                     <li>Pushups – Regular or on your knees</li>
                   </ul>
+                  <h2>{userData.training}</h2>
                   <ul>
-                    <li>Each exercise: Soft & Medium 15 sec, Tough 20 sec</li>
-                    <li>Rest: Soft, Medium, Tough 10 sec</li>
-                    <li>Rounds: Soft 4, Medium 6, Tough 8</li>
+                    {userData.training === 'Soft' && 'Medium' && <li>Each exercise – 15 sec</li>}
+                    {userData.training === 'Tough' && <li>Each exercise – 20 sec</li>}
+                    <li>Rest – 10 sec</li>
+                    {userData.training === 'Soft' && <li>Rounds – 4</li>}
+                    {userData.training === 'Medium' && <li>Rounds – 6</li>}
+                    {userData.training === 'Tough' && <li>Rounds – 8</li>}
                   </ul>
                 </>
               } />
@@ -141,7 +145,10 @@ export const MyPage = () => {
                   is 93,5 altimeters. Start with a few turns and increase each time.
                   With or without skis and poles, depending on the season.
                   </p>
-                  <p>Each cardio workout minimum: Soft 45 min, Medium 60 min, Tough 75 min</p>
+                  <h2>{userData.training}</h2>
+                  {userData.training === 'Soft' && <p>Each cardio workout minimum: 45 minutes</p>}
+                  {userData.training === 'Medium' && <p>Each cardio workout minimum: 60 minutes</p>}
+                  {userData.training === 'Tough' && <p>Each cardio workout minimum: 75 minutes</p>}
                 </>
               } />
 

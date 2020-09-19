@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 import styled from 'styled-components'
 import { OutlinedButton } from 'lib/Buttons'
 import { HamburgerIcon, HamburgerMenu, CloseIcon, HbgNavList, HbgListItem } from 'lib/HbgMenu'
@@ -199,12 +199,12 @@ export const Header = () => {
                 </EventsNavList>
               </EventsDropDown>)}
           </div>
-          <Link to="/booking" exact>
+          <NavLink to="/booking" exact activeClassName="selected">
             <span className="nav">Book now</span>
-          </Link>
-          <Link to="/about" exact>
+          </NavLink>
+          <NavLink to="/about" exact activeClassName="selected">
             <span className="nav">About</span>
-          </Link>
+          </NavLink>
         </Navbar>
         <Link to="/login">
           <SignInButton title="Sign in" />
