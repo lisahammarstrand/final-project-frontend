@@ -105,6 +105,7 @@ export const RiksgransenDetails = () => {
                     <li>Plank – Switch between straight arms and forearms</li>
                     <li>Pushups – Regular or on your knees</li>
                   </ul>
+                  <h2>Soft, Medium or Tough</h2>
                   <ul>
                     <li>Each exercise: Soft & Medium 15 sec, Tough 20 sec</li>
                     <li>Rest: Soft, Medium, Tough 10 sec</li>
@@ -125,6 +126,7 @@ export const RiksgransenDetails = () => {
                   is 93,5 altimeters. Start with a few turns and increase each time.
                   With or without skis and poles, depending on the season.
                   </p>
+                  <h2>Soft, Medium or Tough</h2>
                   <p>Each cardio workout minimum: Soft 45 min, Medium 60 min, Tough 75 min</p>
                 </>
               } />
