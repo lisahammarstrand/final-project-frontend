@@ -1,4 +1,5 @@
 import React from 'react'
+import CookieConsent from 'react-cookie-consent'
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import { Header } from 'components/Header'
 import { StartPage } from 'pages/StartPage'
@@ -53,8 +54,12 @@ export const App = () => {
         </Switch>
       </main>
       <Footer />
+      <CookieConsent
+        style={{ background: '#011627', border: '1px solid #20a4f3' }}
+        buttonStyle={{ background: '#20a4f3', color: '#ffffff', fontSize: '16px' }}>
+        This website uses cookies to enhance the user experience.
+      </CookieConsent>
       <GlobalStyle />
     </BrowserRouter>
-  )
-}
-
+  );
+};

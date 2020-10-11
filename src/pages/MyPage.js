@@ -123,7 +123,8 @@ export const MyPage = () => {
                   </ul>
                   <h2>{userData.training}</h2>
                   <ul>
-                    {userData.training === 'Soft' && 'Medium' && <li>Each exercise – 15 sec</li>}
+                    {userData.training === 'Soft' && <li>Each exercise – 10 sec</li>}
+                    {userData.training === 'Medium' && <li>Each exercise – 15 sec</li>}
                     {userData.training === 'Tough' && <li>Each exercise – 20 sec</li>}
                     <li>Rest – 10 sec</li>
                     {userData.training === 'Soft' && <li>Rounds – 4</li>}
