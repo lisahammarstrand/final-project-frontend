@@ -45,7 +45,7 @@ const AccordionContent = styled.div`
 
   @keyframes showContent {
     0% {max-height: 0px;}
-    100% {max-height: 250px;}
+    100% {max-height: 320px;}
   }
 
   &:active {

@@ -102,7 +102,7 @@ export const FunasfjallenDetails = () => {
                   <h2>Soft, Medium or Tough</h2>
                   <ul>
                     <li>Each exercise: Soft & Medium 15 sec, Tough 20 sec</li>
-                    <li>Rest: Soft, Medium, Tough 10 sec</li>
+                    <li>Rest: Soft, Medium, Tough 15 sec</li>
                     <li>Rounds: Soft 4, Medium 6, Tough 8</li>
                   </ul>
                 </>
